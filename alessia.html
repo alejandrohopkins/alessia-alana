@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alessia — Semanas 1 y 2</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%238c2f39'/></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Inter:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#14161d;--ink-2:#1e212b;--bone:#f2ede4;--bone-dim:#a9a396;
+  --oxblood:#8c2f39;--brass:#b08d57;--rule:#32353f}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--bone);
+  min-height:100vh;padding:28px 22px 60px}
+.shell{max-width:900px;margin:0 auto}
+.back{display:inline-block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--bone-dim);text-decoration:none;margin-bottom:22px}
+.back:hover{color:var(--brass)}
+.mast{border-bottom:1px solid var(--rule);padding-bottom:20px;margin-bottom:24px}
+.eyebrow{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);
+  margin-bottom:12px}
+.title{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(40px,9vw,72px);
+  line-height:.92;letter-spacing:-.015em}
+.title span{font-style:italic;color:var(--oxblood)}
+.sub{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;
+  gap:12px;margin-top:14px}
+.deck{font-size:13px;color:var(--bone-dim);font-weight:300;max-width:460px;line-height:1.5}
+.count{font-family:'Bodoni Moda',serif;font-size:13px;color:var(--brass);white-space:nowrap}
+.count b{font-size:26px;font-weight:500;color:var(--bone)}
+.ctrl{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:14px;margin-bottom:22px}
+.week{display:flex;gap:22px}
+.week button{background:none;border:none;cursor:pointer;padding:0 0 5px;
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--bone-dim);border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.week button.sel{color:var(--bone);border-bottom-color:var(--oxblood)}
+.week button:focus-visible,.day:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
+.days{display:flex;border:1px solid var(--rule)}
+.day{background:none;border:none;border-right:1px solid var(--rule);cursor:pointer;
+  padding:10px 16px;font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--bone-dim);transition:all .15s;position:relative}
+.day:last-child{border-right:none}
+.day:hover{color:var(--bone)}
+.day.sel{background:var(--bone);color:var(--ink)}
+.day.full::after{content:'';position:absolute;top:7px;right:7px;width:4px;height:4px;
+  border-radius:50%;background:var(--brass)}
+.index{font-family:'Bodoni Moda',serif;font-style:italic;font-size:15px;
+  color:var(--bone-dim);margin-bottom:20px}
+.entry{display:grid;grid-template-columns:74px 1fr 30px;gap:18px;padding:20px 0;
+  border-top:1px solid var(--rule);align-items:start}
+.entry:last-of-type{border-bottom:1px solid var(--rule)}
+.entry.done{opacity:.48}
+.time{font-family:'Bodoni Moda',serif;font-size:13px;color:var(--brass);line-height:1.35;
+  padding-top:3px}
+.entry.aft .time{color:var(--oxblood)}
+.subj{font-family:'Bodoni Moda',serif;font-size:21px;font-weight:400;line-height:1.15;
+  margin-bottom:7px}
+.entry.done .subj{text-decoration:line-through;text-decoration-thickness:1px}
+.what{font-size:14px;line-height:1.6;color:#c9c4b9;font-weight:300}
+.check{width:24px;height:24px;border:1px solid var(--rule);background:none;cursor:pointer;
+  display:grid;place-items:center;padding:0;transition:all .15s;margin-top:3px}
+.check:hover{border-color:var(--brass)}
+.check.on{background:var(--oxblood);border-color:var(--oxblood)}
+.check svg{width:12px;height:12px;stroke:var(--bone);stroke-width:2.5;fill:none;
+  opacity:0;transition:opacity .15s}
+.check.on svg{opacity:1}
+.check:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
+.links{margin-top:12px;display:flex;flex-wrap:wrap;gap:16px}
+.links a{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--brass);
+  text-decoration:none;border-bottom:1px solid rgba(176,141,87,.35);padding-bottom:2px;
+  transition:all .15s}
+.links a:hover{color:var(--bone);border-bottom-color:var(--bone)}
+.links a:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
+.flag{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  background:var(--oxblood);color:var(--bone);padding:3px 8px;margin-bottom:8px}
+.sat{margin-top:30px;padding:26px;border:1px solid var(--brass);position:relative}
+.sat .lbl{position:absolute;top:-8px;left:20px;background:var(--ink);padding:0 10px;
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.sat h3{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:400;margin-bottom:8px}
+.sat p{font-size:14px;line-height:1.6;color:#c9c4b9;font-weight:300}
+.tools{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}
+.tools button{background:none;border:none;cursor:pointer;padding:0 0 3px;
+  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--bone-dim);border-bottom:1px solid var(--rule);transition:all .15s}
+.tools button:hover{color:var(--brass);border-bottom-color:var(--brass)}
+.tools button:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--oxblood);color:var(--bone);padding:12px 22px;font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase;transition:transform .25s;z-index:50}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.foot{margin-top:26px;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;
+  color:var(--bone-dim);font-weight:300;line-height:1.65}
+@media(max-width:620px){.entry{grid-template-columns:1fr 28px}
+  .time{grid-column:1/-1;padding-top:0;margin-bottom:-8px}.days{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <a class="back" href="index.html">← Inicio</a>
+  <div class="mast">
+    <div class="eyebrow">Semanas 1 y 2 &nbsp;—&nbsp; Fase de diagnóstico</div>
+    <div class="title">Alessia<span>.</span></div>
+    <div class="sub">
+      <div class="deck">Rumbo a Grade 9. Estas dos semanas no llevan nota — sirven para mapear
+        con precisión qué dominas antes de que Ciencias se divida en tres.</div>
+      <div class="count"><b id="num">0</b> / <span id="tot">0</span> bloques</div>
+    </div>
+  </div>
+  <div class="ctrl">
+    <div class="week">
+      <button data-w="1" class="sel">Semana uno</button>
+      <button data-w="2">Semana dos</button>
+    </div>
+    <div class="days" id="days"></div>
+  </div>
+  <div class="index" id="index"></div>
+  <div id="list"></div>
+  <div class="sat" id="sat"><span class="lbl">Sábado</span></div>
+  <div class="tools">
+    <button id="btn-copy">Copiar resumen para papá</button>
+    <button id="btn-reset">Borrar mi progreso</button>
+  </div>
+  <div class="foot">
+    Un "no sé" bien puesto vale más que una respuesta adivinada — el diagnóstico solo sirve
+    si es honesto. Tu progreso se guarda en este navegador.
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+var K_ALG='https://www.khanacademy.org/math/get-ready-for-algebra-i';
+var K_BIO='https://www.khanacademy.org/science/ms-biology';
+var K_CHEM='https://www.khanacademy.org/science/ms-chemistry';
+var K_PHYS='https://www.khanacademy.org/science/ms-physics';
+var K_HIST='https://www.khanacademy.org/humanities/world-history';
+var DAYS=['Lun','Mar','Mié','Jue','Vie'];
+
+var DATA={
+1:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Science — Diagnóstico I',d:'Célula: estructura y función. Trabaja la unidad de células.',l:[['Khan · MS Biology',K_BIO]]},
+{t:'11:00 12:00',s:'Math — Diagnóstico I',d:'Ecuaciones lineales. Unidades 1 y 2.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'2:00 2:45',s:'Negocio',d:'¿Qué es un negocio? Caso Chanel: no vende ropa, vende identidad.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Qué es la IA y qué implicaciones sociales trae. Conversa con Claude sobre eso.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Elige el lente de tu proyecto editorial: moda o cocina. Esta decisión define los próximos seis meses.',a:1,flag:'Decisión'}]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Diagnóstico II',d:'Química básica: átomo y tabla periódica.',l:[['Khan · MS Chemistry',K_CHEM]]},
+{t:'11:00 12:00',s:'Humanities — Diagnóstico',d:'Analiza una fuente histórica: quién la escribió, cuándo, para quién, y qué deja fuera.'},
+{t:'2:00 2:45',s:'Storytelling',d:'Estructura narrativa aplicada a contenido editorial.',a:1},
+{t:'2:45 3:00',s:'Reflexión',d:'¿Qué te resultó más difícil de analizar en la fuente?',a:1}]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Math — Diagnóstico II',d:'Exponentes y notación científica. Unidades 3 y 4.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'11:00 12:00',s:'Science — Diagnóstico III',d:'Física básica: fuerza, movimiento y energía.',l:[['Khan · MS Physics',K_PHYS]]},
+{t:'2:00 2:45',s:'Diseño',d:'Identidad visual básica para tu proyecto.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]},
+{t:'2:45 3:00',s:'Reflexión',d:'¿Qué tres palabras describen el tono visual que buscas?',a:1}]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Diagnóstico II',d:'Elige un evento del siglo XX y escribe tres causas y tres consecuencias.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'English — Diagnóstico',d:'Write a one-paragraph thesis about something you believe, with two pieces of evidence.'},
+{t:'2:00 2:45',s:'Negocio',d:'Producto o servicio: ¿dónde cae exactamente un proyecto editorial?',a:1},
+{t:'2:45 3:30',s:'IA',d:'Conversa con Claude sobre un movimiento social que no conozcas bien.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Investiga tres historias piloto para tu serie.',a:1}]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Science — Repaso',d:'Vuelve a lo que te costó. Anota qué temas necesitan más trabajo.'},
+{t:'11:00 12:00',s:'Math — Repaso',d:'Identifica tus tres temas más flojos y anótalos para la semana dos.'},
+{t:'2:00 2:45',s:'Negocio',d:'Entrevista a papá sobre Jepa Fashion y El Escaparate de Lolita. Prepara cinco preguntas antes.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Cómo escribir un lead que enganche desde la primera línea.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Escribe tu primera pieza. Trescientas palabras.',a:1}]}
+},
+2:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Ecuaciones a fondo',d:'Lineales y de dos pasos, hasta que salgan solas.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'11:00 12:00',s:'Science — Célula a fondo',d:'Procesos: fotosíntesis y respiración celular.',l:[['Khan · MS Biology',K_BIO]]},
+{t:'2:00 2:45',s:'Negocio',d:'El cliente: ¿quién lee tu proyecto y por qué le importaría?',a:1},
+{t:'2:45 3:30',s:'IA',d:'Prompting avanzado: contexto, rol y formato.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Define la persona de tu audiencia con detalle real.',a:1}]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Movimientos sociales',d:'Siglo XX: elige uno y traza su línea de tiempo completa.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Sistemas de ecuaciones',d:'Método gráfico y sustitución.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'2:00 2:45',s:'Storytelling',d:'Cómo estructurar una serie, no solo una pieza suelta.',a:1},
+{t:'2:45 3:00',s:'Reflexión',d:'¿Qué conecta las historias que elegiste?',a:1}]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Química',d:'Tabla periódica: tendencias y propiedades.',l:[['Khan · MS Chemistry',K_CHEM]]},
+{t:'11:00 12:00',s:'Humanities — Análisis',d:'Escribe 300 palabras explicando por qué el movimiento que elegiste ayer cambió algo.'},
+{t:'2:00 2:45',s:'Diseño',d:'Plantilla visual reutilizable para toda tu serie.',a:1,l:[['Canva','https://www.canva.com/']]},
+{t:'2:45 3:00',s:'Reflexión',d:'¿Tu plantilla funciona para las tres historias piloto?',a:1}]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Thesis y evidencia',d:'Turn your Humanities paragraph into a proper argumentative essay opening.'},
+{t:'11:00 12:00',s:'Science — Física',d:'Movimiento: velocidad, rapidez y aceleración.',l:[['Khan · MS Physics',K_PHYS]]},
+{t:'2:00 2:45',s:'Negocio',d:'Brainstorm de diez historias posibles para tu serie.',a:1},
+{t:'2:45 3:30',s:'IA',d:'IA para research histórico. Verifica siempre lo que te diga — es el punto del ejercicio.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Escribe el one-pager de tu proyecto.',a:1}]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso y quiz',d:'Haz el quiz del curso. Guarda el puntaje para comparar en un mes.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'11:00 12:00',s:'Science — Repaso y quiz',d:'Los tres cursos. Anota los tres puntajes por separado.',l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]]},
+{t:'2:00 2:45',s:'Negocio',d:'Define el formato final: newsletter, Instagram, podcast, o una combinación.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Escribir para audio versus escribir para lectura.',a:1},
+{t:'3:30 4:00',s:'Proyecto',d:'Produce la pieza uno completa.',a:1}]}
+}};
+
+var SAT={1:['Refina y presenta','Dos horas: refina las tres historias piloto y arma un moodboard visual. Una hora: board meeting — presenta el concepto a papá.'],
+2:['Publica la primera pieza','Dos horas: termina la pieza uno con su presentación visual. Una hora: board meeting — presenta la pieza y el one-pager.']};
+
+var week=1,day='Lun',done={};
+var KEY='alessia-progreso-s1s2';
+
+try{var raw=localStorage.getItem(KEY);if(raw)done=JSON.parse(raw);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+
+function total(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=DATA[w][d].blocks.length;});});return n;}
+function got(){return Object.keys(done).filter(function(k){return done[k];}).length;}
+
+var CHECK='<svg viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></svg>';
+
+function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},2200);}
+
+function renderDays(){
+  var w=document.getElementById('days');w.innerHTML='';
+  DAYS.forEach(function(d){
+    var all=DATA[week][d].blocks.every(function(_,i){return done[week+'|'+d+'|'+i];});
+    var b=document.createElement('button');
+    b.className='day'+(d===day?' sel':'')+(all?' full':'');
+    b.textContent=d;b.onclick=function(){day=d;render();};
+    w.appendChild(b);});
+}
+function render(){
+  renderDays();
+  document.getElementById('num').textContent=got();
+  document.getElementById('tot').textContent=total();
+  var info=DATA[week][day];
+  document.getElementById('index').textContent=day+', semana '+(week===1?'uno':'dos')+' — '+info.hrs+', '+info.blocks.length+' bloques';
+  var list=document.getElementById('list');list.innerHTML='';
+  info.blocks.forEach(function(b,i){
+    var key=week+'|'+day+'|'+i,isDone=!!done[key];
+    var row=document.createElement('div');
+    row.className='entry'+(b.a?' aft':'')+(isDone?' done':'');
+    var links='';
+    if(b.l){links='<div class="links">'+b.l.map(function(x){
+      return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>';}).join('')+'</div>';}
+    var flag=b.flag?'<div class="flag">'+b.flag+'</div>':'';
+    row.innerHTML='<div class="time">'+b.t+'</div><div>'+flag+'<div class="subj">'+b.s+'</div>'+
+      '<div class="what">'+b.d+'</div>'+links+'</div>'+
+      '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+CHECK+'</button>';
+    row.querySelector('.check').onclick=function(){done[key]=!done[key];save();render();};
+    list.appendChild(row);});
+  document.getElementById('sat').innerHTML='<span class="lbl">Sábado</span><h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>';
+}
+
+document.querySelectorAll('.week button').forEach(function(btn){
+  btn.onclick=function(){
+    document.querySelectorAll('.week button').forEach(function(b){b.classList.remove('sel');});
+    btn.classList.add('sel');week=+btn.dataset.w;day='Lun';render();};});
+
+document.getElementById('btn-copy').onclick=function(){
+  var lines=['Progreso de Alessia — '+new Date().toLocaleDateString('es-PA'),''];
+  [1,2].forEach(function(w){
+    var wd=0,wt=0;
+    DAYS.forEach(function(d){DATA[w][d].blocks.forEach(function(_,i){wt++;if(done[w+'|'+d+'|'+i])wd++;});});
+    lines.push('Semana '+w+': '+wd+'/'+wt+' bloques');
+    DAYS.forEach(function(d){
+      var bd=0,bt=DATA[w][d].blocks.length;
+      DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])bd++;});
+      lines.push('  '+d+': '+bd+'/'+bt+(bd===bt?' ✓':''));});
+    lines.push('');});
+  lines.push('Total: '+got()+' de '+total()+' bloques');
+  var txt=lines.join('\n');
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('Copiado');},function(){fallback(txt);});
+  }else{fallback(txt);}
+};
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';
+  ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('Copiado');}catch(e){toast('No se pudo copiar');}
+  document.body.removeChild(ta);
+}
+
+document.getElementById('btn-reset').onclick=function(){
+  if(confirm('¿Seguro? Se borra todo tu progreso de las semanas 1 y 2.')){
+    done={};save();render();toast('Progreso borrado');}
+};
+
+render();
+})();
+</script>
+</body>
+</html>

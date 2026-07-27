@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alana — Semanas 1 y 2</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23a3e635'/></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--lime:#a3e635;--lime-deep:#65a30d;--ink:#1b1a2a;--ink-2:#2c2a42;
+  --bone:#f7f6f2;--coral:#fb7185;--mute:#8b8aa3}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--bone);
+  min-height:100vh;padding:24px 20px 60px}
+.shell{max-width:940px;margin:0 auto}
+.back{display:inline-block;font-family:'Chakra Petch',sans-serif;font-size:11px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-decoration:none;
+  margin-bottom:20px}
+.back:hover{color:var(--lime)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;
+  gap:16px;margin-bottom:26px}
+.name{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(34px,7vw,52px);
+  line-height:.95;letter-spacing:-.02em}
+.name em{font-style:normal;color:var(--lime)}
+.tag{color:var(--mute);font-size:13px;margin-top:6px}
+.meter{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.mlabel{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute)}
+.blocks{display:flex;gap:3px}
+.blk{width:13px;height:22px;background:var(--ink-2);border:1px solid #3a3854;
+  transition:background .18s,transform .18s}
+.blk.on{background:var(--lime);border-color:var(--lime);transform:translateY(-2px)}
+.ctrl{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.week{display:flex;gap:4px;background:var(--ink-2);padding:4px}
+.week button,.day{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--mute);
+  border:none;cursor:pointer;padding:9px 14px;transition:all .15s}
+.week button.sel{background:var(--lime);color:var(--ink)}
+.days{display:flex;gap:4px;flex-wrap:wrap}
+.day{background:var(--ink-2);border:1px solid #3a3854}
+.day:hover{border-color:var(--lime-deep);color:var(--bone)}
+.day.sel{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.day .dot{display:inline-block;width:6px;height:6px;margin-left:7px;background:var(--lime);
+  vertical-align:middle}
+.day.sel .dot{background:var(--lime-deep)}
+.daymeta{font-family:'Chakra Petch',sans-serif;font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--mute);padding-bottom:12px;
+  border-bottom:2px solid var(--ink-2);margin-bottom:18px}
+.card{background:var(--ink-2);border-left:4px solid var(--lime);padding:18px 20px;
+  margin-bottom:12px}
+.card.done{border-left-color:var(--lime-deep);opacity:.58}
+.card.aft{border-left-color:var(--coral)}
+.card.aft.done{border-left-color:#9f4a58}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
+  margin-bottom:10px}
+.time{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:.1em;color:var(--lime);white-space:nowrap}
+.card.aft .time{color:var(--coral)}
+.subj{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:-.01em;margin-bottom:3px}
+.what{font-size:14px;line-height:1.55;color:#cfced9}
+.card.done .subj,.card.done .what{text-decoration:line-through;text-decoration-thickness:1px}
+.check{flex-shrink:0;width:26px;height:26px;background:transparent;border:2px solid #4a4866;
+  cursor:pointer;display:grid;place-items:center;transition:all .15s;padding:0}
+.check:hover{border-color:var(--lime)}
+.check.on{background:var(--lime);border-color:var(--lime)}
+.check svg{width:14px;height:14px;stroke:var(--ink);stroke-width:3.5;fill:none;
+  opacity:0;transition:opacity .15s}
+.check.on svg{opacity:1}
+.check:focus-visible{outline:2px solid var(--bone);outline-offset:2px}
+.links{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.links a{font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:.03em;text-decoration:none;color:var(--ink);background:var(--lime);
+  padding:7px 12px;display:inline-flex;align-items:center;gap:6px;transition:transform .15s}
+.links a:hover{transform:translate(1px,-1px);box-shadow:-2px 2px 0 var(--lime-deep)}
+.links a:focus-visible{outline:2px solid var(--bone);outline-offset:2px}
+.links a svg{width:11px;height:11px;stroke:var(--ink);stroke-width:2.5;fill:none}
+.sat{background:linear-gradient(135deg,var(--lime-deep),#4d7c0f);padding:22px;margin-top:20px}
+.sat h3{font-family:'Chakra Petch',sans-serif;font-size:17px;margin-bottom:8px}
+.sat p{font-size:14px;line-height:1.6;color:#f0f7e0}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.tools button{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--mute);
+  border:1px solid #3a3854;padding:10px 16px;cursor:pointer;transition:all .15s}
+.tools button:hover{border-color:var(--lime);color:var(--lime)}
+.tools button:focus-visible{outline:2px solid var(--bone);outline-offset:2px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--lime);color:var(--ink);padding:12px 22px;font-family:'Chakra Petch',sans-serif;
+  font-weight:600;font-size:13px;letter-spacing:.05em;transition:transform .25s;z-index:50}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.foot{margin-top:22px;padding-top:16px;border-top:1px solid var(--ink-2);font-size:12px;
+  color:var(--mute);line-height:1.6}
+@media(max-width:560px){.head{flex-direction:column;align-items:flex-start}
+  .meter{align-items:flex-start}.blk{width:10px;height:18px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <a class="back" href="index.html">← Inicio</a>
+  <div class="head">
+    <div>
+      <div class="name">ALANA<em>.</em></div>
+      <div class="tag">Rumbo a Grade 7 &nbsp;·&nbsp; Semanas 1 y 2 &nbsp;·&nbsp; sin notas, solo mapeo</div>
+    </div>
+    <div class="meter">
+      <div class="mlabel" id="mlabel">0 de 0 bloques</div>
+      <div class="blocks" id="blocks"></div>
+    </div>
+  </div>
+  <div class="ctrl">
+    <div class="week">
+      <button data-w="1" class="sel">Semana 1</button>
+      <button data-w="2">Semana 2</button>
+    </div>
+    <div class="days" id="days"></div>
+  </div>
+  <div class="daymeta" id="meta"></div>
+  <div id="list"></div>
+  <div class="sat" id="sat"></div>
+  <div class="tools">
+    <button id="btn-copy">Copiar resumen para papá</button>
+    <button id="btn-reset">Borrar mi progreso</button>
+  </div>
+  <div class="foot">
+    Si algo te sale difícil, eso es información útil — no un problema. Cuando no sepas algo,
+    escribe "no sé" y sigue. Tu progreso se guarda solo en este navegador.
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+var KHAN7='https://www.khanacademy.org/math/cc-seventh-grade-math';
+var KHANREADY='https://www.khanacademy.org/math/get-ready-for-7th-grade';
+var KHANBIO='https://www.khanacademy.org/science/ms-biology';
+var KHANHIST='https://www.khanacademy.org/humanities/world-history';
+var DAYS=['Lun','Mar','Mié','Jue','Vie'];
+
+var DATA={
+1:{
+Lun:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Diagnóstico 1',d:'Fracciones y decimales. Haz la Unidad 1 sin apuro. No adivines: si no sabes, sáltalo.',l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'11:00–12:00',s:'Español — Diagnóstico',d:'Lee un cuento corto y escribe un resumen de 5 oraciones con tus propias palabras.',l:[['Ciudad Seva — cuentos','https://www.ciudadseva.com/textos/cuentos/']]},
+{t:'2:00–2:45',s:'Negocio',d:'¿Qué es un negocio? Qué le doy a mi audiencia y qué recibo a cambio.',a:1},
+{t:'2:45–3:30',s:'IA',d:'Primera conversación con Claude. Anota 3 cosas que te sorprendieron.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Mira 3 canales de historias que te gusten. ¿Qué tienen en común?',a:1}]},
+Mar:{hrs:'3 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Diagnóstico 2',d:'Porcentajes y razones. Unidades 2 y 3.',l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'11:00–12:00',s:'English — Diagnóstico',d:'Read a short story and write a 5-sentence summary in your own words.',l:[['CommonLit','https://www.commonlit.org/']]},
+{t:'2:00–2:45',s:'Storycraft',d:'Mira 3 shorts virales de historias. ¿Dónde está el gancho? ¿En qué segundo exacto?',a:1},
+{t:'2:45–3:00',s:'Reflexión',d:'¿Qué aprendiste hoy? ¿Qué te costó más?',a:1}]},
+'Mié':{hrs:'3 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Diagnóstico 3',d:'Enteros y operaciones combinadas. Unidad 4.',l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'11:00–12:00',s:'Science — Diagnóstico',d:'Método científico y célula. Unidad 1.',l:[['Khan: MS Biology',KHANBIO]]},
+{t:'2:00–2:45',s:'Video',d:'Revisa tus propios videos de Lime Stories. ¿Qué funciona técnicamente? ¿Qué mejorarías?',a:1},
+{t:'2:45–3:00',s:'Reflexión',d:'Anota tu observación más honesta sobre tu propio trabajo.',a:1}]},
+Jue:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Diagnóstico 2',d:'Escribe 200 palabras contando algo que te pasó. Luego revísalo tú y marca lo que cambiarías.'},
+{t:'11:00–12:00',s:'Humanities — Diagnóstico',d:'Línea de tiempo y fuentes. Explora y anota qué te llama la atención.',l:[['Khan: World history',KHANHIST]]},
+{t:'2:00–2:45',s:'Negocio',d:'¿Quién ve mis videos? Describe a tu espectadora ideal: edad, qué le gusta, cuándo ve videos.',a:1},
+{t:'2:45–3:30',s:'IA',d:'IA como editora, no como escritora. ¿Cuál es la diferencia? Pruébalo con un párrafo tuyo.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Elige 2 tipos de historia para probar este mes.',a:1}]},
+Vie:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Repaso',d:'Vuelve a lo que te costó esta semana. Sin apuro, sin nota.',l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'11:00–12:00',s:'English — Diagnóstico 2',d:'Write a 200-word story. Any topic. Read it out loud and mark what sounds wrong.'},
+{t:'2:00–2:45',s:'Negocio',d:'¿Por qué el contenido original vale más que el reciclado? Conversa con papá.',a:1},
+{t:'2:45–3:30',s:'Video',d:'¿Usarás tu propia voz o voz sintética? Prueba las dos y decide.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Escribe el borrador de tu primera historia original.',a:1}]}
+},
+2:{
+Lun:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Fracciones a fondo',d:'Suma, resta, multiplicación y división. Practica hasta 80% de aciertos.',l:[['Khan: 7th grade math',KHAN7]]},
+{t:'11:00–12:00',s:'Español — Estructura narrativa',d:'Inicio, conflicto, resolución. Analiza un cuento y marca las 3 partes.'},
+{t:'2:00–2:45',s:'Negocio',d:'Nicho: por qué especializarse gana sobre ser generalista.',a:1},
+{t:'2:45–3:30',s:'IA',d:'Prompting: compara un prompt malo y uno bueno para la misma tarea.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Define tu nicho de prueba A.',a:1}]},
+Mar:{hrs:'3 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Decimales',d:'Conversión fracción ↔ decimal ↔ porcentaje hasta que salga sola.',l:[['Khan: 7th grade math',KHAN7]]},
+{t:'11:00–12:00',s:'Español — El gancho',d:'Escribe 5 primeras líneas distintas para la misma historia. Elige la mejor.'},
+{t:'2:00–2:45',s:'Storycraft',d:'Cómo crear tensión en 60 segundos.',a:1},
+{t:'2:45–3:00',s:'Reflexión',d:'¿Cuál de tus 5 líneas funcionó mejor y por qué?',a:1}]},
+'Mié':{hrs:'3 horas',blocks:[
+{t:'9:00–10:00',s:'English — Narrative vocabulary',d:'Action verbs and description. Rewrite a boring paragraph using stronger words.'},
+{t:'11:00–12:00',s:'Math — Porcentajes aplicados',d:'Usa los analytics de tu canal: CTR, retención, % de vistas. Calcula a mano primero.'},
+{t:'2:00–2:45',s:'Diseño',d:'Thumbnails: diseña 3 opciones para tu próxima historia.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]},
+{t:'2:45–3:00',s:'Reflexión',d:'¿Cuál thumbnail elegirías tú si fueras la espectadora?',a:1}]},
+Jue:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Borrador historia 2',d:'Escribe la historia completa en español primero. 300 a 400 palabras.'},
+{t:'11:00–12:00',s:'English — Adaptación',d:"Translate and adapt your Spanish draft. Don't translate word by word — make it sound natural."},
+{t:'2:00–2:45',s:'Negocio',d:'Títulos: cómo se decide qué hace clic.',a:1},
+{t:'2:45–3:30',s:'IA',d:'Usa IA para pulir tu texto, no para escribirlo. Compara antes y después.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Termina la historia 2.',a:1}]},
+Vie:{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Math — Repaso + quiz',d:'Haz el quiz de la unidad. Guarda un screenshot del puntaje.',l:[['Khan: 7th grade math',KHAN7]]},
+{t:'11:00–12:00',s:'Science — Célula',d:'Estructura y función.',l:[['Khan: MS Biology',KHANBIO]]},
+{t:'2:00–2:45',s:'Negocio',d:'Consistencia: por qué publicar seguido importa más que publicar perfecto.',a:1},
+{t:'2:45–3:30',s:'Video',d:'Ritmo de edición: cortes al servicio de la historia.',a:1},
+{t:'3:30–4:00',s:'Proyecto',d:'Produce la historia 2.',a:1}]}
+}};
+
+var SAT={1:['Sábado — semana 1','2h: produce y publica tu primera historia original. 1h: board meeting con papá.'],
+2:['Sábado — semana 2','2h: publica la historia 2 y compara métricas con la 1. 1h: board meeting — ¿qué funcionó mejor y por qué?']};
+
+var week=1,day='Lun',done={};
+var KEY='alana-progreso-s1s2';
+
+try{var raw=localStorage.getItem(KEY);if(raw)done=JSON.parse(raw);}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+
+function total(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=DATA[w][d].blocks.length;});});return n;}
+function got(){return Object.keys(done).filter(function(k){return done[k];}).length;}
+
+var CHECK='<svg viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></svg>';
+var OUT='<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
+function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},2200);}
+
+function renderMeter(){
+  var tt=total(),g=got();
+  document.getElementById('mlabel').textContent=g+' de '+tt+' bloques';
+  var w=document.getElementById('blocks');w.innerHTML='';
+  var shown=20,filled=Math.round(g/tt*shown);
+  for(var i=0;i<shown;i++){var b=document.createElement('div');
+    b.className='blk'+(i<filled?' on':'');w.appendChild(b);}
+}
+function renderDays(){
+  var w=document.getElementById('days');w.innerHTML='';
+  DAYS.forEach(function(d){
+    var all=DATA[week][d].blocks.every(function(_,i){return done[week+'|'+d+'|'+i];});
+    var b=document.createElement('button');
+    b.className='day'+(d===day?' sel':'');
+    b.innerHTML=d+(all?'<span class="dot"></span>':'');
+    b.onclick=function(){day=d;render();};
+    w.appendChild(b);});
+}
+function render(){
+  renderDays();renderMeter();
+  var info=DATA[week][day];
+  document.getElementById('meta').textContent='Semana '+week+' · '+day+' · '+info.hrs+' · '+info.blocks.length+' bloques';
+  var list=document.getElementById('list');list.innerHTML='';
+  info.blocks.forEach(function(b,i){
+    var key=week+'|'+day+'|'+i,isDone=!!done[key];
+    var card=document.createElement('div');
+    card.className='card'+(b.a?' aft':'')+(isDone?' done':'');
+    var links='';
+    if(b.l){links='<div class="links">'+b.l.map(function(x){
+      return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+OUT+'</a>';}).join('')+'</div>';}
+    card.innerHTML='<div class="top"><div><div class="time">'+b.t+'</div><div class="subj">'+b.s+'</div></div>'+
+      '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+CHECK+'</button></div>'+
+      '<div class="what">'+b.d+'</div>'+links;
+    card.querySelector('.check').onclick=function(){done[key]=!done[key];save();render();};
+    list.appendChild(card);});
+  document.getElementById('sat').innerHTML='<h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>';
+}
+
+document.querySelectorAll('.week button').forEach(function(btn){
+  btn.onclick=function(){
+    document.querySelectorAll('.week button').forEach(function(b){b.classList.remove('sel');});
+    btn.classList.add('sel');week=+btn.dataset.w;day='Lun';render();};});
+
+document.getElementById('btn-copy').onclick=function(){
+  var lines=['Progreso de Alana — '+new Date().toLocaleDateString('es-PA'),''];
+  [1,2].forEach(function(w){
+    var wd=0,wt=0;
+    DAYS.forEach(function(d){
+      DATA[w][d].blocks.forEach(function(_,i){wt++;if(done[w+'|'+d+'|'+i])wd++;});});
+    lines.push('Semana '+w+': '+wd+'/'+wt+' bloques');
+    DAYS.forEach(function(d){
+      var bd=0,bt=DATA[w][d].blocks.length;
+      DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])bd++;});
+      lines.push('  '+d+': '+bd+'/'+bt+(bd===bt?' ✓':''));});
+    lines.push('');});
+  lines.push('Total: '+got()+' de '+total()+' bloques');
+  var txt=lines.join('\n');
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){toast('Copiado — pégalo en WhatsApp');},
+      function(){fallback(txt);});
+  }else{fallback(txt);}
+};
+function fallback(txt){
+  var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';
+  ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');toast('Copiado — pégalo en WhatsApp');}
+  catch(e){toast('No se pudo copiar');}
+  document.body.removeChild(ta);
+}
+
+document.getElementById('btn-reset').onclick=function(){
+  if(confirm('¿Seguro? Se borra todo tu progreso de las semanas 1 y 2.')){
+    done={};save();render();toast('Progreso borrado');}
+};
+
+render();
+})();
+</script>
+</body>
+</html>

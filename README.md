@@ -1,55 +1,44 @@
 # Plan de estudio — Alana y Alessia
 
-Sitio estático. Sin build, sin dependencias, sin backend.
-
-## Estructura
+Sitio estático. Tres archivos, sin build ni dependencias.
 
 ```
-/
-  index.html          → página de inicio (elegir quién eres)
-  alana/index.html    → dashboard de Alana      → /alana
-  alessia/index.html  → dashboard de Alessia    → /alessia
+index.html     → página de inicio
+alana.html     → dashboard de Alana
+alessia.html   → dashboard de Alessia
 ```
 
-## Cómo publicar en Vercel
-
-**Opción A — arrastrar la carpeta (más rápido)**
+## Publicar en Vercel
 
 1. Entra a https://vercel.com/new
-2. Arrastra esta carpeta completa a la zona de drop
-3. Vercel detecta que es un sitio estático y publica
-4. Te da una URL tipo `plan-estudio.vercel.app`
+2. Arrastra los tres archivos (o la carpeta que los contiene)
+3. Framework preset: **Other**. Build command y output directory: vacíos
+4. Deploy
 
-**Opción B — desde GitHub**
+URLs resultantes:
+- `tusitio.vercel.app` → inicio
+- `tusitio.vercel.app/alana.html`
+- `tusitio.vercel.app/alessia.html`
 
-1. Sube esta carpeta a un repo
-2. En Vercel: New Project → importa el repo
-3. Framework preset: **Other**
-4. Build command: dejar vacío
-5. Output directory: dejar vacío (o `.`)
-6. Deploy
+## Probar antes de publicar
 
-## Dominio propio
-
-Si tienes un dominio, en Vercel: Project → Settings → Domains → agregar.
-Puedes usar un subdominio, por ejemplo `estudio.tudominio.com`.
+Abre `index.html` directamente en el navegador con doble click. Funciona igual
+que publicado — el guardado de progreso también.
 
 ## Cómo se guarda el progreso
 
-Con `localStorage` del navegador. Esto significa:
+Con `localStorage`. Cada una marca sus bloques y al volver siguen marcados.
+Sin login ni cuenta.
 
-- Cada una marca sus bloques y al volver siguen marcados
-- No hace falta login ni cuenta
-- **El progreso vive en ese navegador y en esa computadora.** Si usa la laptop
-  y luego el iPad, son dos progresos distintos
-- Si borran datos del navegador, se pierde
-- El botón "Copiar resumen para papá" arma un texto con el avance y lo copia
-  al portapapeles para pegarlo en WhatsApp
+Límite importante: **el progreso vive en ese navegador y en esa computadora.**
+Si usa la laptop y luego el iPad, son dos progresos separados.
+
+El botón "Copiar resumen para papá" arma un texto con el avance y lo copia
+al portapapeles para pegarlo en WhatsApp.
 
 ## Cambiar el contenido
 
-Todo el temario vive en la variable `DATA` dentro de cada archivo HTML.
-La estructura es:
+El temario vive en la variable `DATA` dentro de cada HTML:
 
 ```js
 DATA = {
@@ -70,5 +59,5 @@ DATA = {
 }
 ```
 
-Para agregar la semana 3, copia el bloque `2:` y edítalo como `3:`, y agrega
-`3` al selector de semanas en el HTML.
+Para agregar la semana 3: copia el bloque `2:`, edítalo como `3:`, y agrega
+un botón `<button data-w="3">Semana 3</button>` en el selector de semanas.
