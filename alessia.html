@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Inter:wght@300;400;500;600&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--ink:#14161d;--ink-2:#1e212b;--bone:#f2ede4;--bone-dim:#a9a396;
-  --oxblood:#8c2f39;--brass:#b08d57;--rule:#32353f}
+  --oxblood:#8c2f39;--brass:#b08d57;--rule:#32353f;--gold:#c9a24a}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--bone);
   min-height:100vh;padding:28px 22px 60px}
 .shell{max-width:900px;margin:0 auto}
@@ -73,11 +73,93 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--
 .links a:focus-visible{outline:1px solid var(--brass);outline-offset:3px}
 .flag{display:inline-block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
   background:var(--oxblood);color:var(--bone);padding:3px 8px;margin-bottom:8px}
+
+/* Khan mini panel */
+.khan{margin-top:14px;padding:13px 15px;background:#20222c;border:1px dashed var(--rule)}
+.khan-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.khan-head svg{width:13px;height:13px;stroke:var(--gold);fill:none;stroke-width:1.6}
+.khan-title{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.khan-course{font-size:11.5px;color:var(--bone-dim);margin-bottom:8px;font-style:italic}
+.khan-unit{display:flex;align-items:flex-start;gap:9px;padding:5px 0;font-size:13px;
+  color:#d9d4c8;cursor:pointer}
+.khan-unit input{margin-top:3px;accent-color:var(--gold);width:15px;height:15px;flex-shrink:0}
+.khan-unit.checked{color:var(--bone-dim);text-decoration:line-through}
+.khan-note{font-size:11px;color:var(--bone-dim);margin-top:6px;font-style:italic}
+
+/* Proyecto del día */
+.proj{margin-top:26px;background:#181a22;border:1px solid var(--rule)}
+.proj-head{padding:18px 22px;border-bottom:1px solid var(--rule);display:flex;
+  justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.proj-head h3{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:400;color:var(--gold)}
+.proj-status{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  padding:5px 10px;background:var(--rule);color:var(--bone-dim)}
+.proj-status.unlocked{background:var(--oxblood);color:var(--bone)}
+.proj-body{padding:20px 22px}
+.proj-step{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--bone-dim);margin-bottom:10px}
+.proj-links{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.proj-link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--ink);
+  border:1px solid var(--rule);text-decoration:none;transition:all .15s}
+.proj-link:hover{border-color:var(--gold)}
+.proj-link.visited{border-color:var(--brass);background:#221c14}
+.proj-link .num{flex-shrink:0;width:22px;height:22px;border:1.5px solid var(--gold);
+  color:var(--gold);display:grid;place-items:center;font-size:11px;font-weight:700;
+  font-family:'Inter',sans-serif}
+.proj-link.visited .num{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.proj-link .lbl{font-size:13.5px;color:var(--bone);flex:1;font-weight:400}
+.proj-hint{font-size:12px;color:var(--bone-dim);margin-top:6px;font-style:italic}
+
+.lock{margin-top:16px;padding:26px 20px;text-align:center;border:1px dashed var(--rule)}
+.lock svg{width:26px;height:26px;stroke:var(--bone-dim);fill:none;stroke-width:1.6;
+  margin-bottom:10px}
+.lock p{font-size:13px;color:var(--bone-dim);line-height:1.6;max-width:340px;margin:0 auto;
+  font-weight:300}
+.lock b{color:var(--gold)}
+
+.unlocked-content{margin-top:18px;padding-top:18px;border-top:1px solid var(--rule)}
+.proj-concept{background:#20222c;border-left:3px solid var(--gold);padding:14px 16px;
+  margin-bottom:16px;font-size:13.5px;line-height:1.65;color:#d9d4c8;font-weight:300}
+.proj-concept b{color:var(--gold);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  display:block;margin-bottom:6px;font-family:'Inter',sans-serif}
+.proj-task{font-size:14.5px;line-height:1.65;color:var(--bone);margin-bottom:14px;font-weight:300}
+.proj-task b{color:var(--oxblood)}
+
+.ex-toggle{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);
+  background:none;border:1px solid var(--brass);padding:8px 14px;cursor:pointer;
+  margin-bottom:12px;transition:all .15s}
+.ex-toggle:hover{background:var(--brass);color:var(--ink)}
+.example{display:none;background:var(--ink);border-left:3px solid var(--brass);
+  padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.75;color:#c9c4b9;
+  white-space:pre-wrap;font-weight:300}
+.example.show{display:block}
+
+.proj-write{margin-top:8px}
+.proj-write label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--bone-dim);display:block;margin-bottom:8px}
+textarea.entrega{width:100%;min-height:190px;background:var(--ink);color:var(--bone);
+  border:1px solid var(--rule);padding:14px;font-family:'Inter',sans-serif;font-size:13.5px;
+  line-height:1.6;resize:vertical;font-weight:300}
+textarea.entrega:focus{outline:none;border-color:var(--brass)}
+.proj-actions{display:flex;justify-content:space-between;align-items:center;
+  margin-top:10px;flex-wrap:wrap;gap:10px}
+.savebar{font-size:11px;color:var(--bone-dim)}
+.savebar.saved{color:var(--brass)}
+.markdone{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--oxblood);color:var(--bone);border:none;padding:10px 18px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif}
+.markdone.on{background:var(--ink);color:var(--brass);border:1.5px solid var(--brass)}
+.markdone svg{width:13px;height:13px;stroke:currentColor;stroke-width:3;fill:none}
+
 .sat{margin-top:30px;padding:26px;border:1px solid var(--brass);position:relative}
 .sat .lbl{position:absolute;top:-8px;left:20px;background:var(--ink);padding:0 10px;
   font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
 .sat h3{font-family:'Bodoni Moda',serif;font-size:22px;font-weight:400;margin-bottom:8px}
 .sat p{font-size:14px;line-height:1.6;color:#c9c4b9;font-weight:300}
+.sat textarea{width:100%;min-height:80px;margin-top:12px;background:rgba(0,0,0,.2);
+  border:1px solid rgba(176,141,87,.3);color:#fff;padding:10px;font-family:'Inter',sans-serif;
+  font-size:13px}
+.sat textarea::placeholder{color:rgba(242,237,228,.4)}
+
 .tools{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px}
 .tools button{background:none;border:none;cursor:pointer;padding:0 0 3px;
   font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
@@ -116,6 +198,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--
   </div>
   <div class="index" id="index"></div>
   <div id="list"></div>
+  <div class="proj" id="proj"></div>
   <div class="sat" id="sat"><span class="lbl">Sábado</span></div>
   <div class="tools">
     <button id="btn-copy">Copiar resumen para papá</button>
@@ -123,7 +206,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--
   </div>
   <div class="foot">
     Un "no sé" bien puesto vale más que una respuesta adivinada — el diagnóstico solo sirve
-    si es honesto. Tu progreso se guarda en este navegador.
+    si es honesto. Tu progreso, tus respuestas y tus links visitados se guardan en este navegador.
   </div>
 </div>
 <div class="toast" id="toast"></div>
@@ -136,7 +219,9 @@ var K_CHEM='https://www.khanacademy.org/science/ms-chemistry';
 var K_PHYS='https://www.khanacademy.org/science/ms-physics';
 var K_HIST='https://www.khanacademy.org/humanities/world-history';
 var DAYS=['Lun','Mar','Mié','Jue','Vie'];
+var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Viernes'};
 
+/* ===== DATA: Lunes y Martes de semana 1 quedan EXACTAMENTE como estaban — ya los hizo ===== */
 var DATA={
 1:{
 Lun:{hrs:'cuatro horas',blocks:[
@@ -150,102 +235,367 @@ Mar:{hrs:'tres horas',blocks:[
 {t:'11:00 12:00',s:'Humanities — Diagnóstico',d:'Analiza una fuente histórica: quién la escribió, cuándo, para quién, y qué deja fuera.'},
 {t:'2:00 2:45',s:'Storytelling',d:'Estructura narrativa aplicada a contenido editorial.',a:1},
 {t:'2:45 3:00',s:'Reflexión',d:'¿Qué te resultó más difícil de analizar en la fuente?',a:1}]},
+
+/* ===== Desde aquí: nueva arquitectura — proyecto enfocado en Historical Subcultures & Radical Streetwear ===== */
 'Mié':{hrs:'tres horas',blocks:[
-{t:'9:00 10:00',s:'Math — Diagnóstico II',d:'Exponentes y notación científica. Unidades 3 y 4.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
-{t:'11:00 12:00',s:'Science — Diagnóstico III',d:'Física básica: fuerza, movimiento y energía.',l:[['Khan · MS Physics',K_PHYS]]},
-{t:'2:00 2:45',s:'Diseño',d:'Identidad visual básica para tu proyecto.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]},
-{t:'2:45 3:00',s:'Reflexión',d:'¿Qué tres palabras describen el tono visual que buscas?',a:1}]},
+{t:'9:00 10:00',s:'Math — Diagnóstico II',d:'Exponentes y notación científica.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Exponentes y notación científica']}},
+{t:'11:00 12:00',s:'Science — Diagnóstico III',d:'Física básica: fuerza, movimiento y energía.',
+  l:[['Khan · MS Physics',K_PHYS]],
+  khan:{course:'Middle school physics',units:['Motion and forces']}},
+{t:'2:00 2:45',s:'Diseño',d:'El vocabulario visual de la rebeldía. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]}
+]},
 Jue:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Diagnóstico II',d:'Elige un evento del siglo XX y escribe tres causas y tres consecuencias.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'English — Diagnóstico',d:'Write a one-paragraph thesis about something you believe, with two pieces of evidence.'},
 {t:'2:00 2:45',s:'Negocio',d:'Producto o servicio: ¿dónde cae exactamente un proyecto editorial?',a:1},
-{t:'2:45 3:30',s:'IA',d:'Conversa con Claude sobre un movimiento social que no conozcas bien.',a:1},
-{t:'3:30 4:00',s:'Proyecto',d:'Investiga tres historias piloto para tu serie.',a:1}]},
+{t:'2:45 3:30',s:'IA',d:'Moda como protesta: causa y efecto. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 Vie:{hrs:'cuatro horas',blocks:[
-{t:'9:00 10:00',s:'Science — Repaso',d:'Vuelve a lo que te costó. Anota qué temas necesitan más trabajo.'},
-{t:'11:00 12:00',s:'Math — Repaso',d:'Identifica tus tres temas más flojos y anótalos para la semana dos.'},
+{t:'9:00 10:00',s:'Science — Repaso',d:'Los tres cursos: célula, átomos y tabla periódica, fuerza y movimiento.',
+  l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
+  khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (repaso)','Classifying matter (repaso)','Motion and forces (repaso)'],review:true}},
+{t:'11:00 12:00',s:'Math — Repaso',d:'Ecuaciones lineales, exponentes y notación científica.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Ecuaciones lineales y exponentes (repaso)'],review:true}},
 {t:'2:00 2:45',s:'Negocio',d:'Entrevista a papá sobre Jepa Fashion y El Escaparate de Lolita. Prepara cinco preguntas antes.',a:1},
-{t:'2:45 3:30',s:'Storytelling',d:'Cómo escribir un lead que enganche desde la primera línea.',a:1},
-{t:'3:30 4:00',s:'Proyecto',d:'Escribe tu primera pieza. Trescientas palabras.',a:1}]}
+{t:'2:45 3:30',s:'Storytelling',d:'Quién es quién: perfiles de figuras clave. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
 },
 2:{
 Lun:{hrs:'cuatro horas',blocks:[
-{t:'9:00 10:00',s:'Math — Ecuaciones a fondo',d:'Lineales y de dos pasos, hasta que salgan solas.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
-{t:'11:00 12:00',s:'Science — Célula a fondo',d:'Procesos: fotosíntesis y respiración celular.',l:[['Khan · MS Biology',K_BIO]]},
+{t:'9:00 10:00',s:'Math — Ecuaciones a fondo',d:'Lineales y de dos pasos, hasta que salgan solas.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Ecuaciones lineales y de dos pasos']}},
+{t:'11:00 12:00',s:'Science — Célula a fondo',d:'Procesos: fotosíntesis y respiración celular.',
+  l:[['Khan · MS Biology',K_BIO]],
+  khan:{course:'Middle school biology',units:['Cells and organisms (continuar)']}},
 {t:'2:00 2:45',s:'Negocio',d:'El cliente: ¿quién lee tu proyecto y por qué le importaría?',a:1},
-{t:'2:45 3:30',s:'IA',d:'Prompting avanzado: contexto, rol y formato.',a:1},
-{t:'3:30 4:00',s:'Proyecto',d:'Define la persona de tu audiencia con detalle real.',a:1}]},
+{t:'2:45 3:30',s:'IA',d:'Las técnicas DIY: el cómo, no solo el por qué. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 Mar:{hrs:'tres horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Movimientos sociales',d:'Siglo XX: elige uno y traza su línea de tiempo completa.',l:[['Khan · World history',K_HIST]]},
-{t:'11:00 12:00',s:'Math — Sistemas de ecuaciones',d:'Método gráfico y sustitución.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
-{t:'2:00 2:45',s:'Storytelling',d:'Cómo estructurar una serie, no solo una pieza suelta.',a:1},
-{t:'2:45 3:00',s:'Reflexión',d:'¿Qué conecta las historias que elegiste?',a:1}]},
+{t:'11:00 12:00',s:'Math — Sistemas de ecuaciones',d:'Método gráfico y sustitución.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Sistemas de ecuaciones']}},
+{t:'2:00 2:45',s:'Storytelling',d:'De la calle a la pasarela. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 'Mié':{hrs:'tres horas',blocks:[
-{t:'9:00 10:00',s:'Science — Química',d:'Tabla periódica: tendencias y propiedades.',l:[['Khan · MS Chemistry',K_CHEM]]},
+{t:'9:00 10:00',s:'Science — Química',d:'Tabla periódica: tendencias y propiedades.',
+  l:[['Khan · MS Chemistry',K_CHEM]],
+  khan:{course:'Middle school chemistry',units:['Classifying matter']}},
 {t:'11:00 12:00',s:'Humanities — Análisis',d:'Escribe 300 palabras explicando por qué el movimiento que elegiste ayer cambió algo.'},
-{t:'2:00 2:45',s:'Diseño',d:'Plantilla visual reutilizable para toda tu serie.',a:1,l:[['Canva','https://www.canva.com/']]},
-{t:'2:45 3:00',s:'Reflexión',d:'¿Tu plantilla funciona para las tres historias piloto?',a:1}]},
+{t:'2:00 2:45',s:'Diseño',d:'Construí tu moodboard visual. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
 Jue:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'English — Thesis y evidencia',d:'Turn your Humanities paragraph into a proper argumentative essay opening.'},
-{t:'11:00 12:00',s:'Science — Física',d:'Movimiento: velocidad, rapidez y aceleración.',l:[['Khan · MS Physics',K_PHYS]]},
-{t:'2:00 2:45',s:'Negocio',d:'Brainstorm de diez historias posibles para tu serie.',a:1},
-{t:'2:45 3:30',s:'IA',d:'IA para research histórico. Verifica siempre lo que te diga — es el punto del ejercicio.',a:1},
-{t:'3:30 4:00',s:'Proyecto',d:'Escribe el one-pager de tu proyecto.',a:1}]},
+{t:'11:00 12:00',s:'Science — Física',d:'Movimiento: velocidad, rapidez y aceleración.',
+  l:[['Khan · MS Physics',K_PHYS]],
+  khan:{course:'Middle school physics',units:['Motion and forces (continuar)']}},
+{t:'2:00 2:45',s:'Negocio',d:'Brainstorm de diez ángulos posibles para tu serie.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Escribir tu primera pieza completa. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 Vie:{hrs:'cuatro horas',blocks:[
-{t:'9:00 10:00',s:'Math — Repaso y quiz',d:'Haz el quiz del curso. Guarda el puntaje para comparar en un mes.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
-{t:'11:00 12:00',s:'Science — Repaso y quiz',d:'Los tres cursos. Anota los tres puntajes por separado.',l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]]},
+{t:'9:00 10:00',s:'Math — Repaso y quiz',d:'Haz el quiz del curso. Guarda el puntaje para comparar en un mes.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Repaso general + quiz'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso y quiz',d:'Los tres cursos. Anota los tres puntajes por separado.',
+  l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
+  khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (quiz)','Classifying matter (quiz)','Motion and forces (quiz)'],review:true}},
 {t:'2:00 2:45',s:'Negocio',d:'Define el formato final: newsletter, Instagram, podcast, o una combinación.',a:1},
-{t:'2:45 3:30',s:'Storytelling',d:'Escribir para audio versus escribir para lectura.',a:1},
-{t:'3:30 4:00',s:'Proyecto',d:'Produce la pieza uno completa.',a:1}]}
+{t:'2:45 3:30',s:'Storytelling',d:'Producir y presentar. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+}};
+
+/* ===== PROYECTO DEL DÍA — Historical Subcultures & Radical Streetwear Movements ===== */
+/* Punk (Westwood/McLaren, Londres 1970s) · Blitz Kids / New Romantic (Steve Strange,
+   Judy Blame, Londres 1979-80) · Harajuku street style (FRUiTS, Shoichi Aoki, Tokio 1990s) */
+var PROJECTS={
+1:{
+'Mié':{
+  learn:[
+    ['SEX: la boutique que definió el punk (London Museum)','https://www.londonmuseum.org.uk/collections/london-stories/vivienne-westwood-malcolm-mclaren-kings-road-royalty/'],
+    ['Blitz Kids y el nacimiento del New Romantic (Wikipedia)','https://en.wikipedia.org/wiki/Blitz_Kids_(New_Romantics)']
+  ],
+  concept:'Vocabulario visual de la rebeldía — Cada subcultura tiene una gramática visual repetible: elementos que, combinados, "leen" como rebeldía sin necesidad de explicación. El punk tenía imperdibles, tartán y cortes deliberadamente crudos. Los Blitz Kids tenían maquillaje teatral y prendas hechas a mano. Harajuku mezclaba capas, colores imposibles y accesorios kawaii. Tu trabajo es aprender a leer ese vocabulario antes de escribir sobre él.',
+  task:'Elegí <b>un movimiento</b> (punk, Blitz Kids/New Romantic, o Harajuku) y <b>un look</b> representativo de ese movimiento. Describilo prenda por prenda y explicá qué mensaje transmite cada parte.',
+  tmpl:'MOVIMIENTO ELEGIDO: \n\nDESCRIPCIÓN DEL LOOK (prenda por prenda):\n\n\n¿Qué elementos son DIY o hechos a mano?: \n\n¿Qué materiales o técnicas "rompen" la norma de la moda convencional?: \n\n¿Qué mensaje social transmite este look, en tus palabras?: ',
+  example:'Movimiento: Punk (Londres, boutique SEX, 430 King\'s Road)\n\nDescripción: camiseta rasgada intencionalmente y sostenida con imperdibles grandes, estampado provocador, pantalón tipo bondage con correas, tartán combinado con cuero.\n\nElementos DIY: los imperdibles no son un accesorio — reemplazan la costura, mostrando que la prenda fue "reparada" a la vista de todos.\n\nQué rompe la norma: el tartán, típicamente asociado a la tradición formal escocesa, se combina con cuero y bondage — dos mundos que no deberían tocarse.\n\nMensaje: la ropa está deliberadamente inacabada. Nada está "resuelto" — y esa falta de resolución es el punto.'
+},
+Jue:{
+  learn:[
+    ['Meet the London Club Kids Who Made Punk Go Pop','https://www.messynessychic.com/2021/04/30/meet-the-london-club-kids-who-made-punk-go-pop/'],
+    ['430 King\'s Road: la historia de McLaren y Westwood','https://punk77.co.uk/mclaren-westwood/']
+  ],
+  concept:'Causa y efecto en moda — Ninguna subcultura nace de la nada. El punk británico surgió en medio de una crisis económica y desempleo juvenil a mediados de los 70. Los Blitz Kids surgieron un par de años después, cansados del puro nihilismo punk, buscando algo más teatral. Harajuku surgió como reacción a la moda de diseñador rígida de los 80 en Japón. Cada movimiento responde a lo que vino justo antes.',
+  task:'Elegí uno de los tres movimientos. Escribí qué condición social o cultural lo generó, y qué decisión de diseño específica respondió directamente a esa condición.',
+  tmpl:'MOVIMIENTO: \n\nCONTEXTO SOCIAL O CULTURAL: \n\n\nDECISIÓN DE DISEÑO ESPECÍFICA QUE RESPONDE A ESE CONTEXTO: \n\n\n¿Por qué esa decisión "tenía sentido" en ese momento?: ',
+  example:'Movimiento: Blitz Kids (Londres, 1979-1980)\n\nContexto: el punk ya se sentía agotado — puro nihilismo, sin salida. Steve Strange y Rusty Egan buscaban algo distinto: empezaron noches temáticas con música de Bowie y Roxy Music en un club llamado Billy\'s, y luego se mudaron al Blitz, en Covent Garden.\n\nDecisión de diseño: en vez de ropa rasgada y agresiva, los Blitz Kids usaban disfraces hechos en casa, maquillaje teatral exagerado y un aire andrógino y aspiracional.\n\nPor qué tenía sentido: si el punk decía "todo está roto", los Blitz Kids decían "construyamos una fantasía nueva con lo que tenemos" — el DIY seguía ahí, pero apuntaba hacia la belleza en vez de hacia la ruptura.'
+},
+Vie:{
+  learn:[
+    ['Vivienne Westwood (Wikipedia)','https://en.wikipedia.org/wiki/Vivienne_Westwood'],
+    ['Shoichi Aoki, fundador de FRUiTS (Wikipedia)','https://en.wikipedia.org/wiki/Shoichi_Aoki']
+  ],
+  concept:'Fuentes primarias vs secundarias, aplicado a moda — Un perfil bien investigado no repite lo que dice una sola fuente. Cruza al menos dos y distingue hechos verificables (fechas, lugares, qué pasó) de interpretación (por qué importa). Es lo mismo que trabajaste el martes con fuentes históricas — ahora aplicado a personas reales de la moda.',
+  task:'Escribí perfiles cortos de <b>2 figuras clave</b> de tu movimiento. Usá al menos 2 fuentes por persona y no copies texto — parafraseá con tus palabras.',
+  tmpl:'FIGURA 1: \nFuente(s) consultada(s): \nHechos verificables (qué hizo, cuándo, dónde): \n\nPor qué importa (tu interpretación): \n\n\nFIGURA 2: \nFuente(s) consultada(s): \nHechos verificables: \n\nPor qué importa: ',
+  example:'Figura 1: Vivienne Westwood\nFuentes: London Museum, Wikipedia\nHechos verificables: junto a Malcolm McLaren, dirigió una tienda en 430 King\'s Road, Londres, que cambió de nombre varias veces entre 1971 y 1980 (Let It Rock, SEX, Seditionaries). Diseñó ropa que se volvió el uniforme visual del punk británico.\n\nPor qué importa: no diseñaba "para" el punk desde afuera — sus prendas literalmente vestían a la escena, incluyendo a la banda que McLaren manejaba, Sex Pistols. Es difícil separar la historia del punk de la historia de esa tienda.'
+}
+},
+2:{
+Lun:{
+  learn:[
+    ['Sex (boutique) — Wikipedia','https://en.wikipedia.org/wiki/Sex_(boutique)'],
+    ['Las vidas de la tienda Worlds End de Westwood (AnOther)','https://www.anothermag.com/fashion-beauty/8672/clothes-for-heroes-story-of-vivienne-westwoods-worlds-end-shop-sex-kings-road']
+  ],
+  concept:'Técnica como mensaje — El DIY (hazlo tú misma) no es solo estética: es una postura. Cuando reparás algo a la vista con un imperdible en vez de esconder la costura, estás diciendo que no te importa que se note. Cada técnica cuenta una historia sobre qué rechaza ese movimiento.',
+  task:'Investigá <b>3 técnicas DIY</b> concretas usadas en tu movimiento (por ejemplo: imperdibles, deconstrucción de costuras, parches pintados a mano, decoloración). Describí cómo se hacía cada una y qué transmitía.',
+  tmpl:'TÉCNICA 1: \nCómo se hacía: \nQué mensaje transmitía: \n\nTÉCNICA 2: \nCómo se hacía: \nQué mensaje transmitía: \n\nTÉCNICA 3: \nCómo se hacía: \nQué mensaje transmitía: ',
+  example:'Técnica: imperdibles como cierre visible\nCómo se hacía: en vez de coser un desgarro, se sujetaba con imperdibles grandes, a veces varios juntos, dejando la reparación completamente a la vista.\nQué transmitía: rechazo a la idea de que la ropa "rota" debe ocultarse. Convertía un defecto en la pieza central del look.'
+},
+Mar:{
+  learn:[
+    ['Vivienne Westwood (Britannica)','https://www.britannica.com/biography/Vivienne-Westwood'],
+    ['FRUiTS (magazine) — Wikipedia','https://en.wikipedia.org/wiki/Fruits_(magazine)']
+  ],
+  concept:'Capital subcultural y su absorción — Cuando algo underground se vuelve tendencia comercial, algo se gana (alcance, reconocimiento) y algo se pierde (el contexto de protesta original). Entender ese trade-off es clave para escribir sobre moda con profundidad, no solo con nostalgia.',
+  task:'Buscá <b>un ejemplo</b> de cómo tu movimiento pasó de la calle a algo comercial o institucional. Escribí qué cambió en esa traducción.',
+  tmpl:'EJEMPLO ENCONTRADO: \n\n¿Qué elementos se mantuvieron?: \n\n¿Qué se perdió o se suavizó en el camino?: \n\nTu opinión: ¿esa evolución traicionó el espíritu original, o lo expandió?: ',
+  example:'Ejemplo: Vivienne Westwood pasó de dirigir una tienda confrontacional en King\'s Road a mostrar colecciones en las semanas de moda de París y Londres, y en 2006 fue nombrada Dama Comendadora del Imperio Británico — la misma monarquía que sus camisetas de los 70 satirizaban.\n\nQué se mantuvo: el tartán, la silueta rebelde, cierto espíritu provocador en sus declaraciones públicas.\n\nQué se perdió: la confrontación callejera directa — ya no era una tienda a la que la policía escoltaba clientes, sino una casa de moda establecida.\n\nMi opinión: lo expandió — llevó ideas punk a audiencias que nunca hubieran entrado a esa tienda, aunque perdiera parte de su filo original.'
+},
+'Mié':{
+  learn:[['Canva','https://www.canva.com/']],
+  concept:'Moodboards como herramienta de diseño — Antes de escribir, un editor visual reúne referencias: colores, texturas, siluetas, caras. El moodboard no es decoración — es el documento que asegura que cada pieza de tu serie "se sienta" parte de la misma familia visual.',
+  task:'Armá un moodboard con <b>5 a 8 elementos</b> de referencia (colores, texturas, siluetas, figuras clave) que van a definir la identidad visual de tu proyecto.',
+  tmpl:'PALETA DE COLORES (2-3 colores + por qué):\n\n\nTEXTURAS O MATERIALES CLAVE:\n\n\nSILUETA O FORMA QUE SE REPITE:\n\n\nFIGURAS O REFERENCIAS VISUALES INCLUIDAS:\n\n\nLINK O DESCRIPCIÓN DE TU MOODBOARD TERMINADO: ',
+  example:'Paleta: negro + rojo sangre + un acento metálico — negro por el fondo punk/gótico común a los tres movimientos, rojo por la agresión visual, metálico por los imperdibles y tachas.\n\nTexturas: cuero, tartán, red rasgada, parches cosidos a mano.\n\nSilueta: prendas ajustadas en el torso, volumen exagerado en un solo punto (hombros, botas, peinado) — el mismo patrón se repite en punk, Blitz Kids y Harajuku, cada uno a su manera.\n\nReferencias: una foto de SEX boutique, una foto de un Blitz Kid en el club, una página de FRUiTS.'
+},
+Jue:{
+  learn:[],
+  concept:'Sintetizar investigación en narrativa — Esta semana investigaste contexto, técnicas, figuras y absorción comercial. Ahora esos cuatro bloques se convierten en una sola pieza con voz propia, no en cuatro respuestas pegadas una tras otra.',
+  task:'Escribí tu <b>primera pieza editorial completa</b> (500 a 700 palabras) sobre tu movimiento, integrando lo que investigaste esta semana y la pasada.',
+  tmpl:'TÍTULO DE TRABAJO: \n\nLA PIEZA (500-700 palabras):\n\n\n\n\n\n¿Qué parte de tu investigación de las semanas 1 y 2 usaste más?: \n\n¿Qué te costó más al escribir?: ',
+  example:'Título de trabajo: "El imperdible que se volvió manifiesto"\n\nEstructura sugerida: abrí con una imagen concreta (un look específico), después el contexto que lo generó, después una figura clave que lo encarnó, y cerrá con qué queda de ese espíritu hoy — sin necesidad de repetir palabra por palabra tus notas de investigación.'
+},
+Vie:{
+  learn:[],
+  concept:'Producción editorial — Una pieza no está terminada hasta que tiene forma final: título definitivo, algún elemento visual (aunque sea una imagen de referencia), y una versión revisada del texto.',
+  task:'Finalizá tu pieza con al menos un elemento visual y preparala para presentar en el board meeting del sábado.',
+  tmpl:'TÍTULO FINAL: \n\nAJUSTES QUE HICISTE AL TEXTO DESDE EL JUEVES: \n\n\nELEMENTO VISUAL INCLUIDO (describilo o pegá el link): \n\n¿Con qué parte de la pieza estás más conforme?: \n\n¿Qué le falta todavía?: ',
+  example:'Ajustes: corté el segundo párrafo a la mitad — repetía algo que ya había dicho en la introducción. Cambié el cierre para terminar en la figura clave, no en una conclusión genérica.\n\nElemento visual: moodboard de la semana pasada, recortado a 3 imágenes principales.\n\nMás conforme: la apertura — la imagen concreta del look funciona mejor que empezar con historia general.\n\nQué falta: todavía suena más a resumen de investigación que a voz propia en el medio de la pieza.'
+}
 }};
 
 var SAT={1:['Refina y presenta','Dos horas: refina las tres historias piloto y arma un moodboard visual. Una hora: board meeting — presenta el concepto a papá.'],
 2:['Publica la primera pieza','Dos horas: termina la pieza uno con su presentación visual. Una hora: board meeting — presenta la pieza y el one-pager.']};
 
-var week=1,day='Lun',done={};
-var KEY='alessia-progreso-s1s2';
+var week=1,day='Lun';
+var done={}, links={}, entregas={}, khanState={}, satNotes={};
+var K_DONE='alessia-progreso-s1s2', K_LINKS='alessia-links-s1s2', K_ENTREGA='alessia-entrega-s1s2',
+    K_KHAN='alessia-khan-s1s2', K_SAT='alessia-sat-notas-s1s2';
 
-try{var raw=localStorage.getItem(KEY);if(raw)done=JSON.parse(raw);}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
-
-function total(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=DATA[w][d].blocks.length;});});return n;}
-function got(){return Object.keys(done).filter(function(k){return done[k];}).length;}
+function loadAll(){
+  try{var r=localStorage.getItem(K_DONE);if(r)done=JSON.parse(r);}catch(e){}
+  try{var r2=localStorage.getItem(K_LINKS);if(r2)links=JSON.parse(r2);}catch(e){}
+  try{var r3=localStorage.getItem(K_ENTREGA);if(r3)entregas=JSON.parse(r3);}catch(e){}
+  try{var r4=localStorage.getItem(K_KHAN);if(r4)khanState=JSON.parse(r4);}catch(e){}
+  try{var r5=localStorage.getItem(K_SAT);if(r5)satNotes=JSON.parse(r5);}catch(e){}
+}
+function saveDone(){try{localStorage.setItem(K_DONE,JSON.stringify(done));}catch(e){}}
+function saveLinks(){try{localStorage.setItem(K_LINKS,JSON.stringify(links));}catch(e){}}
+function saveEntregas(){try{localStorage.setItem(K_ENTREGA,JSON.stringify(entregas));}catch(e){}}
+function saveKhan(){try{localStorage.setItem(K_KHAN,JSON.stringify(khanState));}catch(e){}}
+function saveSat(){try{localStorage.setItem(K_SAT,JSON.stringify(satNotes));}catch(e){}}
 
 var CHECK='<svg viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></svg>';
+var ICON_STAR='<svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>';
+var ICON_LOCK='<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
 
 function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(function(){t.classList.remove('show');},2200);}
+
+function hasProject(w,d){return !!(PROJECTS[w] && PROJECTS[w][d]);}
+function dayTotalUnits(w,d){return DATA[w][d].blocks.length + (hasProject(w,d)?1:0);}
+function allTotal(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;}
+function allDone(){return Object.keys(done).filter(function(k){return done[k];}).length;}
 
 function renderDays(){
   var w=document.getElementById('days');w.innerHTML='';
   DAYS.forEach(function(d){
     var all=DATA[week][d].blocks.every(function(_,i){return done[week+'|'+d+'|'+i];});
+    if(hasProject(week,d)) all = all && done[week+'|'+d+'|proyecto'];
     var b=document.createElement('button');
     b.className='day'+(d===day?' sel':'')+(all?' full':'');
     b.textContent=d;b.onclick=function(){day=d;render();};
     w.appendChild(b);});
 }
-function render(){
-  renderDays();
-  document.getElementById('num').textContent=got();
-  document.getElementById('tot').textContent=total();
+
+function renderList(){
   var info=DATA[week][day];
-  document.getElementById('index').textContent=day+', semana '+(week===1?'uno':'dos')+' — '+info.hrs+', '+info.blocks.length+' bloques';
+  document.getElementById('num').textContent=allDone();
+  document.getElementById('tot').textContent=allTotal();
+  var extra=hasProject(week,day)?' + proyecto':'';
+  document.getElementById('index').textContent=day+', semana '+(week===1?'uno':'dos')+' — '+info.hrs+', '+info.blocks.length+' bloques'+extra;
   var list=document.getElementById('list');list.innerHTML='';
   info.blocks.forEach(function(b,i){
     var key=week+'|'+day+'|'+i,isDone=!!done[key];
     var row=document.createElement('div');
     row.className='entry'+(b.a?' aft':'')+(isDone?' done':'');
-    var links='';
-    if(b.l){links='<div class="links">'+b.l.map(function(x){
+    var linksHtml='';
+    if(b.l){linksHtml='<div class="links">'+b.l.map(function(x){
       return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>';}).join('')+'</div>';}
     var flag=b.flag?'<div class="flag">'+b.flag+'</div>':'';
+
+    var khanHtml='';
+    if(b.khan){
+      var unitsHtml=b.khan.units.map(function(u,ui){
+        var kkey=week+'|'+day+'|'+i+'|'+ui;
+        var checked=!!khanState[kkey];
+        return '<label class="khan-unit'+(checked?' checked':'')+'" data-kkey="'+kkey+'">'+
+          '<input type="checkbox" '+(checked?'checked':'')+'> '+u+'</label>';
+      }).join('');
+      khanHtml='<div class="khan"><div class="khan-head">'+ICON_STAR+
+        '<span class="khan-title">Meta Khan Academy hoy — '+b.khan.units.length+
+        (b.khan.units.length===1?' unidad':' unidades')+'</span></div>'+
+        '<div class="khan-course">Curso: '+b.khan.course+'</div>'+unitsHtml+
+        (b.khan.review?'<div class="khan-note">Hoy es repaso: no hay unidad nueva, marcá las que ya dominás mejor.</div>':'')+
+        '</div>';
+    }
+
     row.innerHTML='<div class="time">'+b.t+'</div><div>'+flag+'<div class="subj">'+b.s+'</div>'+
-      '<div class="what">'+b.d+'</div>'+links+'</div>'+
+      '<div class="what">'+b.d+'</div>'+linksHtml+khanHtml+'</div>'+
       '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+CHECK+'</button>';
-    row.querySelector('.check').onclick=function(){done[key]=!done[key];save();render();};
-    list.appendChild(row);});
-  document.getElementById('sat').innerHTML='<span class="lbl">Sábado</span><h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>';
+    row.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();render();};
+    list.appendChild(row);
+
+    if(b.khan){
+      row.querySelectorAll('.khan-unit').forEach(function(el){
+        el.querySelector('input').onchange=function(){
+          var kkey=el.getAttribute('data-kkey');
+          khanState[kkey]=this.checked;
+          saveKhan();
+          el.classList.toggle('checked',this.checked);
+        };
+      });
+    }
+  });
+}
+
+function renderProject(){
+  var box=document.getElementById('proj');
+  if(!hasProject(week,day)){ box.innerHTML=''; return; }
+
+  var p=PROJECTS[week][day];
+  var doneKey=week+'|'+day+'|proyecto';
+  var isDone=!!done[doneKey];
+
+  var totalLinks=(p.learn||[]).length;
+  var visitedCount=(p.learn||[]).map(function(_,i){return week+'|'+day+'|'+i;})
+    .filter(function(k){return !!links[k];}).length;
+  var unlocked = totalLinks===0 || visitedCount>=totalLinks;
+
+  var html='<div class="proj-head"><h3>Proyecto del día — '+DAYFULL[day]+'</h3>'+
+    '<span class="proj-status'+(unlocked?' unlocked':'')+'">'+
+    (unlocked?'Desbloqueado':(visitedCount+'/'+totalLinks+' links abiertos'))+'</span></div>';
+
+  html+='<div class="proj-body">';
+
+  if(totalLinks>0){
+    html+='<div class="proj-step">Paso 1 — Abrí estos links antes de empezar</div><div class="proj-links">';
+    p.learn.forEach(function(l,i){
+      var lkey=week+'|'+day+'|'+i;
+      var vis=!!links[lkey];
+      html+='<a class="proj-link'+(vis?' visited':'')+'" data-lkey="'+lkey+'" href="'+l[1]+'" target="_blank" rel="noopener">'+
+        '<span class="num">'+(vis?'✓':(i+1))+'</span><span class="lbl">'+l[0]+'</span></a>';
+    });
+    html+='</div><div class="proj-hint">Se abren en una pestaña nueva. Al volver, tu tarea de hoy se desbloquea aquí abajo.</div>';
+  }
+
+  if(!unlocked){
+    html+='<div class="lock">'+ICON_LOCK+'<p>Abrí <b>'+(totalLinks-visitedCount)+' link'+
+      ((totalLinks-visitedCount)===1?'':'s')+' más</b> de arriba para desbloquear la tarea de hoy.</p></div>';
+  }else{
+    var entKey=week+'|'+day;
+    var savedText=(entregas[entKey]!==undefined)?entregas[entKey]:p.tmpl;
+    html+='<div class="unlocked-content">'+
+      '<div class="proj-concept"><b>Concepto del día</b>'+p.concept+'</div>'+
+      '<div class="proj-task"><b>Tu tarea:</b> '+p.task+'</div>'+
+      '<button class="ex-toggle" id="ex-toggle">Ver ejemplo</button>'+
+      '<div class="example" id="ex-box">'+p.example+'</div>'+
+      '<div class="proj-write"><label>Tu entregable (esto es lo que ve papá)</label>'+
+      '<textarea class="entrega" id="entrega-box" placeholder="Escribí aquí...">'+
+      escapeHtml(savedText)+'</textarea></div>'+
+      '<div class="proj-actions"><span class="savebar" id="savebar">&nbsp;</span>'+
+      '<button class="markdone'+(isDone?' on':'')+'" id="markdone-btn">'+
+      (isDone?CHECK+' Entregado':'Marcar como entregado')+'</button></div>'+
+      '</div>';
+  }
+
+  html+='</div>';
+  box.innerHTML=html;
+
+  if(totalLinks>0){
+    box.querySelectorAll('.proj-link').forEach(function(a){
+      a.addEventListener('click',function(){
+        var lkey=a.getAttribute('data-lkey');
+        if(!links[lkey]){links[lkey]=true;saveLinks();}
+        setTimeout(render,120);
+      });
+    });
+  }
+
+  if(unlocked){
+    var exToggle=document.getElementById('ex-toggle');
+    var exBox=document.getElementById('ex-box');
+    exToggle.onclick=function(){
+      exBox.classList.toggle('show');
+      exToggle.textContent=exBox.classList.contains('show')?'Ocultar ejemplo':'Ver ejemplo';
+    };
+    var ta=document.getElementById('entrega-box');
+    var bar=document.getElementById('savebar');
+    var saveTimer=null;
+    ta.addEventListener('input',function(){
+      bar.textContent='Escribiendo…';bar.classList.remove('saved');
+      clearTimeout(saveTimer);
+      saveTimer=setTimeout(function(){
+        entregas[week+'|'+day]=ta.value;
+        saveEntregas();
+        bar.textContent='Guardado ✓';bar.classList.add('saved');
+      },500);
+    });
+    document.getElementById('markdone-btn').onclick=function(){
+      done[doneKey]=!done[doneKey];
+      saveDone();
+      render();
+    };
+  }
+}
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderSat(){
+  var box=document.getElementById('sat');
+  var key=week+'|sab';
+  var txt=satNotes[key]||'';
+  box.innerHTML='<span class="lbl">Sábado</span><h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>'+
+    '<textarea placeholder="Notas del board meeting (opcional)...">'+escapeHtml(txt)+'</textarea>';
+  var ta=box.querySelector('textarea');
+  var t=null;
+  ta.addEventListener('input',function(){
+    clearTimeout(t);
+    t=setTimeout(function(){satNotes[key]=ta.value;saveSat();},500);
+  });
+}
+
+function render(){
+  renderDays();
+  renderList();
+  renderProject();
+  renderSat();
 }
 
 document.querySelectorAll('.week button').forEach(function(btn){
@@ -257,14 +607,25 @@ document.getElementById('btn-copy').onclick=function(){
   var lines=['Progreso de Alessia — '+new Date().toLocaleDateString('es-PA'),''];
   [1,2].forEach(function(w){
     var wd=0,wt=0;
-    DAYS.forEach(function(d){DATA[w][d].blocks.forEach(function(_,i){wt++;if(done[w+'|'+d+'|'+i])wd++;});});
+    DAYS.forEach(function(d){
+      var n=dayTotalUnits(w,d);wt+=n;
+      DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])wd++;});
+      if(hasProject(w,d)&&done[w+'|'+d+'|proyecto'])wd++;
+    });
     lines.push('Semana '+w+': '+wd+'/'+wt+' bloques');
     DAYS.forEach(function(d){
-      var bd=0,bt=DATA[w][d].blocks.length;
+      var n=dayTotalUnits(w,d),bd=0;
       DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])bd++;});
-      lines.push('  '+d+': '+bd+'/'+bt+(bd===bt?' ✓':''));});
-    lines.push('');});
-  lines.push('Total: '+got()+' de '+total()+' bloques');
+      if(hasProject(w,d)&&done[w+'|'+d+'|proyecto'])bd++;
+      lines.push('  '+d+': '+bd+'/'+n+(bd===n?' ✓':''));
+      var ent=entregas[w+'|'+d];
+      if(ent&&ent.trim().length>0){
+        lines.push('    Entregable: '+(ent.length>80?ent.slice(0,80)+'…':ent).replace(/\n/g,' '));
+      }
+    });
+    lines.push('');
+  });
+  lines.push('Total: '+allDone()+' de '+allTotal()+' bloques');
   var txt=lines.join('\n');
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(txt).then(function(){toast('Copiado');},function(){fallback(txt);});
@@ -278,10 +639,14 @@ function fallback(txt){
 }
 
 document.getElementById('btn-reset').onclick=function(){
-  if(confirm('¿Seguro? Se borra todo tu progreso de las semanas 1 y 2.')){
-    done={};save();render();toast('Progreso borrado');}
+  if(confirm('¿Seguro? Se borra todo tu progreso, tus links abiertos y tus entregables de las semanas 1 y 2.')){
+    done={};links={};entregas={};khanState={};satNotes={};
+    saveDone();saveLinks();saveEntregas();saveKhan();saveSat();
+    render();toast('Progreso borrado');
+  }
 };
 
+loadAll();
 render();
 })();
 </script>
