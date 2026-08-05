@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--lime:#a3e635;--lime-deep:#65a30d;--ink:#1b1a2a;--ink-2:#2c2a42;
-  --bone:#f7f6f2;--coral:#fb7185;--mute:#8b8aa3}
+  --bone:#f7f6f2;--coral:#fb7185;--mute:#8b8aa3;--gold:#f0c93d}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(--bone);
   min-height:100vh;padding:24px 20px 60px}
 .shell{max-width:940px;margin:0 auto}
@@ -75,9 +75,93 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(
 .links a:hover{transform:translate(1px,-1px);box-shadow:-2px 2px 0 var(--lime-deep)}
 .links a:focus-visible{outline:2px solid var(--bone);outline-offset:2px}
 .links a svg{width:11px;height:11px;stroke:var(--ink);stroke-width:2.5;fill:none}
+
+.khan{margin-top:14px;padding:12px 14px;background:#232140;border:1px dashed #4a4866}
+.khan-head{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.khan-head svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2}
+.khan-title{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold)}
+.khan-course{font-size:11px;color:var(--mute);margin-bottom:8px;font-style:italic}
+.khan-unit{display:flex;align-items:flex-start;gap:9px;padding:5px 0;font-size:13px;
+  color:#dcdbe8;cursor:pointer}
+.khan-unit input{margin-top:3px;accent-color:var(--gold);width:15px;height:15px;flex-shrink:0}
+.khan-unit.checked{color:var(--mute);text-decoration:line-through}
+.khan-note{font-size:11px;color:var(--mute);margin-top:6px}
+
+.proj{margin-top:22px;background:linear-gradient(180deg,#232140,var(--ink-2));
+  border:1px solid #3a3854;padding:0;overflow:hidden}
+.proj-head{padding:18px 22px;border-bottom:1px solid #3a3854;display:flex;
+  justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.proj-head h3{font-family:'Chakra Petch',sans-serif;font-size:19px;color:var(--gold);
+  letter-spacing:-.01em}
+.proj-status{font-family:'Chakra Petch',sans-serif;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;padding:5px 10px;background:#3a3854;color:var(--mute)}
+.proj-status.unlocked{background:var(--lime);color:var(--ink)}
+.proj-body{padding:20px 22px}
+.proj-step{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.proj-links{display:flex;flex-direction:column;gap:8px;margin-bottom:8px}
+.proj-link{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--ink);
+  border:1px solid #3a3854;text-decoration:none;transition:all .15s}
+.proj-link:hover{border-color:var(--gold)}
+.proj-link.visited{border-color:var(--lime-deep);background:#1f2a1a}
+.proj-link .num{flex-shrink:0;width:22px;height:22px;border:1.5px solid var(--gold);
+  color:var(--gold);display:grid;place-items:center;font-family:'Chakra Petch',sans-serif;
+  font-size:11px;font-weight:700}
+.proj-link.visited .num{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.proj-link .lbl{font-size:13.5px;color:var(--bone);flex:1}
+.proj-link .go{width:14px;height:14px;stroke:var(--mute);stroke-width:2.2;fill:none;
+  flex-shrink:0}
+.proj-hint{font-size:12px;color:var(--mute);margin-top:6px;font-style:italic}
+
+.lock{margin-top:16px;padding:26px 20px;text-align:center;border:1px dashed #4a4866}
+.lock svg{width:26px;height:26px;stroke:var(--mute);fill:none;stroke-width:1.8;
+  margin-bottom:10px}
+.lock p{font-size:13px;color:var(--mute);line-height:1.6;max-width:340px;margin:0 auto}
+.lock b{color:var(--gold)}
+
+.unlocked-content{margin-top:18px;padding-top:18px;border-top:1px solid #3a3854}
+.proj-concept{background:#1f1d33;border-left:3px solid var(--gold);padding:13px 16px;
+  margin-bottom:16px;font-size:13.5px;line-height:1.6;color:#dcdbe8}
+.proj-concept b{color:var(--gold);font-family:'Chakra Petch',sans-serif;font-size:11px;
+  letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+.proj-task{font-size:14.5px;line-height:1.6;color:var(--bone);margin-bottom:14px}
+.proj-task b{color:var(--lime)}
+
+.ex-toggle{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--coral);background:none;border:1px solid var(--coral);
+  padding:8px 14px;cursor:pointer;margin-bottom:12px;transition:all .15s}
+.ex-toggle:hover{background:var(--coral);color:var(--ink)}
+.example{display:none;background:var(--ink);border-left:3px solid var(--coral);
+  padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.7;color:#cfced9;
+  white-space:pre-wrap}
+.example.show{display:block}
+
+.proj-write{margin-top:8px}
+.proj-write label{font-family:'Chakra Petch',sans-serif;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mute);display:block;margin-bottom:8px}
+textarea.entrega{width:100%;min-height:190px;background:var(--ink);color:var(--bone);
+  border:1px solid #3a3854;padding:14px;font-family:'DM Sans',sans-serif;font-size:13.5px;
+  line-height:1.6;resize:vertical}
+textarea.entrega:focus{outline:none;border-color:var(--lime)}
+.proj-actions{display:flex;justify-content:space-between;align-items:center;
+  margin-top:10px;flex-wrap:wrap;gap:10px}
+.savebar{font-size:11px;color:var(--mute)}
+.savebar.saved{color:var(--lime)}
+.markdone{font-family:'Chakra Petch',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;background:var(--lime);color:var(--ink);
+  border:none;padding:10px 18px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.markdone.on{background:var(--ink);color:var(--lime);border:1.5px solid var(--lime)}
+.markdone svg{width:13px;height:13px;stroke:currentColor;stroke-width:3;fill:none}
+
 .sat{background:linear-gradient(135deg,var(--lime-deep),#4d7c0f);padding:22px;margin-top:20px}
 .sat h3{font-family:'Chakra Petch',sans-serif;font-size:17px;margin-bottom:8px}
 .sat p{font-size:14px;line-height:1.6;color:#f0f7e0}
+.sat textarea{width:100%;min-height:80px;margin-top:12px;background:rgba(0,0,0,.18);
+  border:1px solid rgba(255,255,255,.25);color:#fff;padding:10px;font-family:'DM Sans',sans-serif;
+  font-size:13px}
+.sat textarea::placeholder{color:rgba(255,255,255,.55)}
+
 .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
 .tools button{font-family:'Chakra Petch',sans-serif;font-size:11px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--mute);
@@ -105,7 +189,7 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(
     </div>
     <div class="meter">
       <div class="mlabel" id="mlabel">0 de 0 bloques</div>
-      <div class="blocks" id="blocks"></div>
+      <div class="blocks" id="blocksEl"></div>
     </div>
   </div>
   <div class="ctrl">
@@ -117,6 +201,7 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(
   </div>
   <div class="daymeta" id="meta"></div>
   <div id="list"></div>
+  <div class="proj" id="proj"></div>
   <div class="sat" id="sat"></div>
   <div class="tools">
     <button id="btn-copy">Copiar resumen para papá</button>
@@ -124,155 +209,450 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--ink);color:var(
   </div>
   <div class="foot">
     Si algo te sale difícil, eso es información útil — no un problema. Cuando no sepas algo,
-    escribe "no sé" y sigue. Tu progreso se guarda solo en este navegador.
+    escribe "no sé" y sigue. Tu progreso, tus respuestas y tus links visitados se guardan
+    solos en este navegador.
   </div>
 </div>
 <div class="toast" id="toast"></div>
 
 <script>
 (function(){
-var KHAN7='https://www.khanacademy.org/math/cc-seventh-grade-math';
 var KHANREADY='https://www.khanacademy.org/math/get-ready-for-7th-grade';
+var KHAN7='https://www.khanacademy.org/math/cc-seventh-grade-math';
 var KHANBIO='https://www.khanacademy.org/science/ms-biology';
 var KHANHIST='https://www.khanacademy.org/humanities/world-history';
+var ALIT='https://americanliterature.com/100-great-short-stories/';
+var REEDSY='https://reedsy.com/short-stories/middle-school/';
 var DAYS=['Lun','Mar','Mié','Jue','Vie'];
+var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Viernes'};
 
 var DATA={
 1:{
 Lun:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Diagnóstico 1',d:'Fracciones y decimales. Haz la Unidad 1 sin apuro. No adivines: si no sabes, sáltalo.',l:[['Khan: Get ready 7th',KHANREADY]]},
-{t:'11:00–12:00',s:'Español — Diagnóstico',d:'Lee un cuento corto y escribe un resumen de 5 oraciones con tus propias palabras.',l:[['Ciudad Seva — cuentos','https://www.ciudadseva.com/textos/cuentos/']]},
+{t:'9:00–10:00',s:'Math — Diagnóstico 1',d:'Fracciones y decimales. No adivines: si no sabes, sáltalo.',
+  l:[['Khan: Get ready 7th',KHANREADY]],
+  khan:{course:'Get ready for 7th grade',units:['Fracciones, decimales y porcentajes']}},
+{t:'11:00–12:00',s:'Español — Diagnóstico',d:'Lee un cuento corto y escribe un resumen de 5 oraciones con tus propias palabras.',
+  l:[['Ciudad Seva — cuentos','https://www.ciudadseva.com/textos/cuentos/']]},
 {t:'2:00–2:45',s:'Negocio',d:'¿Qué es un negocio? Qué le doy a mi audiencia y qué recibo a cambio.',a:1},
-{t:'2:45–3:30',s:'IA',d:'Primera conversación con Claude. Anota 3 cosas que te sorprendieron.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Mira 3 canales de historias que te gusten. ¿Qué tienen en común?',a:1}]},
+{t:'2:45–3:30',s:'IA',d:'Primera conversación con Claude. Anota 3 cosas que te sorprendieron.',a:1}
+]},
 Mar:{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Diagnóstico 2',d:'Porcentajes y razones. Unidades 2 y 3.',l:[['Khan: Get ready 7th',KHANREADY]]},
-{t:'11:00–12:00',s:'English — Diagnóstico',d:'Read a short story and write a 5-sentence summary in your own words.',l:[['CommonLit','https://www.commonlit.org/']]},
-{t:'2:00–2:45',s:'Storycraft',d:'Mira 3 shorts virales de historias. ¿Dónde está el gancho? ¿En qué segundo exacto?',a:1},
-{t:'2:45–3:00',s:'Reflexión',d:'¿Qué aprendiste hoy? ¿Qué te costó más?',a:1}]},
+{t:'9:00–10:00',s:'Math — Diagnóstico 2',d:'Porcentajes y razones.',
+  l:[['Khan: Get ready 7th',KHANREADY]],
+  khan:{course:'Get ready for 7th grade',units:['Tasas y relaciones proporcionales']}},
+{t:'11:00–12:00',s:'English — Diagnóstico',d:'Read a short story and write a 5-sentence summary in your own words.',
+  l:[['American Literature',ALIT]]},
+{t:'2:00–2:45',s:'Storycraft',d:'Mira 3 shorts virales de historias. ¿Dónde está el gancho? Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Diagnóstico 3',d:'Enteros y operaciones combinadas. Unidad 4.',l:[['Khan: Get ready 7th',KHANREADY]]},
-{t:'11:00–12:00',s:'Science — Diagnóstico',d:'Método científico y célula. Unidad 1.',l:[['Khan: MS Biology',KHANBIO]]},
-{t:'2:00–2:45',s:'Video',d:'Revisa tus propios videos de Lime Stories. ¿Qué funciona técnicamente? ¿Qué mejorarías?',a:1},
-{t:'2:45–3:00',s:'Reflexión',d:'Anota tu observación más honesta sobre tu propio trabajo.',a:1}]},
+{t:'9:00–10:00',s:'Math — Diagnóstico 3',d:'Enteros y operaciones combinadas.',
+  l:[['Khan: Get ready 7th',KHANREADY]],
+  khan:{course:'Get ready for 7th grade',units:['Operaciones con números negativos']}},
+{t:'11:00–12:00',s:'Science — Diagnóstico',d:'Método científico y célula.',
+  l:[['Khan: MS Biology',KHANBIO]],
+  khan:{course:'Middle school biology',units:['Cells and organisms']}},
+{t:'2:00–2:45',s:'Video',d:'Revisa tus propios videos de Lime Stories. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Diagnóstico 2',d:'Escribe 200 palabras contando algo que te pasó. Luego revísalo tú y marca lo que cambiarías.'},
-{t:'11:00–12:00',s:'Humanities — Diagnóstico',d:'Línea de tiempo y fuentes. Explora y anota qué te llama la atención.',l:[['Khan: World history',KHANHIST]]},
-{t:'2:00–2:45',s:'Negocio',d:'¿Quién ve mis videos? Describe a tu espectadora ideal: edad, qué le gusta, cuándo ve videos.',a:1},
-{t:'2:45–3:30',s:'IA',d:'IA como editora, no como escritora. ¿Cuál es la diferencia? Pruébalo con un párrafo tuyo.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Elige 2 tipos de historia para probar este mes.',a:1}]},
+{t:'9:00–10:00',s:'Español — Diagnóstico 2',d:'Escribe 200 palabras contando algo que te pasó. Revísalo tú y marca lo que cambiarías.'},
+{t:'11:00–12:00',s:'Humanities — Diagnóstico',d:'Línea de tiempo y fuentes. Explora libremente y anota qué te llama la atención.',
+  l:[['Khan: World history',KHANHIST]]},
+{t:'2:00–2:45',s:'Negocio',d:'¿Quién ve mis videos? Describe a tu espectadora ideal.',a:1},
+{t:'2:45–3:30',s:'IA',d:'IA como editora, no como escritora. Pruébalo con un párrafo tuyo.',a:1}
+]},
 Vie:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Repaso',d:'Vuelve a lo que te costó esta semana. Sin apuro, sin nota.',l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'9:00–10:00',s:'Math — Repaso',d:'Vuelve a lo que te costó esta semana. Sin apuro, sin nota.',
+  l:[['Khan: Get ready 7th',KHANREADY]],
+  khan:{course:'Get ready for 7th grade',units:['Fracciones, decimales y porcentajes (repaso)','Tasas y relaciones proporcionales (repaso)','Operaciones con números negativos (repaso)'],review:true}},
 {t:'11:00–12:00',s:'English — Diagnóstico 2',d:'Write a 200-word story. Any topic. Read it out loud and mark what sounds wrong.'},
 {t:'2:00–2:45',s:'Negocio',d:'¿Por qué el contenido original vale más que el reciclado? Conversa con papá.',a:1},
-{t:'2:45–3:30',s:'Video',d:'¿Usarás tu propia voz o voz sintética? Prueba las dos y decide.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Escribe el borrador de tu primera historia original.',a:1}]}
+{t:'2:45–3:30',s:'Video',d:'¿Usarás tu propia voz o voz sintética? Prueba las dos.',a:1}
+]}
 },
 2:{
 Lun:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Fracciones a fondo',d:'Suma, resta, multiplicación y división. Practica hasta 80% de aciertos.',l:[['Khan: 7th grade math',KHAN7]]},
+{t:'9:00–10:00',s:'Math — Fracciones a fondo',d:'Suma, resta, multiplicación y división. Practica hasta 80% de aciertos.',
+  l:[['Khan: 7th grade math',KHAN7]],
+  khan:{course:'7th grade math',units:['Fracciones, decimales y porcentajes']}},
 {t:'11:00–12:00',s:'Español — Estructura narrativa',d:'Inicio, conflicto, resolución. Analiza un cuento y marca las 3 partes.'},
 {t:'2:00–2:45',s:'Negocio',d:'Nicho: por qué especializarse gana sobre ser generalista.',a:1},
-{t:'2:45–3:30',s:'IA',d:'Prompting: compara un prompt malo y uno bueno para la misma tarea.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Define tu nicho de prueba A.',a:1}]},
+{t:'2:45–3:30',s:'IA',d:'Prompting: compara un prompt malo y uno bueno para la misma tarea.',a:1}
+]},
 Mar:{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Decimales',d:'Conversión fracción ↔ decimal ↔ porcentaje hasta que salga sola.',l:[['Khan: 7th grade math',KHAN7]]},
+{t:'9:00–10:00',s:'Math — Decimales',d:'Conversión fracción ↔ decimal ↔ porcentaje hasta que salga sola.',
+  l:[['Khan: 7th grade math',KHAN7]],
+  khan:{course:'7th grade math',units:['Fracciones, decimales y porcentajes (continuar)']}},
 {t:'11:00–12:00',s:'Español — El gancho',d:'Escribe 5 primeras líneas distintas para la misma historia. Elige la mejor.'},
-{t:'2:00–2:45',s:'Storycraft',d:'Cómo crear tensión en 60 segundos.',a:1},
-{t:'2:45–3:00',s:'Reflexión',d:'¿Cuál de tus 5 líneas funcionó mejor y por qué?',a:1}]},
+{t:'2:00–2:45',s:'Storycraft',d:'Cómo crear tensión en 60 segundos. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
 'Mié':{hrs:'3 horas',blocks:[
 {t:'9:00–10:00',s:'English — Narrative vocabulary',d:'Action verbs and description. Rewrite a boring paragraph using stronger words.'},
-{t:'11:00–12:00',s:'Math — Porcentajes aplicados',d:'Usa los analytics de tu canal: CTR, retención, % de vistas. Calcula a mano primero.'},
-{t:'2:00–2:45',s:'Diseño',d:'Thumbnails: diseña 3 opciones para tu próxima historia.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]},
-{t:'2:45–3:00',s:'Reflexión',d:'¿Cuál thumbnail elegirías tú si fueras la espectadora?',a:1}]},
+{t:'11:00–12:00',s:'Math — Porcentajes aplicados',d:'Usa los analytics de tu canal: CTR, retención, % de vistas. Calcula a mano primero. Hoy no hay unidad nueva de Khan — aplicás lo aprendido a tus propios datos.'},
+{t:'2:00–2:45',s:'Diseño',d:'Thumbnails: diseña 3 opciones. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]}
+]},
 Jue:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Español — Borrador historia 2',d:'Escribe la historia completa en español primero. 300 a 400 palabras.'},
 {t:'11:00–12:00',s:'English — Adaptación',d:"Translate and adapt your Spanish draft. Don't translate word by word — make it sound natural."},
 {t:'2:00–2:45',s:'Negocio',d:'Títulos: cómo se decide qué hace clic.',a:1},
-{t:'2:45–3:30',s:'IA',d:'Usa IA para pulir tu texto, no para escribirlo. Compara antes y después.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Termina la historia 2.',a:1}]},
+{t:'2:45–3:30',s:'IA',d:'Usa IA para pulir tu texto, no para escribirlo. Compara antes y después.',a:1}
+]},
 Vie:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Math — Repaso + quiz',d:'Haz el quiz de la unidad. Guarda un screenshot del puntaje.',l:[['Khan: 7th grade math',KHAN7]]},
-{t:'11:00–12:00',s:'Science — Célula',d:'Estructura y función.',l:[['Khan: MS Biology',KHANBIO]]},
+{t:'9:00–10:00',s:'Math — Repaso + quiz',d:'Haz el quiz de la unidad. Guarda un screenshot del puntaje.',
+  l:[['Khan: 7th grade math',KHAN7]],
+  khan:{course:'7th grade math',units:['Tasas y relaciones proporcionales (quiz final)']}},
+{t:'11:00–12:00',s:'Science — Célula',d:'Estructura y función.',
+  l:[['Khan: MS Biology',KHANBIO]],
+  khan:{course:'Middle school biology',units:['Cells and organisms (completar)']}},
 {t:'2:00–2:45',s:'Negocio',d:'Consistencia: por qué publicar seguido importa más que publicar perfecto.',a:1},
-{t:'2:45–3:30',s:'Video',d:'Ritmo de edición: cortes al servicio de la historia.',a:1},
-{t:'3:30–4:00',s:'Proyecto',d:'Produce la historia 2.',a:1}]}
+{t:'2:45–3:30',s:'Video',d:'Ritmo de edición: cortes al servicio de la historia.',a:1}
+]}
+}};
+
+var PROJECTS={
+1:{
+Lun:{
+  learn:[
+    ['Cómo enganchan los creadores en los primeros segundos','https://nofilmschool.com/how-do-youtube-creators-hook-the-audience-right-away'],
+    ['Técnicas de storytelling de creadores grandes','https://1of10.com/blog/storytelling-techniques-top-youtubers-use-to-keep-viewers-hooked/']
+  ],
+  concept:'Análisis competitivo — Antes de construir algo, mirá qué ya funciona. No para copiarlo: para entender las reglas del juego. Los canales que elegiste ya resolvieron problemas que vos vas a tener. Lo importante no es QUÉ hacen, es POR QUÉ funciona.',
+  task:'Elegí <b>3 canales</b> de historias que te gusten. Mirá 2 videos de cada uno. Completá la tabla de abajo y agregá 3 oraciones finales.',
+  tmpl:'CANAL 1\nNombre: \nTipo de historias: \nDuración: \nVoz real o sintética: \nQué pasa en los primeros 5 segundos: \nQué me hizo seguir viendo: \n\nCANAL 2\nNombre: \nTipo de historias: \nDuración: \nVoz real o sintética: \nQué pasa en los primeros 5 segundos: \nQué me hizo seguir viendo: \n\nCANAL 3\nNombre: \nTipo de historias: \nDuración: \nVoz real o sintética: \nQué pasa en los primeros 5 segundos: \nQué me hizo seguir viendo: \n\nLo que estos 3 canales tienen en común es: \nLo que hacen distinto entre sí es: \nLo que yo haría diferente es: ',
+  example:'Canal 2: MrCreepyPasta\n- Tipo: historias de terror, leyendas de internet\n- Duración: 8 a 15 minutos\n- Voz: real, grave, habla lento\n- Primeros 5 segundos: no hay intro. Empieza leyendo directo, con música de fondo baja.\n- Qué me hizo seguir viendo: la primera frase ya tenía algo raro. No entendí qué pasaba y quise saber.\n\nEn común: los tres empiezan sin intro. Ninguno dice "hola, bienvenidos a mi canal". Van directo a la historia.\nDistinto: uno usa imágenes de stock, otro animación simple, otro solo texto sobre fondo negro.\nLo que yo haría diferente: mis historias son más cortas, necesito un gancho aún más rápido.'
+},
+Mar:{
+  learn:[
+    ['10 estrategias de gancho para YouTube','https://www.retentionrabbit.com/blog/youtube-hook-strategy-to-keep-viewers-watching'],
+    ['Por qué funcionan los open loops','https://1of10.com/blog/storytelling-techniques-top-youtubers-use-to-keep-viewers-hooked/']
+  ],
+  concept:'Open loop — Es una pregunta que abrís y no respondés todavía. El cerebro odia las preguntas sin respuesta, por eso la gente se queda. Malo: "Hoy les cuento la historia de mi vecino." Bueno: "Mi vecino desapareció un martes. El jueves su carro apareció solo en la entrada." La segunda abre un loop: nadie se va sin saber qué pasó.',
+  task:'Mirá <b>3 shorts</b> de historias con muchas vistas. Cronometrá en qué segundo exacto empieza el gancho y qué tipo de gancho es.',
+  tmpl:'SHORT 1\nLink: \nVistas aproximadas: \nPrimera frase textual: \nSegundo exacto del conflicto: \nTipo de gancho (pregunta / afirmación rara / conflicto directo / promesa): \n\nSHORT 2\n(mismo formato)\n\nSHORT 3\n(mismo formato)\n\nEl gancho que más me funcionó fue el Short ___ porque: ',
+  example:'Short 1\n- Vistas: 2.3M\n- Primera frase: "My sister disappeared for three days and came back with someone else\'s ring."\n- Conflicto aparece: segundo 0. La primera frase ES el conflicto.\n- Tipo de gancho: afirmación rara.\n\nEl que más me funcionó fue el Short 1, porque no perdió ni un segundo. No dijo "les voy a contar una historia". Empezó con el problema ya adentro.'
+},
+'Mié':{
+  learn:[
+    ['Tu panel de analytics (YouTube Studio)','https://studio.youtube.com'],
+    ['Cómo leer el reporte de retención (YouTube Help, oficial)','https://support.google.com/youtube/answer/9314415']
+  ],
+  concept:'Retención — Es qué porcentaje del video ve la gente antes de irse. Es la métrica más importante que existe en YouTube. En el gráfico de retención, buscá dónde cae fuerte: ese segundo exacto es donde tu video falló. No es opinión, es data.',
+  task:'Mirá tus propios videos de Lime Stories como si fueras una espectadora que no los hizo. Sé honesta.',
+  tmpl:'PARTE 1 — LO TÉCNICO (por video)\n¿La voz se entiende bien? \n¿El texto en pantalla se lee sin esfuerzo? \n¿La música tapa la voz en algún momento? \n¿En qué segundo me distraje? \n\nPARTE 2 — LO HONESTO\nEl video que más me gusta es ___ porque: \nEl que menos me gusta es ___ porque: \nSi tuviera que rehacer uno, cambiaría: \n\nPARTE 3\nPego aquí el screenshot de mis analytics (o describo las cifras): ',
+  example:'Video 3\n- Voz: se entiende, pero suena muy plana. No cambia de tono ni cuando pasa algo fuerte.\n- Texto: la letra es muy chiquita en las frases largas.\n- Música: en el segundo 12 sube y tapa una palabra importante.\n- Me distraje: segundo 20, cuando la imagen de fondo se quedó quieta mucho rato.\n\nEl que menos me gusta es el video 3, porque la historia era buena pero la conté sin emoción. Suena a que la estoy leyendo, no contando.'
+},
+Jue:{
+  learn:[
+    ['Guía simple de audience persona (sin registro)','https://cardsetter.com/define-your-audience-persona'],
+    ['Cómo se elige un nicho','https://1of10.com/blog/storytelling-techniques-top-youtubers-use-to-keep-viewers-hooked/']
+  ],
+  concept:'Persona — Es una persona ficticia pero específica que representa a tu audiencia. Es imposible escribir "para todos", pero sí podés escribir para una persona con nombre. Cada vez que dudes si algo va en un video, preguntate: ¿mi espectadora se quedaría o se iría?',
+  task:'Escribí quién es tu espectadora ideal, con detalle real. Después elegí <b>2 nichos</b> de historia para probar este mes.',
+  tmpl:'MI ESPECTADORA\nNombre inventado y edad: \n¿Dónde está cuando ve videos? \n¿Qué otros canales ve? \n¿Por qué abriría MI video en vez de seguir scrolleando? \n¿Qué la haría compartirlo? \n\nMIS 2 NICHOS DE PRUEBA\nNicho A: ___ — por qué creo que funciona: \nNicho B: ___ — por qué creo que funciona: \nCómo voy a saber cuál gana: ',
+  example:'Mi espectadora: Sofía, 12 años\n- Ve videos en la cama antes de dormir, con audífonos, sin volumen alto.\n- Ve canales de gaming y de historias raras.\n- Abriría mi video si el título promete algo raro que ella no puede adivinar.\n- Lo compartiría si el final la sorprende.\n\nNicho A: Misterio con final inesperado — funciona porque es lo que Sofía ya busca.\nNicho B: Historias raras pero reales — funciona porque "esto pasó de verdad" genera comentarios.\nCómo voy a saber: publico 2 de cada uno y comparo retención, no vistas.'
+},
+Vie:{
+  learn:[
+    ['100 historias cortas para leer y estudiar estructura',ALIT],
+    ['Más historias cortas, sin registro',REEDSY]
+  ],
+  concept:'Mostrar en vez de contar — Contar: "El señor daba miedo." Mostrar: "El señor no parpadeaba." Contar le da al lector una conclusión. Mostrar le da evidencia para que llegue solo. Lo segundo siempre es más fuerte.',
+  task:'Escribí tu <b>primera historia original</b> completa. Tuya, no de Reddit, no de IA. 250 a 350 palabras.',
+  tmpl:'TÍTULO DE TRABAJO: \n\nLA HISTORIA:\n\n\n\n(marcá con [G] dónde está tu gancho, y con [V] dónde está el giro)\n\nQué me costó más de escribirla: ',
+  example:'Título: El asiento del bus\n\n[G] Todos los días el mismo señor se sentaba en el asiento 14 del bus. Nunca se bajaba.\n\nYo tomaba ese bus a las 3. Él ya estaba. Llegaba a mi parada, me bajaba, y él seguía. Un día lo tomé a las 7 de la mañana. Ahí estaba. Mismo asiento. Misma ropa.\n\nLe pregunté al chofer. Me dijo que no había nadie en el asiento 14. Que ese asiento estaba roto hace años y nadie se sentaba ahí.\n\n[V] Al día siguiente subí y el asiento 14 estaba vacío. Me senté. Y cuando el bus arrancó, escuché a alguien atrás decirle al chofer: "hay una niña en el 14 que nunca se baja".\n\nQué me costó: el final. Escribí tres versiones. Las dos primeras explicaban demasiado.'
+}
+},
+2:{
+Lun:{
+  learn:[['Por qué especializarse gana sobre ser generalista','https://1of10.com/blog/storytelling-techniques-top-youtubers-use-to-keep-viewers-hooked/']],
+  concept:'Posicionamiento — Es el lugar que ocupás en la cabeza de la gente. Si alguien piensa "quiero ver algo raro y corto antes de dormir" y se acuerda de tu canal, ganaste. Lo que NO hacés define tanto como lo que hacés.',
+  task:'Definí tu <b>nicho A</b> con precisión: una línea, tres títulos de ejemplo, y tres cosas que tu canal NO va a ser.',
+  tmpl:'NICHO (5 palabras o menos): \n\nUna línea: "Mi canal cuenta ___ para ___"\n\n3 títulos de ejemplo:\n1. \n2. \n3. \n\nLo que NO va a ser mi canal:\n1. \n2. \n3. ',
+  example:'Nicho: Misterios cortos con final inesperado\nUna línea: Mi canal cuenta misterios de 60 segundos con finales que no se ven venir, para gente que ve videos antes de dormir.\n\n3 títulos:\n1. The seat nobody sits in\n2. She answered a phone that wasn\'t ringing\n3. My brother\'s shadow arrived before he did\n\nLo que NO va a ser:\n1. No va a tener sangre ni cosas asquerosas\n2. No van a ser historias de Reddit\n3. No van a durar más de 90 segundos'
+},
+Mar:{
+  learn:[
+    ['Cómo se construye tensión','https://1of10.com/blog/storytelling-techniques-top-youtubers-use-to-keep-viewers-hooked/'],
+    ['Historias cortas para estudiar ritmo',ALIT]
+  ],
+  concept:'La regla de tres — En narrativa, las cosas pasan tres veces. Una vez es un accidente. Dos veces es coincidencia. Tres veces es un patrón, y los patrones dan miedo o hacen gracia.',
+  task:'Tomá tu historia 1 y reescribí solo el medio, para que la tensión suba más. Entregá las dos versiones lado a lado.',
+  tmpl:'VERSIÓN ORIGINAL (el medio):\n\n\nVERSIÓN NUEVA (con más tensión):\n\n\nQué cambié: ',
+  example:'Original: "Yo tomaba ese bus a las 3. Él ya estaba. Un día lo tomé a las 7 y también estaba."\n\nNueva: "Yo tomaba ese bus a las 3. Él ya estaba. Probé a las 7 de la mañana — estaba. Probé un domingo, cuando casi nadie viaja — estaba. Probé con otro chofer, otra ruta, otro bus. Asiento 14. Misma ropa."\n\nQué cambié: repetí la estructura tres veces. Cada intento fallido hace la cosa más rara.'
+},
+'Mié':{
+  learn:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']],
+  concept:'Testear antes de publicar — Tu opinión sobre tu propio trabajo está sesgada, ya sabés la historia. Preguntarle a 2 personas antes de publicar cuesta 5 minutos y te ahorra publicar algo que no funciona. Preguntá siempre "¿cuál abrirías?", no "¿cuál te gusta?".',
+  task:'Diseñá <b>3 thumbnails</b> distintos para tu próxima historia. Preguntale a 2 personas cuál abrirían.',
+  tmpl:'Thumbnail A — descripción: \nThumbnail B — descripción: \nThumbnail C — descripción: \n\nLe pregunté a ___ y a ___: "¿Cuál de estos abrirías?"\nRespondieron: \n\nElijo el ___ porque: ',
+  example:'A: foto de un bus vacío, texto "SEAT 14"\nB: solo el número 14 grande sobre fondo negro\nC: silueta de una persona sentada, texto "he never gets off"\n\nLe pregunté a mamá y a mi prima. Las dos eligieron C — dijeron que la silueta con la pregunta les dio curiosidad.\n\nElijo C, porque hace una pregunta sin responderla.'
+},
+Jue:{
+  learn:[['Cómo escribir títulos que funcionan','https://www.retentionrabbit.com/blog/youtube-hook-strategy-to-keep-viewers-watching']],
+  concept:'El título es parte de la historia — No describe el video, es su primer segundo. Escribí siempre 5 títulos aunque el primero te guste: el quinto casi siempre es mejor.',
+  task:'Terminá tu <b>historia 2</b> en español y en inglés. Escribí 5 títulos posibles y elegí uno.',
+  tmpl:'HISTORIA 2 (español):\n\n\nHISTORIA 2 (English adaptation):\n\n\n5 títulos posibles:\n1. \n2. \n3. \n4. \n5. \n\nElijo el título ___ porque: ',
+  example:'5 títulos:\n1. The seat nobody sits in\n2. Seat 14\n3. The man who never gets off the bus\n4. He was there at 3. And at 7. And on Sunday.\n5. Nobody sits in seat 14\n\nElijo el 4. Los otros dicen QUÉ pasa. El 4 hace sentir lo raro antes de saber de qué se trata.'
+},
+Vie:{
+  learn:[],
+  concept:'El sistema importa más que el talento — La primera vez todo tarda. La décima vez, la mitad. No es que te volviste más talentosa: dejaste de decidir cosas que ya habías decidido antes. Anotar tu proceso lo vuelve repetible.',
+  task:'Producí la historia 2 y comparala con cuánto tardaste en la historia 1.',
+  tmpl:'Grabar voz: ___ min (historia 1: ___ min)\nBuscar imágenes: ___ min\nEditar: ___ min\nThumbnail: ___ min\nTotal: ___\n\nQué mejoró: \nQué empeoró o tardó igual: ',
+  example:'Grabar voz: 12 min (historia 1: 25 min)\nEditar: 35 min\nThumbnail: 20 min\nTotal: 1h 15\n\nQué mejoró: grabar la voz — ya sé dónde pararme y cómo respirar.\nQué empeoró: el thumbnail, porque hice 3 opciones en vez de 1. Pero eso está bien.'
+}
 }};
 
 var SAT={1:['Sábado — semana 1','2h: produce y publica tu primera historia original. 1h: board meeting con papá.'],
 2:['Sábado — semana 2','2h: publica la historia 2 y compara métricas con la 1. 1h: board meeting — ¿qué funcionó mejor y por qué?']};
 
-var week=1,day='Lun',done={};
-var KEY='alana-progreso-s1s2';
+var week=1,day='Lun';
+var done={}, links={}, entregas={}, khanState={}, satNotes={};
+var K_DONE='alana-progreso-s1s2', K_LINKS='alana-links-s1s2', K_ENTREGA='alana-entrega-s1s2',
+    K_KHAN='alana-khan-s1s2', K_SAT='alana-sat-notas-s1s2';
 
-try{var raw=localStorage.getItem(KEY);if(raw)done=JSON.parse(raw);}catch(e){}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(done));}catch(e){}}
+function loadAll(){
+  try{var r=localStorage.getItem(K_DONE);if(r)done=JSON.parse(r);}catch(e){}
+  try{var r2=localStorage.getItem(K_LINKS);if(r2)links=JSON.parse(r2);}catch(e){}
+  try{var r3=localStorage.getItem(K_ENTREGA);if(r3)entregas=JSON.parse(r3);}catch(e){}
+  try{var r4=localStorage.getItem(K_KHAN);if(r4)khanState=JSON.parse(r4);}catch(e){}
+  try{var r5=localStorage.getItem(K_SAT);if(r5)satNotes=JSON.parse(r5);}catch(e){}
+}
+function saveDone(){try{localStorage.setItem(K_DONE,JSON.stringify(done));}catch(e){}}
+function saveLinks(){try{localStorage.setItem(K_LINKS,JSON.stringify(links));}catch(e){}}
+function saveEntregas(){try{localStorage.setItem(K_ENTREGA,JSON.stringify(entregas));}catch(e){}}
+function saveKhan(){try{localStorage.setItem(K_KHAN,JSON.stringify(khanState));}catch(e){}}
+function saveSat(){try{localStorage.setItem(K_SAT,JSON.stringify(satNotes));}catch(e){}}
 
-function total(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=DATA[w][d].blocks.length;});});return n;}
-function got(){return Object.keys(done).filter(function(k){return done[k];}).length;}
-
-var CHECK='<svg viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></svg>';
-var OUT='<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+var ICON_CHECK='<svg viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></svg>';
+var ICON_OUT='<svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+var ICON_STAR='<svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>';
+var ICON_LOCK='<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>';
 
 function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(function(){t.classList.remove('show');},2200);}
 
-function renderMeter(){
-  var tt=total(),g=got();
-  document.getElementById('mlabel').textContent=g+' de '+tt+' bloques';
-  var w=document.getElementById('blocks');w.innerHTML='';
-  var shown=20,filled=Math.round(g/tt*shown);
-  for(var i=0;i<shown;i++){var b=document.createElement('div');
-    b.className='blk'+(i<filled?' on':'');w.appendChild(b);}
+function dayTotalUnits(w,d){ return DATA[w][d].blocks.length + 1; }
+function allBlocksTotal(){
+  var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;
 }
+function allBlocksDone(){return Object.keys(done).filter(function(k){return done[k];}).length;}
+
 function renderDays(){
   var w=document.getElementById('days');w.innerHTML='';
   DAYS.forEach(function(d){
-    var all=DATA[week][d].blocks.every(function(_,i){return done[week+'|'+d+'|'+i];});
+    var blocks=DATA[week][d].blocks;
+    var all=blocks.every(function(_,i){return done[week+'|'+d+'|'+i];}) && done[week+'|'+d+'|proyecto'];
     var b=document.createElement('button');
     b.className='day'+(d===day?' sel':'');
     b.innerHTML=d+(all?'<span class="dot"></span>':'');
     b.onclick=function(){day=d;render();};
-    w.appendChild(b);});
+    w.appendChild(b);
+  });
 }
-function render(){
-  renderDays();renderMeter();
+function renderMeter(){
+  var tt=allBlocksTotal(),g=allBlocksDone();
+  document.getElementById('mlabel').textContent=g+' de '+tt+' bloques';
+  var w=document.getElementById('blocksEl');w.innerHTML='';
+  var shown=20,filled=Math.round(g/tt*shown);
+  for(var i=0;i<shown;i++){var bl=document.createElement('div');
+    bl.className='blk'+(i<filled?' on':'');w.appendChild(bl);}
+}
+
+function renderList(){
   var info=DATA[week][day];
-  document.getElementById('meta').textContent='Semana '+week+' · '+day+' · '+info.hrs+' · '+info.blocks.length+' bloques';
+  document.getElementById('meta').textContent='Semana '+week+' · '+day+' · '+info.hrs+' · '+(info.blocks.length+1)+' bloques (incluye proyecto)';
   var list=document.getElementById('list');list.innerHTML='';
+
   info.blocks.forEach(function(b,i){
     var key=week+'|'+day+'|'+i,isDone=!!done[key];
     var card=document.createElement('div');
     card.className='card'+(b.a?' aft':'')+(isDone?' done':'');
-    var links='';
-    if(b.l){links='<div class="links">'+b.l.map(function(x){
-      return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+OUT+'</a>';}).join('')+'</div>';}
+
+    var linksHtml='';
+    if(b.l){linksHtml='<div class="links">'+b.l.map(function(x){
+      return '<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+ICON_OUT+'</a>';}).join('')+'</div>';}
+
+    var khanHtml='';
+    if(b.khan){
+      var unitsHtml=b.khan.units.map(function(u,ui){
+        var kkey=week+'|'+day+'|'+i+'|'+ui;
+        var checked=!!khanState[kkey];
+        return '<label class="khan-unit'+(checked?' checked':'')+'" data-kkey="'+kkey+'">'+
+          '<input type="checkbox" '+(checked?'checked':'')+'> '+u+'</label>';
+      }).join('');
+      khanHtml='<div class="khan"><div class="khan-head">'+ICON_STAR+
+        '<span class="khan-title">Meta Khan Academy hoy — '+b.khan.units.length+
+        (b.khan.units.length===1?' unidad':' unidades')+'</span></div>'+
+        '<div class="khan-course">Curso: '+b.khan.course+'</div>'+unitsHtml+
+        (b.khan.review?'<div class="khan-note">Hoy es repaso: no hay unidad nueva, marcá las que ya dominás mejor.</div>':'')+
+        '</div>';
+    }
+
     card.innerHTML='<div class="top"><div><div class="time">'+b.t+'</div><div class="subj">'+b.s+'</div></div>'+
-      '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+CHECK+'</button></div>'+
-      '<div class="what">'+b.d+'</div>'+links;
-    card.querySelector('.check').onclick=function(){done[key]=!done[key];save();render();};
-    list.appendChild(card);});
-  document.getElementById('sat').innerHTML='<h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>';
+      '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+ICON_CHECK+'</button></div>'+
+      '<div class="what">'+b.d+'</div>'+linksHtml+khanHtml;
+
+    card.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();render();};
+    list.appendChild(card);
+
+    if(b.khan){
+      card.querySelectorAll('.khan-unit').forEach(function(el){
+        el.querySelector('input').onchange=function(){
+          var kkey=el.getAttribute('data-kkey');
+          khanState[kkey]=this.checked;
+          saveKhan();
+          el.classList.toggle('checked',this.checked);
+        };
+      });
+    }
+  });
+}
+
+function renderProject(){
+  var p=PROJECTS[week][day];
+  var box=document.getElementById('proj');
+  var doneKey=week+'|'+day+'|proyecto';
+  var isDone=!!done[doneKey];
+
+  var linkKeysFor=function(){return (p.learn||[]).map(function(_,i){return week+'|'+day+'|'+i;});};
+  var visitedCount=linkKeysFor().filter(function(k){return !!links[k];}).length;
+  var totalLinks=(p.learn||[]).length;
+  var unlocked = totalLinks===0 || visitedCount>=totalLinks;
+
+  var html='<div class="proj-head"><h3>Proyecto del día — '+DAYFULL[day]+'</h3>'+
+    '<span class="proj-status'+(unlocked?' unlocked':'')+'">'+
+    (unlocked?'Desbloqueado':(visitedCount+'/'+totalLinks+' links abiertos'))+'</span></div>';
+
+  html+='<div class="proj-body">';
+
+  if(totalLinks>0){
+    html+='<div class="proj-step">Paso 1 — Abrí estos links antes de empezar</div><div class="proj-links">';
+    p.learn.forEach(function(l,i){
+      var lkey=week+'|'+day+'|'+i;
+      var vis=!!links[lkey];
+      html+='<a class="proj-link'+(vis?' visited':'')+'" data-lkey="'+lkey+'" href="'+l[1]+'" target="_blank" rel="noopener">'+
+        '<span class="num">'+(vis?'✓':(i+1))+'</span><span class="lbl">'+l[0]+'</span>'+ICON_OUT+'</a>';
+    });
+    html+='</div><div class="proj-hint">Se abren en una pestaña nueva. Al volver, tu tarea de hoy se desbloquea aquí abajo.</div>';
+  }
+
+  if(!unlocked){
+    html+='<div class="lock">'+ICON_LOCK+'<p>Abrí <b>'+(totalLinks-visitedCount)+' link'+
+      ((totalLinks-visitedCount)===1?'':'s')+' más</b> de arriba para desbloquear la tarea de hoy.</p></div>';
+  }else{
+    var entKey=week+'|'+day;
+    var savedText=(entregas[entKey]!==undefined)?entregas[entKey]:p.tmpl;
+    html+='<div class="unlocked-content">'+
+      '<div class="proj-concept"><b>Concepto del día</b>'+p.concept+'</div>'+
+      '<div class="proj-task"><b>Tu tarea:</b> '+p.task+'</div>'+
+      '<button class="ex-toggle" id="ex-toggle">Ver ejemplo</button>'+
+      '<div class="example" id="ex-box">'+p.example+'</div>'+
+      '<div class="proj-write"><label>Tu entregable (esto es lo que ve papá)</label>'+
+      '<textarea class="entrega" id="entrega-box" placeholder="Escribí aquí...">'+
+      escapeHtml(savedText)+'</textarea></div>'+
+      '<div class="proj-actions"><span class="savebar" id="savebar">&nbsp;</span>'+
+      '<button class="markdone'+(isDone?' on':'')+'" id="markdone-btn">'+
+      (isDone?ICON_CHECK+' Entregado':'Marcar como entregado')+'</button></div>'+
+      '</div>';
+  }
+
+  html+='</div>';
+  box.innerHTML=html;
+
+  if(totalLinks>0){
+    box.querySelectorAll('.proj-link').forEach(function(a){
+      a.addEventListener('click',function(){
+        var lkey=a.getAttribute('data-lkey');
+        if(!links[lkey]){links[lkey]=true;saveLinks();}
+        setTimeout(render,120);
+      });
+    });
+  }
+
+  if(unlocked){
+    var exToggle=document.getElementById('ex-toggle');
+    var exBox=document.getElementById('ex-box');
+    exToggle.onclick=function(){
+      exBox.classList.toggle('show');
+      exToggle.textContent=exBox.classList.contains('show')?'Ocultar ejemplo':'Ver ejemplo';
+    };
+    var ta=document.getElementById('entrega-box');
+    var bar=document.getElementById('savebar');
+    var saveTimer=null;
+    ta.addEventListener('input',function(){
+      bar.textContent='Escribiendo…';bar.classList.remove('saved');
+      clearTimeout(saveTimer);
+      saveTimer=setTimeout(function(){
+        entregas[week+'|'+day]=ta.value;
+        saveEntregas();
+        bar.textContent='Guardado ✓';bar.classList.add('saved');
+      },500);
+    });
+    document.getElementById('markdone-btn').onclick=function(){
+      done[doneKey]=!done[doneKey];
+      saveDone();
+      render();
+    };
+  }
+}
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function renderSat(){
+  var box=document.getElementById('sat');
+  var key=week+'|sab';
+  var txt=satNotes[key]||'';
+  box.innerHTML='<h3>'+SAT[week][0]+'</h3><p>'+SAT[week][1]+'</p>'+
+    '<textarea placeholder="Notas del board meeting (opcional)...">'+escapeHtml(txt)+'</textarea>';
+  var ta=box.querySelector('textarea');
+  var t=null;
+  ta.addEventListener('input',function(){
+    clearTimeout(t);
+    t=setTimeout(function(){satNotes[key]=ta.value;saveSat();},500);
+  });
+}
+
+function render(){
+  renderDays();
+  renderMeter();
+  renderList();
+  renderProject();
+  renderSat();
 }
 
 document.querySelectorAll('.week button').forEach(function(btn){
   btn.onclick=function(){
     document.querySelectorAll('.week button').forEach(function(b){b.classList.remove('sel');});
-    btn.classList.add('sel');week=+btn.dataset.w;day='Lun';render();};});
+    btn.classList.add('sel');week=+btn.dataset.w;day='Lun';render();
+  };
+});
 
 document.getElementById('btn-copy').onclick=function(){
   var lines=['Progreso de Alana — '+new Date().toLocaleDateString('es-PA'),''];
   [1,2].forEach(function(w){
     var wd=0,wt=0;
     DAYS.forEach(function(d){
-      DATA[w][d].blocks.forEach(function(_,i){wt++;if(done[w+'|'+d+'|'+i])wd++;});});
+      var n=DATA[w][d].blocks.length+1;wt+=n;
+      DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])wd++;});
+      if(done[w+'|'+d+'|proyecto'])wd++;
+    });
     lines.push('Semana '+w+': '+wd+'/'+wt+' bloques');
     DAYS.forEach(function(d){
-      var bd=0,bt=DATA[w][d].blocks.length;
+      var n=DATA[w][d].blocks.length+1,bd=0;
       DATA[w][d].blocks.forEach(function(_,i){if(done[w+'|'+d+'|'+i])bd++;});
-      lines.push('  '+d+': '+bd+'/'+bt+(bd===bt?' ✓':''));});
-    lines.push('');});
-  lines.push('Total: '+got()+' de '+total()+' bloques');
+      if(done[w+'|'+d+'|proyecto'])bd++;
+      lines.push('  '+d+': '+bd+'/'+n+(bd===n?' ✓':''));
+      var ent=entregas[w+'|'+d];
+      if(ent&&ent.trim().length>0){
+        lines.push('    Entregable: '+(ent.length>80?ent.slice(0,80)+'…':ent).replace(/\n/g,' '));
+      }
+    });
+    lines.push('');
+  });
+  lines.push('Total: '+allBlocksDone()+' de '+allBlocksTotal()+' bloques');
   var txt=lines.join('\n');
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(txt).then(function(){toast('Copiado — pégalo en WhatsApp');},
@@ -288,10 +668,14 @@ function fallback(txt){
 }
 
 document.getElementById('btn-reset').onclick=function(){
-  if(confirm('¿Seguro? Se borra todo tu progreso de las semanas 1 y 2.')){
-    done={};save();render();toast('Progreso borrado');}
+  if(confirm('¿Seguro? Se borra todo tu progreso, tus links abiertos y tus entregables de las semanas 1 y 2.')){
+    done={};links={};entregas={};khanState={};satNotes={};
+    saveDone();saveLinks();saveEntregas();saveKhan();saveSat();
+    render();toast('Progreso borrado');
+  }
 };
 
+loadAll();
 render();
 })();
 </script>
