@@ -193,6 +193,9 @@ textarea.entrega:focus{outline:none;border-color:var(--brass)}
     <div class="week">
       <button data-w="1" class="sel">Semana uno</button>
       <button data-w="2">Semana dos</button>
+      <button data-w="3">Semana tres</button>
+      <button data-w="4">Semana cuatro</button>
+      <button data-w="5">Semana cinco</button>
     </div>
     <div class="days" id="days"></div>
   </div>
@@ -218,6 +221,8 @@ var K_BIO='https://www.khanacademy.org/science/ms-biology';
 var K_CHEM='https://www.khanacademy.org/science/ms-chemistry';
 var K_PHYS='https://www.khanacademy.org/science/ms-physics';
 var K_HIST='https://www.khanacademy.org/humanities/world-history';
+var K_ALGFULL='https://www.khanacademy.org/math/algebra';
+var K_HSBIO='https://www.khanacademy.org/science/high-school-biology';
 var DAYS=['Lun','Mar','Mié','Jue','Vie'];
 var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Viernes'};
 
@@ -306,7 +311,135 @@ Vie:{hrs:'cuatro horas',blocks:[
 {t:'2:00 2:45',s:'Negocio',d:'Define el formato final: newsletter, Instagram, podcast, o una combinación.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Producir y presentar. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
-}};
+},
+3:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Science — Química a fondo',d:'Enlaces y moléculas — continuación de la tabla periódica.',
+  l:[['Khan · MS Chemistry',K_CHEM]],
+  khan:{course:'Middle school chemistry',units:['Classifying matter (continuar)']}},
+{t:'11:00 12:00',s:'Math — Desigualdades',d:'Desigualdades simples y valor absoluto.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'2:00 2:45',s:'Negocio',d:'El elenco: por qué importa conocer nombres reales, no solo "el movimiento".',a:1},
+{t:'2:45 3:30',s:'IA',d:'El elenco: quiénes eran realmente los Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Movimientos sociales',d:'Continuación: contexto económico de Gran Bretaña a fines de los 70.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Desigualdades aplicadas',d:'Practicar con problemas del mundo real.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'2:00 2:45',s:'Storytelling',d:'El código de entrada: por qué la puerta importaba tanto como la ropa. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Reacciones químicas',d:'Introducción: tipos de reacciones y balanceo básico.',
+  l:[['Khan · MS Chemistry',K_CHEM]],
+  khan:{course:'Middle school chemistry',units:['Classifying matter (reacciones)']}},
+{t:'11:00 12:00',s:'Humanities — Análisis',d:'Escribe 300 palabras sobre el contexto económico investigado ayer.'},
+{t:'2:00 2:45',s:'Diseño',d:'El maquillaje como arquitectura. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Citar fuentes',d:'Practice paraphrasing a source without copying its exact wording.'},
+{t:'11:00 12:00',s:'Science — Física aplicada',d:'Velocidad y aceleración con problemas reales.',
+  l:[['Khan · MS Physics',K_PHYS]],
+  khan:{course:'Middle school physics',units:['Motion and forces (aplicado)']}},
+{t:'2:00 2:45',s:'Negocio',d:'Producto vs experiencia: por qué un club también "vende" algo.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Producir pieza 4. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso',d:'Ecuaciones, sistemas, exponentes y desigualdades — repaso de la semana.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Repaso semanal'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso',d:'Química y física de esta semana.',
+  l:[['Química',K_CHEM],['Física',K_PHYS]],
+  khan:{course:'Repaso química y física',units:['Classifying matter (repaso)','Motion and forces (repaso)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Mostrarle a papá el avance de la semana antes del board meeting.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Feedback cruzado. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+},
+4:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso de sistemas',d:'Sistemas de ecuaciones — método gráfico y sustitución, a fondo.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'11:00 12:00',s:'Science — Biología a fondo',d:'Repaso de célula: estructura, función y procesos.',
+  l:[['Khan · MS Biology',K_BIO]],
+  khan:{course:'Middle school biology',units:['Cells and organisms (repaso a fondo)']}},
+{t:'2:00 2:45',s:'Negocio',d:'La banda sonora de un movimiento: música como parte del producto.',a:1},
+{t:'2:45 3:30',s:'IA',d:'De Bowie a Strange: la banda sonora del movimiento. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Síntesis',d:'Conecta el contexto económico con las decisiones de moda que investigaste.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Exponentes, repaso final',d:'Notación científica — cierre del curso de preparación.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'2:00 2:45',s:'Storytelling',d:'De ahí salió una banda real: Spandau Ballet. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Física, repaso final',d:'Fuerza, movimiento y energía — cierre de la unidad.',
+  l:[['Khan · MS Physics',K_PHYS]],
+  khan:{course:'Middle school physics',units:['Motion and forces (cierre)']}},
+{t:'11:00 12:00',s:'Humanities — Repaso',d:'Repasa tus notas de las últimas 2 semanas sobre el contexto histórico.'},
+{t:'2:00 2:45',s:'Diseño',d:'Moodboard Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Argumentación',d:'Write a paragraph defending why Blitz Kids deserves to be remembered as more than "just fashion".'},
+{t:'11:00 12:00',s:'Science — Química, repaso final',d:'Átomos, tabla periódica, reacciones — cierre de la unidad.',
+  l:[['Khan · MS Chemistry',K_CHEM]],
+  khan:{course:'Middle school chemistry',units:['Classifying matter (cierre)']}},
+{t:'2:00 2:45',s:'Negocio',d:'Cierre de fase de investigación: qué tanto sabés ahora vs semana 1.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Producir pieza 5. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso general',d:'Cierre completo de Get ready for Algebra 1: ecuaciones, sistemas, exponentes, desigualdades.',
+  l:[['Khan · Get ready Algebra 1',K_ALG]],
+  khan:{course:'Get ready for Algebra 1',units:['Repaso general — curso completo'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso general',d:'Cierre de las tres ciencias: célula, átomos, fuerza y movimiento.',
+  l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
+  khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (cierre)','Classifying matter (cierre)','Motion and forces (cierre)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Prepararse para presentar el resumen del mes al board.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Repaso: qué sabés ahora que no sabías en semana 1. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+},
+5:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Grade 9 arranca',d:'Álgebra 1 completa — funciones lineales, pendiente e intercepto. No es repaso, es contenido nuevo real.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Linear equations & graphs']}},
+{t:'11:00 12:00',s:'Science — Grade 9 arranca',d:'Genética clásica — Mendel, herencia, genotipo y fenotipo. Sales de Middle School Biology.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics']}},
+{t:'2:00 2:45',s:'Negocio',d:'Por qué una exhibición de museo en 2025 todavía habla de un club de 1979.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Legado: el Design Museum 2025. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Math — Linear equations & graphs',d:'Practicar hasta 80% de aciertos en la unidad.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Linear equations & graphs (continuar)']}},
+{t:'11:00 12:00',s:'Science — Classical genetics',d:'Punnett squares — introducción práctica.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics (continuar)']}},
+{t:'2:00 2:45',s:'Storytelling',d:'De Blitz a Taboo: la escena sigue mutando. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'English — Editorial voice',d:'Compare two paragraphs you wrote this month — which sounds more like "you"?'},
+{t:'11:00 12:00',s:'Math — Linear equations, aplicado',d:'Graficar 3 ecuaciones a mano antes de usar la calculadora.',
+  l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'IA',d:'Producir pieza 6. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Science — Classical genetics',d:'Pedigrees — analizar un árbol genealógico simple.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics (pedigrees)']}},
+{t:'11:00 12:00',s:'Humanities — Síntesis final',d:'Conecta todo lo investigado sobre Blitz Kids en una línea de tiempo.'},
+{t:'2:00 2:45',s:'Negocio',d:'Definir el formato final de publicación con todo lo aprendido.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Formato final: ¿serie escrita, IG, o ambas? Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso',d:'Linear equations & graphs — quiz de la unidad.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Repaso de la semana'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso',d:'Classical genetics — quiz de la unidad.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Repaso de la semana'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Revisión completa del mes con papá.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Revisión del mes. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+}
+};
 
 /* ===== PROYECTO DEL DÍA — Historical Subcultures & Radical Streetwear Movements ===== */
 /* Punk (Westwood/McLaren, Londres 1970s) · Blitz Kids / New Romantic (Steve Strange,
@@ -386,10 +519,131 @@ Vie:{
   tmpl:'TÍTULO FINAL: \n\nAJUSTES QUE HICISTE AL TEXTO DESDE EL JUEVES: \n\n\nELEMENTO VISUAL INCLUIDO (describilo o pegá el link): \n\n¿Con qué parte de la pieza estás más conforme?: \n\n¿Qué le falta todavía?: ',
   example:'Ajustes: corté el segundo párrafo a la mitad — repetía algo que ya había dicho en la introducción. Cambié el cierre para terminar en la figura clave, no en una conclusión genérica.\n\nElemento visual: moodboard de la semana pasada, recortado a 3 imágenes principales.\n\nMás conforme: la apertura — la imagen concreta del look funciona mejor que empezar con historia general.\n\nQué falta: todavía suena más a resumen de investigación que a voz propia en el medio de la pieza.'
 }
-}};
+},
+3:{
+Lun:{
+  learn:[
+    ['Lista de 21 "fashionistas" del Blitz (Shapers of the 80s)','https://shapersofthe80s.com/blitz-kids/'],
+    ['El sitio de Steve Strange','https://www.stevestrange.org/index.html']
+  ],
+  concept:'Los Blitz Kids eran un círculo cerrado con nombres reales — no un concepto abstracto ni una "vibe" genérica. Conocerlos por nombre le da autoridad a tu escritura: la diferencia entre decir "la gente del Blitz" y decir "Stephen Jones, que después fue sombrerero de la realeza británica".',
+  task:'De la lista de fashionistas del Blitz, elegí <b>3 personas</b> (además de Strange, Egan y Blame, que ya viste) e investigá qué rol jugó cada una.',
+  tmpl:'PERSONA 1: \n¿Qué hacía en el Blitz?: \n¿Qué hizo después?: \n\nPERSONA 2: \n¿Qué hacía en el Blitz?: \n¿Qué hizo después?: \n\nPERSONA 3: \n¿Qué hacía en el Blitz?: \n¿Qué hizo después?: ',
+  example:'Persona: Stephen Jones\n¿Qué hacía?: era parte del círculo de fashionistas del Blitz, conocido por sombreros llamativos y escultóricos que usaban él y sus amigos en el club.\n¿Qué hizo después?: se convirtió en uno de los sombrereros más reconocidos del mundo, trabajando eventualmente para casas de moda de altísimo nivel.'
+},
+Mar:{
+  learn:[
+    ['El club que definió los 80 (exhibición Design Museum)','https://underground-england.com/the-club-that-shaped-the-80s-and-its-revival-at-the-design-museum/'],
+    ['Leigh Bowery, Taboo y el maquillaje de los Blitz Kids','https://www.wallpaper.com/fashion-beauty/leigh-bowery-blitz-kids-hair-and-make-up-1980s']
+  ],
+  concept:'La política de puerta (door policy) — El Blitz tenía una entrada muy estricta: si no ibas vestida de forma extraordinaria, no entrabas, ni siquiera si eras conocida. Eso no era esnobismo porque sí — era parte del diseño de la experiencia: crear un espacio donde el esfuerzo visual era el precio de entrada.',
+  task:'Investigá cómo funcionaba la política de puerta del Blitz. Compará esa lógica con algún espacio actual (guestlist, dress code, evento por invitación).',
+  tmpl:'CÓMO FUNCIONABA LA PUERTA DEL BLITZ: \n\n\n¿QUIÉN DECIDÍA QUIÉN ENTRABA?: \n\nCOMPARACIÓN CON ALGO ACTUAL: \n\n¿QUÉ CUMPLE ESA MISMA FUNCIÓN HOY (crear pertenencia através de exclusión)?: ',
+  example:'La puerta del Blitz la manejaba gente del propio círculo — no un guardia contratado, sino alguien que entendía el código visual y podía juzgarlo al instante. Eso es distinto a una guestlist actual, que suele basarse en status o conexiones, no en esfuerzo creativo puesto esa misma noche.'
+},
+'Mié':{
+  learn:[['Leigh Bowery, Taboo y el maquillaje de los Blitz Kids','https://www.wallpaper.com/fashion-beauty/leigh-bowery-blitz-kids-hair-and-make-up-1980s']],
+  concept:'El maquillaje como arquitectura — El maquillaje de los Blitz Kids no imitaba belleza convencional. Construía una cara nueva, casi escultórica: formas geométricas, colores que no existen en una cara real, texturas inesperadas. Era diseño, no cosmética.',
+  task:'Describí un look de maquillaje tipo Blitz Kid en detalle técnico — qué se hacía, con qué, en qué orden, buscando el efecto "escultórico" en vez de "bonito".',
+  tmpl:'DESCRIPCIÓN DEL LOOK: \n\n\nORDEN DE PASOS (qué se hacía primero, después, al final): \n\n\n¿QUÉ LO HACE "ESCULTÓRICO" EN VEZ DE CONVENCIONAL?: ',
+  example:'Base pálida uniforme sobre toda la cara, después formas geométricas en colores saturados (no imitando sombra natural) alrededor de los ojos, cejas cubiertas y redibujadas en otra posición, y un elemento final no cosmético (purpurina gruesa, una línea metálica). El orden importa: primero se borra la cara "real", después se construye una nueva encima.'
+},
+Jue:{
+  learn:[],
+  concept:'Todo lo de esta semana en una pieza real — el elenco, la puerta, el maquillaje. Elegí qué ángulo te interesa más desarrollar hoy.',
+  task:'Escribí la pieza editorial completa (500-700 palabras) sobre uno de los tres ángulos investigados esta semana.',
+  tmpl:'ÁNGULO ELEGIDO: \n\nTÍTULO DE TRABAJO: \n\nLA PIEZA COMPLETA:\n\n\n\n\n¿Qué fuente usaste más?: ',
+  example:'Estructura sugerida: abrí con una imagen concreta de la puerta o del maquillaje, seguí con el contexto (por qué existía esa regla o esa estética), sumá una persona real que la encarnó, y cerrá conectándolo con algo de hoy.'
+},
+Vie:{
+  learn:[],
+  concept:'Feedback cruzado — Mostrarle tu trabajo a alguien que no investigó lo mismo revela qué parte de tu pieza asume demasiado conocimiento previo.',
+  task:'Mostrá la pieza a 2 personas. Preguntales qué entendieron del Blitz Kids y qué les quedó confuso.',
+  tmpl:'PERSONA 1 — qué entendió: \nPERSONA 1 — qué le quedó confuso: \n\nPERSONA 2 — qué entendió: \nPERSONA 2 — qué le quedó confuso: \n\n¿Qué vas a aclarar en la próxima pieza?: ',
+  example:'Las dos personas entendieron bien el "qué" (un club exclusivo con moda extrema), pero ninguna captó bien el "por qué ahora importa" — la conexión con el legado actual quedó muy al final y muy breve. Para la próxima: desarrollar más esa parte.'
+}
+},
+4:{
+Lun:{
+  learn:[['Meet the London Club Kids Who Made Punk Go Pop','https://www.messynessychic.com/2021/04/30/meet-the-london-club-kids-who-made-punk-go-pop/']],
+  concept:'La banda sonora del movimiento — El Blitz no era solo moda. Steve Strange y Rusty Egan armaron las noches originales poniendo música de Bowie y Roxy Music — esa música definía quién "pertenecía" tanto como la ropa.',
+  task:'Investigá la conexión entre la música que sonaba en el Blitz y las decisiones de moda de quienes iban. ¿Por qué esa música en particular atraía a ese público?',
+  tmpl:'MÚSICA QUE SONABA EN EL BLITZ: \n\n¿POR QUÉ ESA MÚSICA (Y NO OTRA) ATRAÍA A ESE PÚBLICO?: \n\n¿CÓMO SE CONECTA EL SONIDO CON LA ESTÉTICA VISUAL DEL MOVIMIENTO?: ',
+  example:'Bowie y Roxy Music tenían una estética teatral, andrógina, futurista — coherente con lo que buscaban los Blitz Kids visualmente. No era casualidad: la música ya traía el permiso de ser extravagante antes de que la moda lo confirmara.'
+},
+Mar:{
+  learn:[['Lista de 21 "fashionistas" del Blitz (Shapers of the 80s)','https://shapersofthe80s.com/blitz-kids/']],
+  concept:'De la pista de baile a la banda real — El Blitz no se quedó solo en moda: generó una banda de verdad. Spandau Ballet tocó ahí como su "casa" antes de volverse conocidos a nivel nacional.',
+  task:'Investigá cómo una banda salió literalmente del público de un club. ¿Qué significa eso sobre la relación entre una subcultura y la industria musical/moda que la absorbe después?',
+  tmpl:'CÓMO SURGIÓ LA BANDA DESDE EL CLUB: \n\n¿QUÉ ROL JUGÓ EL PÚBLICO DEL BLITZ EN ESE SURGIMIENTO?: \n\n¿QUÉ SE GANA Y QUÉ SE PIERDE CUANDO ALGO ASÍ SE VUELVE MASIVO?: ',
+  example:'Spandau Ballet tocó sus primeros shows como la banda de la casa del Blitz, con público que ya era parte de la escena. Cuando se volvieron conocidos a nivel nacional, ganaron alcance pero perdieron esa sensación de "esto es solo nuestro" que tenía el público original.'
+},
+'Mié':{
+  learn:[['Canva','https://www.canva.com/']],
+  concept:'Moodboard Blitz Kids — Reunir referencias visuales concretas (maquillaje, ropa, el club mismo) antes de seguir escribiendo asegura que tus próximas piezas se sientan de la misma familia visual.',
+  task:'Armá un moodboard con 5-8 elementos de referencia específicos de Blitz Kids.',
+  tmpl:'PALETA DE COLORES: \n\nTEXTURAS O MATERIALES CLAVE: \n\nREFERENCIAS DE MAQUILLAJE INCLUIDAS: \n\nFIGURAS O FOTOS DE REFERENCIA: \n\nLINK O DESCRIPCIÓN DE TU MOODBOARD: ',
+  example:'Paleta: negro + plateado metálico + un acento de color saturado (magenta o azul eléctrico) — el negro y plateado por el aire futurista de Bowie, el acento saturado por el maquillaje escultórico.\n\nTexturas: telas satinadas, hombreras exageradas, formas geométricas.\n\nReferencias: una foto de la fachada del Blitz, un look de maquillaje descrito la semana pasada, una imagen de Spandau Ballet en sus primeros shows.'
+},
+Jue:{
+  learn:[],
+  concept:'Sintetizar todo lo investigado hasta ahora — música, banda, elenco, puerta, maquillaje — en una sola pieza con voz propia.',
+  task:'Escribí tu pieza editorial 5 (500-700 palabras) integrando al menos dos de los ángulos investigados en las últimas dos semanas.',
+  tmpl:'ÁNGULOS QUE VAS A CONECTAR: \n\nTÍTULO DE TRABAJO: \n\nLA PIEZA COMPLETA:\n\n\n\n¿Qué conexión entre los dos ángulos te pareció más interesante al escribir?: ',
+  example:'Conectar música + banda funciona bien: empezás con la pista sonando en el club, seguís con cómo esa música moldeó a quienes después formaron Spandau Ballet, y cerrás preguntando qué queda hoy de esa conexión directa entre escena y sonido.'
+},
+Vie:{
+  learn:[],
+  concept:'Cierre de la fase de investigación profunda — después de dos semanas dedicadas casi enteras a Blitz Kids, vale la pena medir cuánto cambió tu conocimiento real.',
+  task:'Escribí 5 datos que aprendiste sobre Blitz Kids que no sabías cuando elegiste el tema en la semana 1, y por qué te sorprendieron.',
+  tmpl:'DATO 1 (y por qué sorprendió): \n\nDATO 2: \n\nDATO 3: \n\nDATO 4: \n\nDATO 5: \n\n¿Cuál de estos 5 datos usarías como gancho de una pieza nueva?: ',
+  example:'Dato: no sabía que Spandau Ballet salió literalmente del público del club — pensaba que la moda y la música eran cosas separadas que coincidían en el mismo lugar, no que una generó a la otra directamente. Ese sería un buen gancho: "La banda que nació de un código de vestimenta".'
+}
+},
+5:{
+Lun:{
+  learn:[['El club que definió los 80 (exhibición Design Museum)','https://underground-england.com/the-club-that-shaped-the-80s-and-its-revival-at-the-design-museum/']],
+  concept:'Legado real vs nostalgia — Un movimiento de apenas dos años (1979-1981) sigue siendo objeto de una exhibición de museo 45 años después. Eso es legado real, no solo nostalgia de quienes lo vivieron.',
+  task:'Investigá la exhibición reciente del Design Museum sobre el Blitz. Escribí por qué creés que un club que duró tan poco todavía importa hoy.',
+  tmpl:'QUÉ MUESTRA LA EXHIBICIÓN: \n\n¿POR QUÉ UN CLUB DE SOLO 2 AÑOS TODAVÍA SE EXHIBE EN UN MUSEO HOY?: \n\nTU OPINIÓN: ¿ES NOSTALGIA, O HAY ALGO QUE REALMENTE SIGUE VIGENTE?: ',
+  example:'La exhibición reconstruye la experiencia del club para gente que nunca lo vivió. Sigue importando porque la pregunta central del Blitz — ¿qué pasa si te vestís como si tu vida dependiera de eso, todos los días, no solo para una fiesta? — no tiene fecha de vencimiento.'
+},
+Mar:{
+  learn:[['Leigh Bowery, Taboo y el maquillaje de los Blitz Kids','https://www.wallpaper.com/fashion-beauty/leigh-bowery-blitz-kids-hair-and-make-up-1980s']],
+  concept:'Las subculturas no terminan, mutan — El Blitz cerró alrededor de 1981, pero esa misma energía siguió en clubs posteriores como Taboo, con Leigh Bowery en los mid-80s. No fue el final de algo — fue el paso a otra forma de lo mismo.',
+  task:'Comparé Blitz vs Taboo: qué se mantuvo de la lógica original, y qué cambió.',
+  tmpl:'QUÉ SE MANTUVO (Blitz → Taboo): \n\nQUÉ CAMBIÓ: \n\n¿A QUÉ SE PARECE ESTA MISMA MUTACIÓN HOY (algún espacio o escena actual)?: ',
+  example:'Se mantuvo: la puerta estricta, el maquillaje como construcción de identidad, la idea de "vestite como si tu vida dependiera de eso".\nCambió: Taboo fue todavía más extremo — Leigh Bowery llevó el maquillaje a un nivel casi de arte performático, más allá de lo que el Blitz se animaba a hacer.'
+},
+'Mié':{
+  learn:[],
+  concept:'Producción con toda la investigación acumulada — después de 4 semanas de research, esta pieza debería sentirse más fácil de escribir que la primera.',
+  task:'Escribí la pieza editorial 6, usando cualquier ángulo de las últimas semanas que todavía no hayas desarrollado.',
+  tmpl:'ÁNGULO ELEGIDO: \n\nTÍTULO: \n\nLA PIEZA COMPLETA:\n\n\n\n¿Se sintió más fácil que la pieza 1? ¿Por qué?: ',
+  example:'Comparado con la pieza 1 (que tardó en arrancar porque no sabía por dónde entrar), esta vez ya tenía 5 semanas de research para elegir el ángulo más fuerte de entrada — el trabajo se movió a pulir la voz, no a buscar qué decir.'
+},
+Jue:{
+  learn:[],
+  concept:'Decisión de formato final — Con toda la investigación y piezas ya escritas, es momento de confirmar cómo se va a publicar de acá en adelante.',
+  task:'Decidí (o confirmá) el formato definitivo: newsletter, serie de Instagram, o ambos combinados. Justificá con lo que aprendiste este mes.',
+  tmpl:'FORMATO ELEGIDO: \n\n¿POR QUÉ ESE FORMATO Y NO OTRO?: \n\n¿CADA CUÁNTO VAS A PUBLICAR?: \n\n¿QUÉ NECESITÁS PARA EL LANZAMIENTO?: ',
+  example:'Formato: newsletter con resumen visual en Instagram. La newsletter permite el desarrollo largo que necesitan estos temas; Instagram atrae gente nueva con un resumen visual del mismo contenido.'
+},
+Vie:{
+  learn:[],
+  concept:'Cierre reflexivo del mes — después de 6 piezas y 5 semanas, hay suficiente material para evaluar el conjunto, no solo la última pieza.',
+  task:'Escribí una autoevaluación honesta: mejor pieza, peor pieza, qué cambiarías, qué mantendrías igual.',
+  tmpl:'MEJOR PIEZA (y por qué): \n\nPEOR PIEZA (y por qué): \n\nQUÉ CAMBIARÍAS PARA EL PRÓXIMO MES: \n\nQUÉ MANTENDRÍAS IGUAL: ',
+  example:'Mejor: la pieza sobre la banda que salió del club — tenía el gancho más fuerte y la conexión causa-efecto más clara.\nPeor: la primera pieza — muy general, no aterrizaba en nada específico.\nCambiaría: empezar cada pieza con una imagen o dato concreto, no con contexto general.\nMantendría: cruzar siempre 2 fuentes por dato importante.'
+}
+}
+};
 
 var SAT={1:['Refina y presenta','Dos horas: refina las tres historias piloto y arma un moodboard visual. Una hora: board meeting — presenta el concepto a papá.'],
-2:['Publica la primera pieza','Dos horas: termina la pieza uno con su presentación visual. Una hora: board meeting — presenta la pieza y el one-pager.']};
+2:['Publica la primera pieza','Dos horas: termina la pieza uno con su presentación visual. Una hora: board meeting — presenta la pieza y el one-pager.'],
+3:['Feedback cruzado','Dos horas: termina la pieza sobre el elenco, la puerta o el maquillaje. Una hora: board meeting — presenta la pieza y el feedback de las 2 personas que la leyeron.'],
+4:['Cierre de investigación','Dos horas: termina la pieza 5 y tus 5 datos sorprendentes. Una hora: board meeting — presenta cuánto cambió tu conocimiento desde semana 1.'],
+5:['Cierre del mes','Dos horas: termina la pieza 6 y confirma el formato final. Una hora: board meeting — presenta tu autoevaluación del mes y el plan de publicación.']};
 
 var week=1,day='Lun';
 var done={}, links={}, entregas={}, khanState={}, satNotes={};
@@ -418,7 +672,7 @@ function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.c
 
 function hasProject(w,d){return !!(PROJECTS[w] && PROJECTS[w][d]);}
 function dayTotalUnits(w,d){return DATA[w][d].blocks.length + (hasProject(w,d)?1:0);}
-function allTotal(){var n=0;[1,2].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;}
+function allTotal(){var n=0;[1,2,3,4,5].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;}
 function allDone(){return Object.keys(done).filter(function(k){return done[k];}).length;}
 
 function renderDays(){
@@ -605,7 +859,7 @@ document.querySelectorAll('.week button').forEach(function(btn){
 
 document.getElementById('btn-copy').onclick=function(){
   var lines=['Progreso de Alessia — '+new Date().toLocaleDateString('es-PA'),''];
-  [1,2].forEach(function(w){
+  [1,2,3,4,5].forEach(function(w){
     var wd=0,wt=0;
     DAYS.forEach(function(d){
       var n=dayTotalUnits(w,d);wt+=n;
