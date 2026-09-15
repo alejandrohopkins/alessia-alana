@@ -196,6 +196,10 @@ textarea.entrega:focus{outline:none;border-color:var(--brass)}
       <button data-w="3">Semana tres</button>
       <button data-w="4">Semana cuatro</button>
       <button data-w="5">Semana cinco</button>
+      <button data-w="6">Semana seis</button>
+      <button data-w="7">Semana siete</button>
+      <button data-w="8">Semana ocho</button>
+      <button data-w="9">Semana nueve</button>
     </div>
     <div class="days" id="days"></div>
   </div>
@@ -223,6 +227,7 @@ var K_PHYS='https://www.khanacademy.org/science/ms-physics';
 var K_HIST='https://www.khanacademy.org/humanities/world-history';
 var K_ALGFULL='https://www.khanacademy.org/math/algebra';
 var K_HSBIO='https://www.khanacademy.org/science/high-school-biology';
+var K_PFIN='https://www.khanacademy.org/college-careers-more/personal-finance/pf-saving-and-budgeting';
 var DAYS=['Lun','Mar','Mié','Jue','Vie'];
 var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Viernes'};
 
@@ -438,6 +443,162 @@ Vie:{hrs:'cuatro horas',blocks:[
 {t:'2:00 2:45',s:'Negocio',d:'Revisión completa del mes con papá.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Revisión del mes. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
+},
+6:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Forms of linear equations',d:'Nueva unidad: distintas formas de escribir una ecuación lineal.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Forms of linear equations']}},
+{t:'11:00 12:00',s:'Science — Classical genetics',d:'Repaso de Punnett squares antes de seguir a molecular.',
+  l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'2:00 2:45',s:'Negocio',d:'Cierre de proyecto: por qué compilar es tan importante como producir.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Compilar tu portfolio de Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Síntesis',d:'Relee tus notas de 5 semanas y marcá los 3 hallazgos más fuertes.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Forms of linear equations',d:'Practicar hasta 80% de aciertos.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Storytelling',d:'La pieza que conecta todo. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Classical genetics',d:'Cierre de la unidad — repaso de herencia y mutaciones.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics (cierre)'],review:true}},
+{t:'11:00 12:00',s:'Humanities — Repaso',d:'Revisa tu línea de tiempo de Blitz Kids completa.'},
+{t:'2:00 2:45',s:'Diseño',d:'Diseño final del portfolio. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Reflective writing',d:'Write one paragraph on what surprised you most about this project.'},
+{t:'11:00 12:00',s:'Math — Repaso',d:'Forms of linear equations — quiz de la unidad.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Forms of linear equations (quiz)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Preparar la presentación final: qué mostrar primero, qué dejar para preguntas.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Preparar la presentación de cierre. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Science — Repaso general',d:'Classical genetics completa.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics (repaso final)'],review:true}},
+{t:'11:00 12:00',s:'Math — Repaso general',d:'Linear equations & graphs, Forms of linear equations.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Repaso general del mes'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Último ensayo de la presentación antes del board meeting.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Presentación de cierre del proyecto. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+},
+7:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Sistemas, repaso',d:'Sistemas de ecuaciones — repaso antes de seguir con funciones.',
+  l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'11:00 12:00',s:'Science — Molecular genetics',d:'Nueva unidad: ADN, ARN, y cómo se traduce en proteínas.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Molecular genetics']}},
+{t:'2:00 2:45',s:'Negocio',d:'Nuevo proyecto: finanzas personales. Por qué es una habilidad, no un tema aburrido.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Ingreso, gasto y la diferencia que nadie te explica. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Historia económica',d:'Cómo cambió el concepto de "ahorrar" a lo largo del siglo XX.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Funciones, introducción',d:'Qué es una función — de tabla a gráfico.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Storytelling',d:'Necesidades vs deseos: la distinción que cambia todo. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Molecular genetics',d:'Mutaciones a nivel molecular — continuación.',
+  l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'11:00 12:00',s:'English — Explaining concepts',d:'Practice explaining a technical idea (genetics or finance) in one simple sentence.'},
+{t:'2:00 2:45',s:'Diseño',d:'Qué es un presupuesto, explicado simple. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Argumentación',d:'Write a paragraph on why budgeting is a skill, not a punishment.'},
+{t:'11:00 12:00',s:'Science — Molecular genetics',d:'Ingeniería genética — introducción conceptual.',
+  l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'2:00 2:45',s:'Negocio',d:'La regla 50/30/20 — de dónde sale y qué significa cada número.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Producir tu primera pieza de finanzas. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso',d:'Funciones — introducción, repaso de la semana.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Repaso semanal'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso',d:'Molecular genetics — quiz de la semana.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Molecular genetics (repaso)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Mostrarle tu pieza a papá antes del board meeting.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Feedback de tu primera pieza de finanzas. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+},
+8:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Funciones lineales',d:'Pendiente e intercepto — conexión directa con interés compuesto.',
+  l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'11:00 12:00',s:'Science — Molecular genetics',d:'Cierre de la unidad — repaso de ADN, ARN y mutaciones.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Molecular genetics (cierre)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Por qué existe un fondo de emergencia — qué problema resuelve.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Por qué ahorrar antes de gastar. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Repaso',d:'Conecta lo que aprendiste de historia económica con el ahorro personal de hoy.'},
+{t:'11:00 12:00',s:'Math — Funciones exponenciales, intro',d:'Cómo se ve una función que crece cada vez más rápido.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Storytelling',d:'Metas de ahorro: por qué "ahorrar más" no es una meta real. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Repaso',d:'Genética clásica y molecular — repaso combinado antes del cierre del mes.',
+  l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'11:00 12:00',s:'English — Numbers in writing',d:'Practice explaining a percentage or calculation in a full sentence, not just the number.'},
+{t:'2:00 2:45',s:'Diseño',d:'Interés compuesto, explicado con una gráfica simple. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Explaining math in words',d:'Write two sentences explaining compound interest to someone who has never heard of it.'},
+{t:'11:00 12:00',s:'Math — Funciones exponenciales',d:'Practicar con la fórmula de interés compuesto.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Negocio',d:'Por qué empezar temprano importa más que la cantidad — el efecto del tiempo.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Producir tu pieza sobre interés compuesto. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso',d:'Funciones lineales y exponenciales — repaso de la semana.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Repaso semanal'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso general',d:'Cierre de genética clásica y molecular.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Classical genetics (repaso)','Molecular genetics (repaso)'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Revisar juntos las dos piezas de finanzas producidas hasta ahora.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Feedback cruzado de la semana. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
+},
+9:{
+Lun:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso general',d:'Funciones lineales y exponenciales — cierre del mes.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Algebra 1',units:['Repaso general del mes'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso general',d:'Genética clásica y molecular — cierre del mes.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'High school biology',units:['Cierre general del mes'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Presupuesto real vs presupuesto ideal: por qué casi nunca coinciden.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Armar tu propio presupuesto simple. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Mar:{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Humanities — Repaso general',d:'Repasa todo lo visto en Historia estas 9 semanas.',l:[['Khan · World history',K_HIST]]},
+{t:'11:00 12:00',s:'Math — Repaso general',d:'Practicar problemas mixtos de todo el mes.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Storytelling',d:'Deuda buena vs deuda mala. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+'Mié':{hrs:'tres horas',blocks:[
+{t:'9:00 10:00',s:'Science — Repaso general',d:'Repasa todo lo visto en Ciencias estas 9 semanas.',l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'11:00 12:00',s:'English — Final review',d:'Practice presenting your finance project in English, out loud.'},
+{t:'2:00 2:45',s:'Diseño',d:'Diseñar tu zine de finanzas personales. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
+]},
+Jue:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'English — Presentation prep',d:'Write the opening 3 sentences of your final finance presentation.'},
+{t:'11:00 12:00',s:'Math — Repaso final',d:'Simulacro corto de las unidades del mes.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'2:00 2:45',s:'Negocio',d:'Armar la lista de lo que aprendiste que te sirve ya, no solo para el colegio.',a:1},
+{t:'2:45 3:30',s:'IA',d:'Producir tu pieza final de cierre. Detalle completo abajo, en Proyecto del día.',a:1}
+]},
+Vie:{hrs:'cuatro horas',blocks:[
+{t:'9:00 10:00',s:'Math — Repaso final del mes',d:'Todas las unidades del mes: Forms of linear equations, funciones, exponenciales.',
+  l:[['Khan · Algebra 1',K_ALGFULL]],
+  khan:{course:'Repaso general del mes',units:['Forms of linear equations','Funciones lineales y exponenciales'],review:true}},
+{t:'11:00 12:00',s:'Science — Repaso final del mes',d:'Classical genetics y Molecular genetics.',
+  l:[['Khan · High School Biology',K_HSBIO]],
+  khan:{course:'Repaso general del mes',units:['Classical genetics','Molecular genetics'],review:true}},
+{t:'2:00 2:45',s:'Negocio',d:'Preparar la presentación final del proyecto de finanzas.',a:1},
+{t:'2:45 3:30',s:'Storytelling',d:'Presentación de cierre del mes. Detalle completo abajo, en Proyecto del día.',a:1}
+]}
 }
 };
 
@@ -636,6 +797,154 @@ Vie:{
   tmpl:'MEJOR PIEZA (y por qué): \n\nPEOR PIEZA (y por qué): \n\nQUÉ CAMBIARÍAS PARA EL PRÓXIMO MES: \n\nQUÉ MANTENDRÍAS IGUAL: ',
   example:'Mejor: la pieza sobre la banda que salió del club — tenía el gancho más fuerte y la conexión causa-efecto más clara.\nPeor: la primera pieza — muy general, no aterrizaba en nada específico.\nCambiaría: empezar cada pieza con una imagen o dato concreto, no con contexto general.\nMantendría: cruzar siempre 2 fuentes por dato importante.'
 }
+},
+6:{
+Lun:{
+  learn:[],
+  concept:'Compilar es distinto de producir — Tenés 6 piezas dispersas escritas en 5 semanas. Compilarlas en un solo lugar, en orden, con una introducción que las conecte, las convierte en un cuerpo de trabajo real — no solo en una carpeta de archivos.',
+  task:'Reuní tus 6 piezas sobre Blitz Kids en un solo documento, en el orden que mejor cuente la historia completa (no necesariamente el orden en que las escribiste).',
+  tmpl:'ORDEN FINAL DE LAS PIEZAS (1 a 6): \n\n¿POR QUÉ ESE ORDEN Y NO EL ORDEN EN QUE LAS ESCRIBISTE?: \n\n¿QUÉ PIEZA FUNCIONA MEJOR COMO INTRODUCCIÓN A TODO EL PROYECTO?: ',
+  example:'Orden final: empiezo con la pieza sobre el vocabulario visual (engancha con una imagen concreta), sigo con causa-efecto (contexto), después el elenco y la puerta, la banda, y cierro con la pieza sobre el legado y el Design Museum — que conecta todo con el presente.'
+},
+Mar:{
+  learn:[],
+  concept:'La pieza que conecta todo — Un portfolio de piezas sueltas no es lo mismo que un proyecto con tesis. Falta una pieza nueva, corta, que explique de entrada por qué elegiste Blitz Kids y qué aprendiste investigándolo — la lente a través de la cual se leen las otras 6.',
+  task:'Escribí una pieza de cierre (300-400 palabras) que funcione como introducción a todo el proyecto — tu tesis sobre por qué Blitz Kids importa.',
+  tmpl:'TU TESIS EN UNA ORACIÓN: \n\nLA PIEZA DE CIERRE COMPLETA:\n\n\n\n¿QUÉ CAMBIÓ EN TU FORMA DE VER EL TEMA DESDE LA SEMANA 1?: ',
+  example:'Tesis: "Blitz Kids demuestra que una regla de entrada estricta puede generar más creatividad que libertad total." La pieza desarrolla eso conectando la puerta, el maquillaje, y el legado en el Design Museum, todo bajo esa misma idea central.'
+},
+'Mié':{
+  learn:[['Canva','https://www.canva.com/']],
+  concept:'Diseño final — El portfolio necesita verse como un solo proyecto, no como 7 documentos pegados. Portada, tipografía consistente, y el moodboard de la semana 4 usado de verdad, no solo guardado.',
+  task:'Diseñá la portada y el formato visual final de tu portfolio compilado.',
+  tmpl:'DESCRIPCIÓN DE LA PORTADA: \n\n¿QUÉ ELEMENTOS DEL MOODBOARD DE LA SEMANA 4 USASTE ACÁ?: \n\nLINK O DESCRIPCIÓN DEL DISEÑO FINAL: ',
+  example:'Portada: título "Vestite como si tu vida dependiera de eso" en tipografía tipo Bowie/glam, fondo negro con un acento plateado — tomado directo del moodboard de la semana 4.'
+},
+Jue:{
+  learn:[],
+  concept:'Prepararse para presentar — No es lo mismo escribir un portfolio que presentarlo en voz alta. Elegir qué mostrar primero, qué dejar para preguntas, y cómo resumir 6 semanas en pocos minutos requiere su propio trabajo.',
+  task:'Armá el guion de tu presentación de cierre: qué vas a decir primero, qué piezas vas a destacar, cómo vas a cerrar.',
+  tmpl:'APERTURA (primeros 30 segundos): \n\nPIEZAS QUE VAS A DESTACAR (y por qué esas): \n\nCIERRE: \n\n¿QUÉ PREGUNTA TE GUSTARÍA QUE TE HICIERA PAPÁ?: ',
+  example:'Apertura: mostrar la portada y leer la tesis en una oración.\nPiezas destacadas: la del vocabulario visual (engancha rápido) y la del legado (cierra con impacto).\nCierre: "esto empezó como un tema de moda y terminó siendo un proyecto sobre por qué las reglas estrictas a veces generan más libertad creativa, no menos."'
+},
+Vie:{
+  learn:[],
+  concept:'Cierre real — Después de 6 semanas, esta presentación no es un ejercicio más: es el cierre formal de un proyecto completo, con principio, desarrollo y fin.',
+  task:'Presentá tu portfolio completo a papá. Después de la presentación, escribí qué preguntó y cómo respondiste.',
+  tmpl:'¿QUÉ PREGUNTÓ PAPÁ?: \n\n¿CÓMO RESPONDISTE?: \n\n¿QUÉ TE GUSTARÍA HABER DICHO MEJOR?: \n\n¿ESTÁS CONFORME CON EL CIERRE DE ESTE PROYECTO?: ',
+  example:'Preguntó por qué elegí Blitz Kids en particular y no punk o Harajuku. Respondí que me enganchó la idea de que la puerta era parte del diseño — algo que no esperaba de un club de baile. Me gustaría haber tenido lista una comparación más corta con los otros dos movimientos para esa pregunta específica.'
+}
+},
+7:{
+Lun:{
+  learn:[['Khan Academy — Ahorro y presupuesto','https://www.khanacademy.org/college-careers-more/personal-finance/pf-saving-and-budgeting']],
+  concept:'Ingreso vs gasto — Suena obvio, pero la mayoría de la gente no sabe con precisión cuánto entra y cuánto sale cada mes. Ingreso es todo el dinero que entra. Gasto es todo el que sale. La diferencia entre los dos es lo único que realmente podés ahorrar.',
+  task:'Explicá, en tus palabras, la diferencia entre ingreso y gasto, y por qué tanta gente pierde de vista esa diferencia.',
+  tmpl:'INGRESO, EN TUS PALABRAS: \n\nGASTO, EN TUS PALABRAS: \n\n¿POR QUÉ CREÉS QUE LA GENTE PIERDE DE VISTA LA DIFERENCIA?: ',
+  example:'Ingreso: todo lo que entra — una mesada, un regalo, plata que ganás. Gasto: todo lo que sale, aunque sea chico (un helado cuenta igual que algo caro).\n\nLa gente pierde de vista la diferencia porque los gastos chicos no se sienten como gasto — cinco compras de $2 se sienten distintas a una de $10, aunque sea la misma plata.'
+},
+Mar:{
+  learn:[],
+  concept:'Necesidades vs deseos — Una necesidad es algo sin lo cual no podés funcionar (comida, un techo). Un deseo es algo que mejora tu vida pero no es imprescindible (salir a comer afuera, un juego nuevo). La confusión entre las dos categorías es la razón número uno por la que los presupuestos fallan.',
+  task:'Hacé una lista de 10 gastos típicos de alguien de tu edad. Clasificá cada uno como necesidad o deseo, y explicá el caso más difícil de clasificar.',
+  tmpl:'LISTA DE 10 GASTOS (marcá cada uno: necesidad o deseo):\n1. \n2. \n3. \n4. \n5. \n6. \n7. \n8. \n9. \n10. \n\nEL MÁS DIFÍCIL DE CLASIFICAR Y POR QUÉ: ',
+  example:'El más difícil: un celular. No es una necesidad básica como la comida, pero hoy en día es casi imposible funcionar socialmente y académicamente sin uno — entonces cae en una zona gris entre necesidad y deseo, dependiendo del contexto de cada persona.'
+},
+'Mié':{
+  learn:[],
+  concept:'Qué es un presupuesto — Un presupuesto no es una lista de restricciones. Es un plan que dice, de antemano, a dónde va cada parte del dinero que entra — así vos decidís, en vez de que las circunstancias decidan por vos.',
+  task:'Explicá qué es un presupuesto usando una metáfora propia (no la que ya usaste en clase) que lo haga fácil de entender para alguien de tu edad.',
+  tmpl:'TU METÁFORA PARA EXPLICAR UN PRESUPUESTO: \n\n¿POR QUÉ ESA METÁFORA FUNCIONA?: ',
+  example:'Un presupuesto es como un mapa antes de un viaje: no te dice que no podés parar en ningún lado interesante, te dice cuánta nafta tenés para que decidas vos dónde parar, en vez de quedarte varada a mitad de camino.'
+},
+Jue:{
+  learn:[],
+  concept:'La regla 50/30/20 — Una forma simple de empezar a organizar un presupuesto: 50% a necesidades, 30% a deseos, 20% a ahorro. No es una ley matemática — es un punto de partida razonable para no tener que inventar todo desde cero.',
+  task:'Escribí tu primera pieza de finanzas (400-500 palabras) explicando la regla 50/30/20 con tu propia voz editorial — la misma que usaste para Blitz Kids, ahora aplicada a un tema distinto.',
+  tmpl:'TÍTULO DE TRABAJO: \n\nLA PIEZA COMPLETA:\n\n\n\n¿Qué fue distinto de escribir sobre finanzas comparado con escribir sobre moda/historia?: ',
+  example:'Lo distinto: con Blitz Kids tenía que investigar hechos históricos; acá tengo que explicar un concepto de forma que se entienda, sin depender tanto de investigación externa — es más parecido a enseñar que a reportear.'
+},
+Vie:{
+  learn:[],
+  concept:'Feedback sobre claridad, no sobre estilo — En un texto de finanzas, lo más importante no es que suene bonito, es que alguien que no sabe nada del tema lo entienda sin releer.',
+  task:'Mostrá tu pieza a 2 personas. Preguntales si pudieron explicar la regla 50/30/20 con sus propias palabras después de leerla.',
+  tmpl:'PERSONA 1 — ¿pudo explicar la regla con sus palabras?: \n\nPERSONA 2 — ¿pudo explicar la regla con sus palabras?: \n\n¿QUÉ PARTE DEL TEXTO GENERÓ MÁS CONFUSIÓN?: ',
+  example:'Las dos pudieron explicar los porcentajes, pero ninguna recordó bien el orden (necesidades-deseos-ahorro). Voy a probar poniendo los tres números como una lista visual en vez de solo en el texto corrido.'
+}
+},
+8:{
+Lun:{
+  learn:[['Khan Academy — Ahorro y presupuesto','https://www.khanacademy.org/college-careers-more/personal-finance/pf-saving-and-budgeting']],
+  concept:'Por qué existe un fondo de emergencia — No es plata "extra". Es plata separada específicamente para cuando algo sale mal (se rompe algo, surge un gasto imprevisto) — así ese imprevisto no te obliga a usar plata que tenías destinada a otra cosa.',
+  task:'Explicá qué problema resuelve un fondo de emergencia, con un ejemplo concreto (inventado, no de tu vida real) de alguien que no tenía uno.',
+  tmpl:'QUÉ PROBLEMA RESUELVE UN FONDO DE EMERGENCIA: \n\nEJEMPLO (inventado) de alguien sin fondo de emergencia: \n\n¿QUÉ LE PASÓ POR NO TENERLO?: ',
+  example:'Problema que resuelve: evita que un imprevisto te obligue a sacar plata de donde no querías, o a endeudarte.\n\nEjemplo: alguien que gastaba todo su ingreso mes a mes. Se le rompió la bicicleta que usaba para ir a trabajar. Sin fondo de emergencia, tuvo que pedir plata prestada solo para arreglarla — algo que un fondo chico ya ahorrado hubiera cubierto sin problema.'
+},
+Mar:{
+  learn:[],
+  concept:'Metas de ahorro reales — "Ahorrar más" no es una meta, es un deseo vago. Una meta real tiene un número, un propósito, y un plazo: "ahorrar $X para Y antes de Z".',
+  task:'Convertí "quiero ahorrar más" en 2 metas de ahorro reales, con número, propósito y plazo (podés inventar los montos, no hace falta que sean tus finanzas reales).',
+  tmpl:'META 1: cuánto, para qué, en cuánto tiempo: \n\nMETA 2: cuánto, para qué, en cuánto tiempo: \n\n¿QUÉ HACE QUE ESTAS METAS SEAN MEJORES QUE "AHORRAR MÁS"?: ',
+  example:'Meta 1: ahorrar $50 para un regalo de cumpleaños en 2 meses.\nMeta 2: ahorrar $200 para un proyecto propio en 6 meses.\n\nSon mejores porque tienen un número que podés chequear y un plazo que te dice si vas bien o mal — "ahorrar más" nunca te dice si ya lo lograste.'
+},
+'Mié':{
+  learn:[['Interés compuesto, explicado (Wikipedia)','https://en.wikipedia.org/wiki/Compound_interest']],
+  concept:'Interés compuesto — Es cuando el interés que ganás también empieza a generar su propio interés. Por eso el dinero ahorrado crece cada vez más rápido con el tiempo, no de forma pareja — se parece a la función exponencial que estás viendo en Math, no a una línea recta.',
+  task:'Explicá con una gráfica simple (dibujada o descrita) por qué el interés compuesto crece más rápido con el tiempo, no en línea recta.',
+  tmpl:'DESCRIPCIÓN DE TU GRÁFICA: \n\n¿POR QUÉ LA LÍNEA SE CURVA HACIA ARRIBA EN VEZ DE SER RECTA?: \n\n¿CÓMO SE CONECTA ESTO CON LO QUE VISTE EN FUNCIONES EXPONENCIALES?: ',
+  example:'Gráfica: eje horizontal = años, eje vertical = plata ahorrada. La línea empieza casi plana y se curva cada vez más hacia arriba.\n\nSe curva porque cada año no solo ganás interés sobre lo que pusiste al principio, sino también sobre el interés de los años anteriores — exactamente la misma lógica de una función exponencial, donde el crecimiento se acelera en vez de mantenerse constante.'
+},
+Jue:{
+  learn:[],
+  concept:'El tiempo importa más que la cantidad — Con interés compuesto, empezar temprano con poco casi siempre le gana a empezar tarde con mucho, porque el tiempo es lo que hace crecer la curva.',
+  task:'Escribí tu segunda pieza de finanzas (400-500 palabras) explicando por qué el tiempo importa más que la cantidad cuando se trata de ahorro e interés compuesto.',
+  tmpl:'TÍTULO DE TRABAJO: \n\nLA PIEZA COMPLETA:\n\n\n\n¿Qué ejemplo usaste para que se entienda sin fórmulas?: ',
+  example:'Ejemplo usado: comparar a dos personas — una que ahorra un poco desde joven, otra que ahorra el doble pero empieza 10 años después. La primera termina con más, no porque haya ahorrado más en total, sino porque el tiempo trabajó a su favor.'
+},
+Vie:{
+  learn:[],
+  concept:'Revisar el conjunto — Con 2 piezas de finanzas ya escritas, vale la pena mirar juntas si se conectan bien o si cada una vive aislada.',
+  task:'Releé tus piezas de esta semana y la anterior juntas. ¿Se sienten parte del mismo proyecto, o parecen dos textos sueltos?',
+  tmpl:'¿SE SIENTEN CONECTADAS?: \n\n¿QUÉ LAS CONECTA (o qué falta para conectarlas)?: \n\n¿QUÉ AJUSTARÍAS EN LA PIEZA 1 AHORA QUE ESCRIBISTE LA PIEZA 2?: ',
+  example:'Se sienten conectadas a medias — las dos hablan de "decisiones con el tiempo" pero no lo digo explícitamente en ninguna. Ajustaría la pieza 1 para mencionar, al final, que el interés compuesto (tema de la pieza 2) es la razón número uno para empezar el fondo de emergencia cuanto antes.'
+}
+},
+9:{
+Lun:{
+  learn:[],
+  concept:'Presupuesto real vs ideal — El presupuesto que planeás en un papel casi nunca coincide exacto con lo que pasa en la vida real. Eso no significa que el presupuesto esté mal — significa que hay que revisarlo y ajustarlo, no abandonarlo.',
+  task:'Armá un presupuesto simple inventado (para una persona ficticia con un ingreso mensual inventado) usando la regla 50/30/20. Después, inventá 2 imprevistos que lo desordenan, y decidí cómo se ajusta.',
+  tmpl:'INGRESO MENSUAL INVENTADO: \n\nPRESUPUESTO 50/30/20 (montos): \n\nIMPREVISTO 1 y cómo se ajusta: \n\nIMPREVISTO 2 y cómo se ajusta: ',
+  example:'Ingreso inventado: $100/mes.\nPresupuesto: $50 necesidades, $30 deseos, $20 ahorro.\nImprevisto 1: se rompe algo que hay que reponer ($15) — se cubre con el fondo de emergencia si existe, si no, se saca de "deseos" ese mes.\nImprevisto 2: un regalo inesperado de cumpleaños (+$20 de ingreso) — se reparte proporcionalmente entre las tres categorías, no se gasta todo en "deseos".'
+},
+Mar:{
+  learn:[['Khan Academy — Crédito al consumidor','https://www.khanacademy.org/college-careers-more/financial-literacy']],
+  concept:'Deuda buena vs deuda mala — No toda deuda es igual. Una deuda que te ayuda a generar más valor del que cuesta (por ejemplo, para estudiar) se comporta distinto de una deuda para algo que pierde valor apenas lo comprás. La diferencia no es el monto — es qué pasa con esa plata después.',
+  task:'Explicá la diferencia entre deuda buena y deuda mala con un ejemplo de cada una (inventados).',
+  tmpl:'EJEMPLO DE DEUDA "BUENA" (y por qué): \n\nEJEMPLO DE DEUDA "MALA" (y por qué): \n\n¿QUÉ TIENEN EN COMÚN LAS DOS, MÁS ALLÁ DE SER DEUDA?: ',
+  example:'Deuda "buena": pedir prestado para un curso que te permite ganar más después — el retorno supera el costo.\nDeuda "mala": pedir prestado para algo que pierde valor apenas lo tenés y no genera ningún retorno.\nEn común: las dos hay que pagarlas igual, con intereses — la diferencia está en si valió la pena o no, no en si "se siente" bien o mal pedirla.'
+},
+'Mié':{
+  learn:[['Canva','https://www.canva.com/']],
+  concept:'De piezas sueltas a un zine — Igual que hiciste con Blitz Kids, las piezas de finanzas ganan fuerza juntas, con diseño consistente, en vez de quedar como textos sueltos.',
+  task:'Diseñá el formato de tu "zine de finanzas personales" — cómo se van a ver tus piezas juntas.',
+  tmpl:'TÍTULO DEL ZINE: \n\nPALETA VISUAL (colores, tipografía): \n\n¿EN QUÉ SE PARECE O DIFERENCIA DEL DISEÑO QUE USASTE PARA BLITZ KIDS?: ',
+  example:'Título: "Plata en Palabras Simples"\nPaleta: verde y blanco, tipografía clara y redondeada — muy distinto del negro/plateado de Blitz Kids, porque el tono acá es más amigable y menos dramático.'
+},
+Jue:{
+  learn:[],
+  concept:'La pieza final integra todo — presupuesto, ahorro, interés compuesto, deuda — en una sola narrativa que alguien de tu edad pueda leer de principio a fin y salir con una idea clara.',
+  task:'Escribí tu pieza de cierre (500-700 palabras) integrando al menos 3 de los conceptos vistos este mes.',
+  tmpl:'CONCEPTOS QUE VAS A INTEGRAR: \n\nTÍTULO: \n\nLA PIEZA COMPLETA:\n\n\n\n¿Qué querés que alguien recuerde después de leerla?: ',
+  example:'Integra: necesidades vs deseos, la regla 50/30/20, e interés compuesto — conectados bajo la idea de que las decisiones chicas de hoy definen opciones grandes en el futuro.\n\nLo que quiero que recuerden: que empezar es más importante que empezar perfecto.'
+},
+Vie:{
+  learn:[],
+  concept:'Cierre del mes más corto — Este proyecto duró solo 3 semanas, la mitad que Blitz Kids. Vale la pena reflexionar también sobre eso: qué cambia cuando un proyecto es más corto e intenso.',
+  task:'Escribí una autoevaluación: qué aprendiste de finanzas, y qué aprendiste sobre trabajar con un proyecto más corto.',
+  tmpl:'QUÉ APRENDISTE SOBRE FINANZAS: \n\nQUÉ APRENDISTE SOBRE TRABAJAR EN UN PROYECTO DE SOLO 3 SEMANAS: \n\n¿PREFERÍS PROYECTOS LARGOS COMO BLITZ KIDS O CORTOS COMO ESTE? ¿POR QUÉ?: ',
+  example:'De finanzas: que la mayoría de las decisiones importantes son simples de entender, solo que nadie te las explica simple.\n\nDe proyectos cortos: hay menos tiempo para investigar a fondo, así que hay que elegir mejor qué vale la pena profundizar desde el día 1.\n\nPrefiero: un poco de los dos — el corto obliga a ser más eficiente, el largo permite conocer un tema de verdad.'
+}
 }
 };
 
@@ -643,7 +952,11 @@ var SAT={1:['Refina y presenta','Dos horas: refina las tres historias piloto y a
 2:['Publica la primera pieza','Dos horas: termina la pieza uno con su presentación visual. Una hora: board meeting — presenta la pieza y el one-pager.'],
 3:['Feedback cruzado','Dos horas: termina la pieza sobre el elenco, la puerta o el maquillaje. Una hora: board meeting — presenta la pieza y el feedback de las 2 personas que la leyeron.'],
 4:['Cierre de investigación','Dos horas: termina la pieza 5 y tus 5 datos sorprendentes. Una hora: board meeting — presenta cuánto cambió tu conocimiento desde semana 1.'],
-5:['Cierre del mes','Dos horas: termina la pieza 6 y confirma el formato final. Una hora: board meeting — presenta tu autoevaluación del mes y el plan de publicación.']};
+5:['Cierre del mes','Dos horas: termina la pieza 6 y confirma el formato final. Una hora: board meeting — presenta tu autoevaluación del mes y el plan de publicación.'],
+6:['Cierre de Blitz Kids','Dos horas: termina de compilar el portfolio completo. Una hora: board meeting — presentación formal de cierre del proyecto.'],
+7:['Primera pieza de finanzas','Dos horas: termina tu pieza sobre la regla 50/30/20. Una hora: board meeting — presenta la pieza y el feedback de las 2 personas que la leyeron.'],
+8:['Interés compuesto','Dos horas: termina tu pieza sobre ahorro e interés compuesto. Una hora: board meeting — presenta cómo se conectan tus dos piezas de finanzas.'],
+9:['Cierre del proyecto de finanzas','Dos horas: termina tu zine y la pieza final. Una hora: board meeting — presentación de cierre de los 3 meses de proyectos.']};
 
 var week=1,day='Lun';
 var done={}, links={}, entregas={}, khanState={}, satNotes={};
@@ -672,7 +985,7 @@ function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.c
 
 function hasProject(w,d){return !!(PROJECTS[w] && PROJECTS[w][d]);}
 function dayTotalUnits(w,d){return DATA[w][d].blocks.length + (hasProject(w,d)?1:0);}
-function allTotal(){var n=0;[1,2,3,4,5].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;}
+function allTotal(){var n=0;[1,2,3,4,5,6,7,8,9].forEach(function(w){DAYS.forEach(function(d){n+=dayTotalUnits(w,d);});});return n;}
 function allDone(){return Object.keys(done).filter(function(k){return done[k];}).length;}
 
 function renderDays(){
@@ -859,7 +1172,7 @@ document.querySelectorAll('.week button').forEach(function(btn){
 
 document.getElementById('btn-copy').onclick=function(){
   var lines=['Progreso de Alessia — '+new Date().toLocaleDateString('es-PA'),''];
-  [1,2,3,4,5].forEach(function(w){
+  [1,2,3,4,5,6,7,8,9].forEach(function(w){
     var wd=0,wt=0;
     DAYS.forEach(function(d){
       var n=dayTotalUnits(w,d);wt+=n;
