@@ -230,356 +230,433 @@ var KHANBIO='https://www.khanacademy.org/science/ms-biology';
 var KHANHIST='https://www.khanacademy.org/humanities/world-history';
 var ALIT='https://americanliterature.com/100-great-short-stories/';
 var REEDSY='https://reedsy.com/short-stories/middle-school/';
+var CIUDADSEVA='https://www.ciudadseva.com/textos/cuentos/';
+var SD_SUBJ='https://www.spanishdict.com/guide/spanish-subjunctive';
+var SD_PERF='https://www.spanishdict.com/guide/the-perfect-aspect';
+var SD_FUT='https://www.spanishdict.com/guide/simple-future-regular-forms-and-tenses';
+var SD_COND='https://www.spanishdict.com/guide/conditional-tense';
+var SD_CONECT='https://www.spanishdict.com/guide/using-transition-words-in-spanish';
+var SD_CONJ='https://www.spanishdict.com/conjugate';
+var RAE_ACENTOS='https://www.rae.es/buen-uso-español/las-reglas-de-acentuación-gráfica';
+var MUNDOPRIM='https://www.mundoprimaria.com/lecturas-para-ninos-primaria';
+var LIFEDER_ENSAYO='https://www.lifeder.com/ensayo-expositivo/';
 var DAYS=['Lun','Mar','Mié','Jue','Vie'];
 var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Viernes'};
 
 var DATA={
 1:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Diagnóstico 1',d:'Fracciones y decimales. No adivines: si no sabes, sáltalo.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Fracciones, decimales y porcentajes']}},
 {t:'11:00–12:00',s:'Español — Diagnóstico',d:'Lee un cuento corto y escribe un resumen de 5 oraciones con tus propias palabras.',
   l:[['Ciudad Seva — cuentos','https://www.ciudadseva.com/textos/cuentos/']]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'¿Qué es un negocio? Qué le doy a mi audiencia y qué recibo a cambio.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Primera conversación con Claude. Anota 3 cosas que te sorprendieron.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Diagnóstico 2',d:'Porcentajes y razones.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Tasas y relaciones proporcionales']}},
 {t:'11:00–12:00',s:'English — Diagnóstico',d:'Read a short story and write a 5-sentence summary in your own words.',
   l:[['American Literature',ALIT]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'Mira 3 shorts virales de historias. ¿Dónde está el gancho? Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
+'Mié':{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Diagnóstico 3',d:'Enteros y operaciones combinadas.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Operaciones con números negativos']}},
 {t:'11:00–12:00',s:'Science — Diagnóstico',d:'Método científico y célula.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Cells and organisms']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Video',d:'Revisa tus propios videos de Lime Stories. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Diagnóstico 2',d:'Escribe 200 palabras contando algo que te pasó. Revísalo tú y marca lo que cambiarías.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Diagnóstico 2',d:'Escribe 200 palabras contando algo que te pasó. Revísalo tú y marca lo que cambiarías.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
 {t:'11:00–12:00',s:'Humanities — Diagnóstico',d:'Línea de tiempo y fuentes. Explora libremente y anota qué te llama la atención.',
   l:[['Khan: World history',KHANHIST]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'¿Quién ve mis videos? Describe a tu espectadora ideal.',a:1},
 {t:'2:45–3:30',s:'IA',d:'IA como editora, no como escritora. Pruébalo con un párrafo tuyo.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso',d:'Vuelve a lo que te costó esta semana. Sin apuro, sin nota.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Fracciones, decimales y porcentajes (repaso)','Tasas y relaciones proporcionales (repaso)','Operaciones con números negativos (repaso)'],review:true}},
 {t:'11:00–12:00',s:'English — Diagnóstico 2',d:'Write a 200-word story. Any topic. Read it out loud and mark what sounds wrong.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'¿Por qué el contenido original vale más que el reciclado? Conversa con papá.',a:1},
 {t:'2:45–3:30',s:'Video',d:'¿Usarás tu propia voz o voz sintética? Prueba las dos.',a:1}
 ]}
 },
 2:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Fracciones a fondo',d:'Suma, resta, multiplicación y división. Practica hasta 80% de aciertos.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Fracciones, decimales y porcentajes']}},
-{t:'11:00–12:00',s:'Español — Estructura narrativa',d:'Inicio, conflicto, resolución. Analiza un cuento y marca las 3 partes.'},
+{t:'11:00–12:00',s:'Español — Estructura narrativa',d:'Inicio, conflicto, resolución. Analiza un cuento y marca las 3 partes.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Nicho: por qué especializarse gana sobre ser generalista.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Prompting: compara un prompt malo y uno bueno para la misma tarea.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Decimales',d:'Conversión fracción ↔ decimal ↔ porcentaje hasta que salga sola.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Fracciones, decimales y porcentajes (continuar)']}},
-{t:'11:00–12:00',s:'Español — El gancho',d:'Escribe 5 primeras líneas distintas para la misma historia. Elige la mejor.'},
+{t:'11:00–12:00',s:'Español — El gancho',d:'Escribe 5 primeras líneas distintas para la misma historia. Elige la mejor.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'Cómo crear tensión en 60 segundos. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
+'Mié':{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'English — Narrative vocabulary',d:'Action verbs and description. Rewrite a boring paragraph using stronger words.'},
 {t:'11:00–12:00',s:'Math — Porcentajes aplicados',d:'Usa los analytics de tu canal: CTR, retención, % de vistas. Calcula a mano primero. Hoy no hay unidad nueva de Khan — aplicás lo aprendido a tus propios datos.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Diseño',d:'Thumbnails: diseña 3 opciones. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Borrador historia 2',d:'Escribe la historia completa en español primero. 300 a 400 palabras.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Borrador historia 2',d:'Escribe la historia completa en español primero. 300 a 400 palabras.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
 {t:'11:00–12:00',s:'English — Adaptación',d:"Translate and adapt your Spanish draft. Don't translate word by word — make it sound natural."},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Títulos: cómo se decide qué hace clic.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Usa IA para pulir tu texto, no para escribirlo. Compara antes y después.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso + quiz',d:'Haz el quiz de la unidad. Guarda un screenshot del puntaje.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Tasas y relaciones proporcionales (quiz final)']}},
 {t:'11:00–12:00',s:'Science — Célula',d:'Estructura y función.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Cells and organisms (completar)']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Consistencia: por qué publicar seguido importa más que publicar perfecto.',a:1},
 {t:'2:45–3:30',s:'Video',d:'Ritmo de edición: cortes al servicio de la historia.',a:1}
 ]}
 },
 3:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Expresiones y ecuaciones',d:'Términos, coeficientes, variables. Introducción a expresiones algebraicas.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Expressions, equations, & inequalities']}},
-{t:'11:00–12:00',s:'Español — Repaso',d:'Tiempos compuestos: he hecho, había hecho. Ejercicios de conjugación.'},
+{t:'11:00–12:00',s:'Español — Repaso',d:'Tiempos compuestos: he hecho, había hecho. Ejercicios de conjugación.',
+  l:[['SpanishDict — tiempos perfectos',SD_PERF]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Por qué la consistencia de género importa más que la variedad.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Cómo se planta una pista limpia. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Ecuaciones aplicadas',d:'Traducir problemas verbales a ecuaciones simples.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Expressions, equations, & inequalities (continuar)']}},
 {t:'11:00–12:00',s:'English — Perfect tenses',d:'Present perfect vs past simple. Rewrite 5 sentences using the correct tense.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'El red herring: cómo despistar sin hacer trampa. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Futuro y condicional',d:'Ejercicios de conjugación: iré, iría, haré, haría.'},
+'Mié':{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Futuro y condicional',d:'Ejercicios de conjugación: iré, iría, haré, haría.',
+  l:[['SpanishDict — futuro simple',SD_FUT],['SpanishDict — condicional',SD_COND]]},
 {t:'11:00–12:00',s:'Math — Repaso',d:'Expresiones y ecuaciones de la semana.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Expressions, equations, & inequalities (repaso)']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'El narrador poco confiable. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Escritura',d:'Practica conectores: sin embargo, por lo tanto, mientras tanto.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Escritura',d:'Practica conectores: sin embargo, por lo tanto, mientras tanto.',
+  l:[['SpanishDict — conectores',SD_CONECT]]},
 {t:'11:00–12:00',s:'Humanities — Civilizaciones antiguas',d:'Mesopotamia, Egipto, Grecia, Roma. Explora y anota qué te llama la atención.',
   l:[['Khan: World history',KHANHIST]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Cómo pedir feedback sin sesgar la respuesta de la otra persona.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Producir el episodio 4. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso + quiz',d:'Expresiones, ecuaciones e inecuaciones. Guarda tu puntaje.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Expressions, equations, & inequalities (quiz)']}},
 {t:'11:00–12:00',s:'English — Conditionals',d:'If I were... If I had... Practice with 5 real examples from your own life.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Revisar juntos los números de los últimos 3 episodios.',a:1},
 {t:'2:45–3:30',s:'Video',d:'Qué notó la audiencia. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 4:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Geometría',d:'Ángulos complementarios, suplementarios y verticales.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Geometry']}},
-{t:'11:00–12:00',s:'Español — Subjuntivo',d:'Introducción: espero que, quiero que, dudo que. Ejercicios básicos.'},
+{t:'11:00–12:00',s:'Español — Subjuntivo',d:'Introducción: espero que, quiero que, dudo que. Ejercicios básicos.',
+  l:[['SpanishDict — subjuntivo',SD_SUBJ]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Naming: por qué "Caso #1" funciona mejor que un título suelto.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Nombrar tu serie: casos, no solo episodios. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Geometría aplicada',d:'Área y perímetro de figuras compuestas.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Geometry (continuar)']}},
-{t:'11:00–12:00',s:'Español — Conectores',d:'Practica transiciones en un texto propio de 150 palabras.'},
+{t:'11:00–12:00',s:'Español — Conectores',d:'Practica transiciones en un texto propio de 150 palabras.',
+  l:[['SpanishDict — conectores',SD_CONECT]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Diseño',d:'La estética de expediente. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
+'Mié':{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'English — Active vs passive',d:'Rewrite 5 passive sentences as active. Notice which sounds more direct.'},
 {t:'11:00–12:00',s:'Math — Estadística',d:'Media, mediana, moda, rango con datos reales de tu canal.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Statistics & probability']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'La fórmula del gancho de misterio. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Escritura libre',d:'Redacta 200 palabras usando subjuntivo al menos 2 veces.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Escritura libre',d:'Redacta 200 palabras usando subjuntivo al menos 2 veces.',
+  l:[['SpanishDict — subjuntivo',SD_SUBJ]]},
 {t:'11:00–12:00',s:'Science — Organismos y sistemas',d:'Sistemas del cuerpo humano — introducción.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Cells and organisms (sistemas)']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Probabilidad y azar: por qué algunos episodios "pegan" y otros no.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Producir el episodio 5. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso general',d:'Cierre del curso completo: las 6 unidades de Get ready for 7th grade.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Repaso general — curso completo'],review:true}},
 {t:'11:00–12:00',s:'English — Repaso',d:'Perfect tenses, conditionals, active/passive — mini quiz de repaso.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Cierre de mes 2: qué funcionó, qué no.',a:1},
 {t:'2:45–3:30',s:'Storycraft',d:'Patrones en 4-5 episodios. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 5:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Grade 7 arranca',d:'Razones y proporciones a nivel de curso completo — no repaso, contenido nuevo real.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Ratios & proportions']}},
-{t:'11:00–12:00',s:'Español — Narrativa avanzada',d:'Arcos y subtramas — aplicado directo a tu serie de misterio.'},
+{t:'11:00–12:00',s:'Español — Narrativa avanzada',d:'Arcos y subtramas — aplicado directo a tu serie de misterio.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Sistemas: por qué producir seguido no debería sentirse heroico.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Un calendario sostenible. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Ratios & proportions',d:'Practicar hasta 80% de aciertos en la unidad.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Ratios & proportions (continuar)']}},
 {t:'11:00–12:00',s:'English — Story craft',d:'Narrative structure and pacing — apply it to your next mystery episode.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Storycraft',d:'Banco de ideas: nunca quedarte sin misterios. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Narrativa avanzada',d:'Subtramas continuación — practicar en un episodio real.'},
+'Mié':{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Narrativa avanzada',d:'Subtramas continuación — practicar en un episodio real.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
 {t:'11:00–12:00',s:'Math — Rates and percentages',d:'Nueva unidad del curso completo de 7th grade math.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Rates and percentages']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Producir el episodio 6. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Repaso',d:'Revisar tu propio episodio 6 buscando errores de conjugación.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Repaso',d:'Revisar tu propio episodio 6 buscando errores de conjugación.',
+  l:[['SpanishDict — conjugador',SD_CONJ]]},
 {t:'11:00–12:00',s:'Humanities — Geografía humana',d:'Población, migración, recursos. Explora libremente.',
   l:[['Khan: World history',KHANHIST]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'¿Vale la pena una miniserie de 2 partes? Costos y beneficios.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Evaluar una miniserie de 2 partes. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso',d:'Ratios & proportions, Rates and percentages.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Repaso de la semana'],review:true}},
 {t:'11:00–12:00',s:'English — Repaso',d:'Story craft — revisar estructura de tus últimos 3 episodios.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Cierre de mes: revisar analíticas completas del canal hasta hoy.',a:1},
 {t:'2:45–3:30',s:'Storycraft',d:'Revisión del mes: qué aprendiste. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 6:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Rates and percentages',d:'Continuar la unidad del curso completo de 7th grade math.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Rates and percentages (continuar)']}},
-{t:'11:00–12:00',s:'Español — Lectura crítica',d:'Comprensión inferencial: qué dice un texto sin decirlo directamente.'},
+{t:'11:00–12:00',s:'Español — Lectura crítica',d:'Comprensión inferencial: qué dice un texto sin decirlo directamente.',
+  l:[['Mundo Primaria — lecturas',MUNDOPRIM]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Nuevo proyecto: qué es "vibe coding", y por qué vas a construir algo real de Minecraft que le puedas mostrar a tus amigas.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Qué es vibe coding. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Rates and percentages',d:'Practicar hasta 80% de aciertos.',
   l:[['Khan: 7th grade math',KHAN7]]},
 {t:'11:00–12:00',s:'English — Reading inference',d:'Practice inferring theme and author purpose from a short passage.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Tu primer prompt de código. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Comprensión',d:'Distingue hecho de opinión en un texto de no ficción.'},
+'Mié':{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Comprensión',d:'Distingue hecho de opinión en un texto de no ficción.',
+  l:[['Mundo Primaria — lecturas',MUNDOPRIM]]},
 {t:'11:00–12:00',s:'Math — Repaso',d:'Rates and percentages.',
   l:[['Khan: 7th grade math',KHAN7]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Cómo se ve el HTML por dentro. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Análisis',d:'Identifica tesis y argumentos en un texto corto.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Análisis',d:'Identifica tesis y argumentos en un texto corto.',
+  l:[['Mundo Primaria — lecturas',MUNDOPRIM]]},
 {t:'11:00–12:00',s:'Science — Ecosistemas',d:'Cadenas alimentarias — introducción.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Ecosystems and biodiversity']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Por qué "describir bien" es la habilidad real detrás de vibe coding.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Producir tu buscador de recetas de Minecraft. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Quiz de la unidad',d:'Rates and percentages — guarda tu puntaje.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Rates and percentages (quiz)']}},
 {t:'11:00–12:00',s:'English — Repaso',d:'Inference and reading comprehension — mini quiz.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Mostrar tu primera página a papá antes del board meeting.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Mostrarle tu página a alguien. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 7:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso general',d:'Cierre de las unidades del curso 7th grade math vistas hasta ahora.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Repaso general — Ratios, Rates and percentages'],review:true}},
-{t:'11:00–12:00',s:'Español — Ensayo',d:'Estructura de un ensayo expositivo: introducción, desarrollo, cierre.'},
+{t:'11:00–12:00',s:'Español — Ensayo',d:'Estructura de un ensayo expositivo: introducción, desarrollo, cierre.',
+  l:[['Lifeder — ensayo expositivo',LIFEDER_ENSAYO]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'De página fija a herramienta: qué cambia cuando algo responde a lo que hacés.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Qué hace que algo sea interactivo. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Expresiones, práctica',d:'Traducir problemas a expresiones algebraicas.',
   l:[['Khan: 7th grade math',KHAN7]]},
 {t:'11:00–12:00',s:'English — Persuasive basics',d:'What makes a sentence convincing? Rewrite 3 weak sentences to be more persuasive.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Diseñar la lógica antes de pedirle a la IA que la escriba. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Escritura',d:'Redacta un párrafo explicando un proceso paso a paso (para practicar claridad).'},
+'Mié':{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Escritura',d:'Redacta un párrafo explicando un proceso paso a paso (para practicar claridad).',
+  l:[['SpanishDict — conectores',SD_CONECT]]},
 {t:'11:00–12:00',s:'Math — Práctica',d:'Expresiones y ecuaciones — repaso.',
   l:[['Khan: 7th grade math',KHAN7]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Cuando la IA se equivoca: cómo pedirle que arregle un bug. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Revisión',d:'Revisa tu propio ensayo expositivo, marca qué mejorarías.'},
+Jue:{hrs:'5 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Revisión',d:'Revisa tu propio ensayo expositivo, marca qué mejorarías.',
+  l:[['Lifeder — ensayo expositivo',LIFEDER_ENSAYO]]},
 {t:'11:00–12:00',s:'Science — Ecosistemas',d:'Ciclos biogeoquímicos — agua y carbono, introducción.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Matter and energy in ecosystems']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Qué se siente pedirle algo a la IA y que funcione a la primera (o no).',a:1},
 {t:'2:45–3:30',s:'IA',d:'Producir tu calculadora de crafteo. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Quiz',d:'Expresiones y ecuaciones aplicadas.',
   l:[['Khan: 7th grade math',KHAN7]],
   khan:{course:'7th grade math',units:['Repaso semanal'],review:true}},
 {t:'11:00–12:00',s:'English — Repaso',d:'Persuasive writing — revisar 3 oraciones que escribiste esta semana.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Probar la herramienta con alguien que no sabe cómo funciona.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Testear con un usuario real. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 8:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Geometría, repaso',d:'Ángulos y área — repaso del curso Get ready.',
   l:[['Khan: Get ready 7th',KHANREADY]]},
-{t:'11:00–12:00',s:'Español — Creatividad',d:'Describe un bioma real de Minecraft (el que más te guste) en 200 palabras, con detalle sensorial.'},
+{t:'11:00–12:00',s:'Español — Creatividad',d:'Describe un bioma real de Minecraft (el que más te guste) en 200 palabras, con detalle sensorial.',
+  l:[['Ciudad Seva — cuentos',CIUDADSEVA]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Qué hace que un juego se sienta "juego": loop, feedback, meta.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Anatomía de un mini-juego simple. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Geometría aplicada',d:'Perímetro y área de figuras compuestas.',
   l:[['Khan: Get ready 7th',KHANREADY]]},
 {t:'11:00–12:00',s:'English — Descriptive writing',d:'Describe the same Minecraft biome from Monday, now in English.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Diseñar tu mecánica en una oración. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
-{t:'9:00–10:00',s:'Español — Repaso',d:'Revisa ortografía y acentuación en tu descripción del bioma.'},
+'Mié':{hrs:'4 horas',blocks:[
+{t:'9:00–10:00',s:'Español — Repaso',d:'Revisa ortografía y acentuación en tu descripción del bioma.',
+  l:[['RAE — reglas de acentuación',RAE_ACENTOS]]},
 {t:'11:00–12:00',s:'Math — Práctica',d:'Geometría — ejercicios mixtos.',
   l:[['Khan: Get ready 7th',KHANREADY]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Pedirle a la IA el loop del juego. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
+Jue:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Español — Escritura',d:'Reescribe la descripción de tu bioma como si fuera el escenario de tu mini-juego.'},
 {t:'11:00–12:00',s:'Science — Ecosistemas',d:'Biodiversidad y adaptación.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Interactions in ecosystems']}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Qué se corta primero cuando el tiempo apremia (alcance vs calidad).',a:1},
 {t:'2:45–3:30',s:'IA',d:'Producir y pulir tu mini-juego. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso general',d:'Geometría — cierre de la unidad.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Geometry (cierre)'],review:true}},
 {t:'11:00–12:00',s:'English — Repaso',d:'Descriptive writing — revisar tu escenario en inglés.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Grabar a alguien jugando tu mini-juego, sin ayudarla.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Testear tu juego con un usuario real. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 9:{
-Lun:{hrs:'4 horas',blocks:[
+Lun:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Estadística, repaso',d:'Media, mediana, moda — repaso del curso Get ready.',
   l:[['Khan: Get ready 7th',KHANREADY]]},
-{t:'11:00–12:00',s:'Español — Escritura formal',d:'Redacta un párrafo formal explicando tu proyecto de este mes.'},
+{t:'11:00–12:00',s:'Español — Escritura formal',d:'Redacta un párrafo formal explicando tu proyecto de este mes.',
+  l:[['Lifeder — ensayo expositivo',LIFEDER_ENSAYO]]},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Qué significa "pulir" — no es agregar más, es quitar lo que no funciona.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Qué le falta pulir a tu juego. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'3 horas',blocks:[
+Mar:{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Estadística aplicada',d:'Usa datos de tus propios proyectos (episodios, visitas) para practicar.',
   l:[['Khan: Get ready 7th',KHANREADY]]},
 {t:'11:00–12:00',s:'English — Formal writing',d:'Translate your Spanish project paragraph into English.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Que funcione en el celular, no solo en la laptop. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'3 horas',blocks:[
+'Mié':{hrs:'4 horas',blocks:[
 {t:'9:00–10:00',s:'Español — Revisión',d:'Revisa tu párrafo formal con ayuda de la IA como editora, no como escritora.'},
 {t:'11:00–12:00',s:'Math — Repaso',d:'Estadística y probabilidad — cierre.',
   l:[['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Get ready for 7th grade',units:['Statistics & probability (cierre)'],review:true}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'IA',d:'Publicar tu proyecto en Vercel. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'4 horas',blocks:[
+Jue:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Español — Presentación',d:'Practica explicar tu proyecto en voz alta, en español.'},
 {t:'11:00–12:00',s:'Science — Repaso',d:'Ecosistemas — cierre del mes.',
   l:[['Khan: MS Biology',KHANBIO]],
   khan:{course:'Middle school biology',units:['Ecosystems and biodiversity (cierre)'],review:true}},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Armar una lista de lo que aprendiste que va más allá del código.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Documentar tu proyecto. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'4 horas',blocks:[
+Vie:{hrs:'5 horas',blocks:[
 {t:'9:00–10:00',s:'Math — Repaso final del mes',d:'Todas las unidades vistas en las últimas 4 semanas.',
   l:[['Khan: 7th grade math',KHAN7],['Khan: Get ready 7th',KHANREADY]],
   khan:{course:'Repaso general del mes',units:['Rates and percentages','Geometry','Statistics & probability'],review:true}},
 {t:'11:00–12:00',s:'English — Repaso final',d:'Practica presentar tu proyecto en inglés.'},
+{t:'12:00–1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00–2:45',s:'Negocio',d:'Preparar la presentación final: a quién se lo vas a mostrar primero, papá o tus amigas.',a:1},
 {t:'2:45–3:30',s:'IA',d:'Mandarle el link a una amiga que juegue Minecraft. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
@@ -963,6 +1040,19 @@ var done={}, links={}, entregas={}, khanState={}, satNotes={};
 var K_DONE='alana-progreso-s1s2', K_LINKS='alana-links-s1s2', K_ENTREGA='alana-entrega-s1s2',
     K_KHAN='alana-khan-s1s2', K_SAT='alana-sat-notas-s1s2';
 
+var SUPA_URL='https://hlbdgcvgsnnrtkkwamxa.supabase.co';
+var SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhsYmRnY3Znc25ucnRra3dhbXhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2OTYzNTMsImV4cCI6MjEwNTI3MjM1M30.KMGum89tM6fUgG-ltymEQLVgXIlqZ3-1sXuxcVR4mAc';
+var KID='alana';
+function logActivity(kind,itemKey,subject,label,value){
+  try{
+    fetch(SUPA_URL+'/rest/v1/activity_log',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY},
+      body:JSON.stringify({kid:KID,week:week,day:day,kind:kind,item_key:String(itemKey),subject:subject||null,label:label||null,value:value===undefined?null:String(value)})
+    }).catch(function(){});
+  }catch(e){}
+}
+
 function loadAll(){
   try{var r=localStorage.getItem(K_DONE);if(r)done=JSON.parse(r);}catch(e){}
   try{var r2=localStorage.getItem(K_LINKS);if(r2)links=JSON.parse(r2);}catch(e){}
@@ -1045,7 +1135,7 @@ function renderList(){
       '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+ICON_CHECK+'</button></div>'+
       '<div class="what">'+b.d+'</div>'+linksHtml+khanHtml;
 
-    card.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();render();};
+    card.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();logActivity(done[key]?'done':'undone',key,b.s,b.s,done[key]);render();};
     list.appendChild(card);
 
     if(b.khan){
@@ -1054,6 +1144,7 @@ function renderList(){
           var kkey=el.getAttribute('data-kkey');
           khanState[kkey]=this.checked;
           saveKhan();
+          logActivity('khan',kkey,b.s,el.textContent.trim(),this.checked);
           el.classList.toggle('checked',this.checked);
         };
       });
@@ -1141,9 +1232,13 @@ function renderProject(){
         bar.textContent='Guardado ✓';bar.classList.add('saved');
       },500);
     });
+    ta.addEventListener('blur',function(){
+      if(ta.value&&ta.value.trim().length>0){logActivity('entrega',week+'|'+day,'Proyecto','Proyecto del día — '+DAYFULL[day],ta.value);}
+    });
     document.getElementById('markdone-btn').onclick=function(){
       done[doneKey]=!done[doneKey];
       saveDone();
+      logActivity(done[doneKey]?'done':'undone',doneKey,'Proyecto','Proyecto del día — '+DAYFULL[day],done[doneKey]);
       render();
     };
   }
@@ -1164,6 +1259,9 @@ function renderSat(){
   ta.addEventListener('input',function(){
     clearTimeout(t);
     t=setTimeout(function(){satNotes[key]=ta.value;saveSat();},500);
+  });
+  ta.addEventListener('blur',function(){
+    if(ta.value&&ta.value.trim().length>0){logActivity('sat',key,'Board meeting',SAT[week][0],ta.value);}
   });
 }
 

@@ -234,368 +234,413 @@ var DAYFULL={Lun:'Lunes',Mar:'Martes','Mié':'Miércoles',Jue:'Jueves',Vie:'Vier
 /* ===== DATA: Lunes y Martes de semana 1 quedan EXACTAMENTE como estaban — ya los hizo ===== */
 var DATA={
 1:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Science — Diagnóstico I',d:'Célula: estructura y función. Trabaja la unidad de células.',l:[['Khan · MS Biology',K_BIO]]},
 {t:'11:00 12:00',s:'Math — Diagnóstico I',d:'Ecuaciones lineales. Unidades 1 y 2.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'¿Qué es un negocio? Caso Chanel: no vende ropa, vende identidad.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Qué es la IA y qué implicaciones sociales trae. Conversa con Claude sobre eso.',a:1},
 {t:'3:30 4:00',s:'Proyecto',d:'Elige el lente de tu proyecto editorial: moda o cocina. Esta decisión define los próximos seis meses.',a:1,flag:'Decisión'}]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Diagnóstico II',d:'Química básica: átomo y tabla periódica.',l:[['Khan · MS Chemistry',K_CHEM]]},
 {t:'11:00 12:00',s:'Humanities — Diagnóstico',d:'Analiza una fuente histórica: quién la escribió, cuándo, para quién, y qué deja fuera.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'Estructura narrativa aplicada a contenido editorial.',a:1},
 {t:'2:45 3:00',s:'Reflexión',d:'¿Qué te resultó más difícil de analizar en la fuente?',a:1}]},
 
 /* ===== Desde aquí: nueva arquitectura — proyecto enfocado en Historical Subcultures & Radical Streetwear ===== */
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Math — Diagnóstico II',d:'Exponentes y notación científica.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Exponentes y notación científica']}},
 {t:'11:00 12:00',s:'Science — Diagnóstico III',d:'Física básica: fuerza, movimiento y energía.',
   l:[['Khan · MS Physics',K_PHYS]],
   khan:{course:'Middle school physics',units:['Motion and forces']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'El vocabulario visual de la rebeldía. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/'],['Figma','https://www.figma.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Diagnóstico II',d:'Elige un evento del siglo XX y escribe tres causas y tres consecuencias.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'English — Diagnóstico',d:'Write a one-paragraph thesis about something you believe, with two pieces of evidence.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Producto o servicio: ¿dónde cae exactamente un proyecto editorial?',a:1},
 {t:'2:45 3:30',s:'IA',d:'Moda como protesta: causa y efecto. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Science — Repaso',d:'Los tres cursos: célula, átomos y tabla periódica, fuerza y movimiento.',
   l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
   khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (repaso)','Classifying matter (repaso)','Motion and forces (repaso)'],review:true}},
 {t:'11:00 12:00',s:'Math — Repaso',d:'Ecuaciones lineales, exponentes y notación científica.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Ecuaciones lineales y exponentes (repaso)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Entrevista a papá sobre Jepa Fashion y El Escaparate de Lolita. Prepara cinco preguntas antes.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Quién es quién: perfiles de figuras clave. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 2:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Ecuaciones a fondo',d:'Lineales y de dos pasos, hasta que salgan solas.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Ecuaciones lineales y de dos pasos']}},
 {t:'11:00 12:00',s:'Science — Célula a fondo',d:'Procesos: fotosíntesis y respiración celular.',
   l:[['Khan · MS Biology',K_BIO]],
   khan:{course:'Middle school biology',units:['Cells and organisms (continuar)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'El cliente: ¿quién lee tu proyecto y por qué le importaría?',a:1},
 {t:'2:45 3:30',s:'IA',d:'Las técnicas DIY: el cómo, no solo el por qué. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Movimientos sociales',d:'Siglo XX: elige uno y traza su línea de tiempo completa.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Sistemas de ecuaciones',d:'Método gráfico y sustitución.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Sistemas de ecuaciones']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'De la calle a la pasarela. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Química',d:'Tabla periódica: tendencias y propiedades.',
   l:[['Khan · MS Chemistry',K_CHEM]],
   khan:{course:'Middle school chemistry',units:['Classifying matter']}},
 {t:'11:00 12:00',s:'Humanities — Análisis',d:'Escribe 300 palabras explicando por qué el movimiento que elegiste ayer cambió algo.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Construí tu moodboard visual. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Thesis y evidencia',d:'Turn your Humanities paragraph into a proper argumentative essay opening.'},
 {t:'11:00 12:00',s:'Science — Física',d:'Movimiento: velocidad, rapidez y aceleración.',
   l:[['Khan · MS Physics',K_PHYS]],
   khan:{course:'Middle school physics',units:['Motion and forces (continuar)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Brainstorm de diez ángulos posibles para tu serie.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Escribir tu primera pieza completa. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso y quiz',d:'Haz el quiz del curso. Guarda el puntaje para comparar en un mes.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Repaso general + quiz'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso y quiz',d:'Los tres cursos. Anota los tres puntajes por separado.',
   l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
   khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (quiz)','Classifying matter (quiz)','Motion and forces (quiz)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Define el formato final: newsletter, Instagram, podcast, o una combinación.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Producir y presentar. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 3:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Science — Química a fondo',d:'Enlaces y moléculas — continuación de la tabla periódica.',
   l:[['Khan · MS Chemistry',K_CHEM]],
   khan:{course:'Middle school chemistry',units:['Classifying matter (continuar)']}},
 {t:'11:00 12:00',s:'Math — Desigualdades',d:'Desigualdades simples y valor absoluto.',
   l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'El elenco: por qué importa conocer nombres reales, no solo "el movimiento".',a:1},
 {t:'2:45 3:30',s:'IA',d:'El elenco: quiénes eran realmente los Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Movimientos sociales',d:'Continuación: contexto económico de Gran Bretaña a fines de los 70.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Desigualdades aplicadas',d:'Practicar con problemas del mundo real.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'El código de entrada: por qué la puerta importaba tanto como la ropa. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Reacciones químicas',d:'Introducción: tipos de reacciones y balanceo básico.',
   l:[['Khan · MS Chemistry',K_CHEM]],
   khan:{course:'Middle school chemistry',units:['Classifying matter (reacciones)']}},
 {t:'11:00 12:00',s:'Humanities — Análisis',d:'Escribe 300 palabras sobre el contexto económico investigado ayer.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'El maquillaje como arquitectura. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Citar fuentes',d:'Practice paraphrasing a source without copying its exact wording.'},
 {t:'11:00 12:00',s:'Science — Física aplicada',d:'Velocidad y aceleración con problemas reales.',
   l:[['Khan · MS Physics',K_PHYS]],
   khan:{course:'Middle school physics',units:['Motion and forces (aplicado)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Producto vs experiencia: por qué un club también "vende" algo.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Producir pieza 4. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso',d:'Ecuaciones, sistemas, exponentes y desigualdades — repaso de la semana.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Repaso semanal'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso',d:'Química y física de esta semana.',
   l:[['Química',K_CHEM],['Física',K_PHYS]],
   khan:{course:'Repaso química y física',units:['Classifying matter (repaso)','Motion and forces (repaso)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Mostrarle a papá el avance de la semana antes del board meeting.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Feedback cruzado. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 4:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso de sistemas',d:'Sistemas de ecuaciones — método gráfico y sustitución, a fondo.',
   l:[['Khan · Get ready Algebra 1',K_ALG]]},
 {t:'11:00 12:00',s:'Science — Biología a fondo',d:'Repaso de célula: estructura, función y procesos.',
   l:[['Khan · MS Biology',K_BIO]],
   khan:{course:'Middle school biology',units:['Cells and organisms (repaso a fondo)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'La banda sonora de un movimiento: música como parte del producto.',a:1},
 {t:'2:45 3:30',s:'IA',d:'De Bowie a Strange: la banda sonora del movimiento. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Síntesis',d:'Conecta el contexto económico con las decisiones de moda que investigaste.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Exponentes, repaso final',d:'Notación científica — cierre del curso de preparación.',l:[['Khan · Get ready Algebra 1',K_ALG]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'De ahí salió una banda real: Spandau Ballet. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Física, repaso final',d:'Fuerza, movimiento y energía — cierre de la unidad.',
   l:[['Khan · MS Physics',K_PHYS]],
   khan:{course:'Middle school physics',units:['Motion and forces (cierre)']}},
 {t:'11:00 12:00',s:'Humanities — Repaso',d:'Repasa tus notas de las últimas 2 semanas sobre el contexto histórico.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Moodboard Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Argumentación',d:'Write a paragraph defending why Blitz Kids deserves to be remembered as more than "just fashion".'},
 {t:'11:00 12:00',s:'Science — Química, repaso final',d:'Átomos, tabla periódica, reacciones — cierre de la unidad.',
   l:[['Khan · MS Chemistry',K_CHEM]],
   khan:{course:'Middle school chemistry',units:['Classifying matter (cierre)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Cierre de fase de investigación: qué tanto sabés ahora vs semana 1.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Producir pieza 5. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso general',d:'Cierre completo de Get ready for Algebra 1: ecuaciones, sistemas, exponentes, desigualdades.',
   l:[['Khan · Get ready Algebra 1',K_ALG]],
   khan:{course:'Get ready for Algebra 1',units:['Repaso general — curso completo'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso general',d:'Cierre de las tres ciencias: célula, átomos, fuerza y movimiento.',
   l:[['Biología',K_BIO],['Química',K_CHEM],['Física',K_PHYS]],
   khan:{course:'Repaso de las tres ciencias',units:['Cells and organisms (cierre)','Classifying matter (cierre)','Motion and forces (cierre)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Prepararse para presentar el resumen del mes al board.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Repaso: qué sabés ahora que no sabías en semana 1. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 5:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Grade 9 arranca',d:'Álgebra 1 completa — funciones lineales, pendiente e intercepto. No es repaso, es contenido nuevo real.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Linear equations & graphs']}},
 {t:'11:00 12:00',s:'Science — Grade 9 arranca',d:'Genética clásica — Mendel, herencia, genotipo y fenotipo. Sales de Middle School Biology.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Por qué una exhibición de museo en 2025 todavía habla de un club de 1979.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Legado: el Design Museum 2025. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Math — Linear equations & graphs',d:'Practicar hasta 80% de aciertos en la unidad.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Linear equations & graphs (continuar)']}},
 {t:'11:00 12:00',s:'Science — Classical genetics',d:'Punnett squares — introducción práctica.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics (continuar)']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'De Blitz a Taboo: la escena sigue mutando. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'English — Editorial voice',d:'Compare two paragraphs you wrote this month — which sounds more like "you"?'},
 {t:'11:00 12:00',s:'Math — Linear equations, aplicado',d:'Graficar 3 ecuaciones a mano antes de usar la calculadora.',
   l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'IA',d:'Producir pieza 6. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Science — Classical genetics',d:'Pedigrees — analizar un árbol genealógico simple.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics (pedigrees)']}},
 {t:'11:00 12:00',s:'Humanities — Síntesis final',d:'Conecta todo lo investigado sobre Blitz Kids en una línea de tiempo.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Definir el formato final de publicación con todo lo aprendido.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Formato final: ¿serie escrita, IG, o ambas? Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso',d:'Linear equations & graphs — quiz de la unidad.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Repaso de la semana'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso',d:'Classical genetics — quiz de la unidad.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Repaso de la semana'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Revisión completa del mes con papá.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Revisión del mes. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 6:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Forms of linear equations',d:'Nueva unidad: distintas formas de escribir una ecuación lineal.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Forms of linear equations']}},
 {t:'11:00 12:00',s:'Science — Classical genetics',d:'Repaso de Punnett squares antes de seguir a molecular.',
   l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Cierre de proyecto: por qué compilar es tan importante como producir.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Compilar tu portfolio de Blitz Kids. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Síntesis',d:'Relee tus notas de 5 semanas y marcá los 3 hallazgos más fuertes.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Forms of linear equations',d:'Practicar hasta 80% de aciertos.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'La pieza que conecta todo. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Classical genetics',d:'Cierre de la unidad — repaso de herencia y mutaciones.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics (cierre)'],review:true}},
 {t:'11:00 12:00',s:'Humanities — Repaso',d:'Revisa tu línea de tiempo de Blitz Kids completa.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Diseño final del portfolio. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Reflective writing',d:'Write one paragraph on what surprised you most about this project.'},
 {t:'11:00 12:00',s:'Math — Repaso',d:'Forms of linear equations — quiz de la unidad.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Forms of linear equations (quiz)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Preparar la presentación final: qué mostrar primero, qué dejar para preguntas.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Preparar la presentación de cierre. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Science — Repaso general',d:'Classical genetics completa.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics (repaso final)'],review:true}},
 {t:'11:00 12:00',s:'Math — Repaso general',d:'Linear equations & graphs, Forms of linear equations.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Repaso general del mes'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Último ensayo de la presentación antes del board meeting.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Presentación de cierre del proyecto. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 7:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Sistemas, repaso',d:'Sistemas de ecuaciones — repaso antes de seguir con funciones.',
   l:[['Khan · Algebra 1',K_ALGFULL]]},
 {t:'11:00 12:00',s:'Science — Molecular genetics',d:'Nueva unidad: ADN, ARN, y cómo se traduce en proteínas.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Molecular genetics']}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Nuevo proyecto: finanzas personales. Por qué es una habilidad, no un tema aburrido.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Ingreso, gasto y la diferencia que nadie te explica. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Historia económica',d:'Cómo cambió el concepto de "ahorrar" a lo largo del siglo XX.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Funciones, introducción',d:'Qué es una función — de tabla a gráfico.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'Necesidades vs deseos: la distinción que cambia todo. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Molecular genetics',d:'Mutaciones a nivel molecular — continuación.',
   l:[['Khan · High School Biology',K_HSBIO]]},
 {t:'11:00 12:00',s:'English — Explaining concepts',d:'Practice explaining a technical idea (genetics or finance) in one simple sentence.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Qué es un presupuesto, explicado simple. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Argumentación',d:'Write a paragraph on why budgeting is a skill, not a punishment.'},
 {t:'11:00 12:00',s:'Science — Molecular genetics',d:'Ingeniería genética — introducción conceptual.',
   l:[['Khan · High School Biology',K_HSBIO]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'La regla 50/30/20 — de dónde sale y qué significa cada número.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Producir tu primera pieza de finanzas. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso',d:'Funciones — introducción, repaso de la semana.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Repaso semanal'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso',d:'Molecular genetics — quiz de la semana.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Molecular genetics (repaso)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Mostrarle tu pieza a papá antes del board meeting.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Feedback de tu primera pieza de finanzas. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 8:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Funciones lineales',d:'Pendiente e intercepto — conexión directa con interés compuesto.',
   l:[['Khan · Algebra 1',K_ALGFULL]]},
 {t:'11:00 12:00',s:'Science — Molecular genetics',d:'Cierre de la unidad — repaso de ADN, ARN y mutaciones.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Molecular genetics (cierre)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Por qué existe un fondo de emergencia — qué problema resuelve.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Por qué ahorrar antes de gastar. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Repaso',d:'Conecta lo que aprendiste de historia económica con el ahorro personal de hoy.'},
 {t:'11:00 12:00',s:'Math — Funciones exponenciales, intro',d:'Cómo se ve una función que crece cada vez más rápido.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'Metas de ahorro: por qué "ahorrar más" no es una meta real. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Repaso',d:'Genética clásica y molecular — repaso combinado antes del cierre del mes.',
   l:[['Khan · High School Biology',K_HSBIO]]},
 {t:'11:00 12:00',s:'English — Numbers in writing',d:'Practice explaining a percentage or calculation in a full sentence, not just the number.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Interés compuesto, explicado con una gráfica simple. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Explaining math in words',d:'Write two sentences explaining compound interest to someone who has never heard of it.'},
 {t:'11:00 12:00',s:'Math — Funciones exponenciales',d:'Practicar con la fórmula de interés compuesto.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Por qué empezar temprano importa más que la cantidad — el efecto del tiempo.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Producir tu pieza sobre interés compuesto. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso',d:'Funciones lineales y exponenciales — repaso de la semana.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Repaso semanal'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso general',d:'Cierre de genética clásica y molecular.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Classical genetics (repaso)','Molecular genetics (repaso)'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Revisar juntos las dos piezas de finanzas producidas hasta ahora.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Feedback cruzado de la semana. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
 },
 9:{
-Lun:{hrs:'cuatro horas',blocks:[
+Lun:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso general',d:'Funciones lineales y exponenciales — cierre del mes.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Algebra 1',units:['Repaso general del mes'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso general',d:'Genética clásica y molecular — cierre del mes.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'High school biology',units:['Cierre general del mes'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Presupuesto real vs presupuesto ideal: por qué casi nunca coinciden.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Armar tu propio presupuesto simple. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Mar:{hrs:'tres horas',blocks:[
+Mar:{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Humanities — Repaso general',d:'Repasa todo lo visto en Historia estas 9 semanas.',l:[['Khan · World history',K_HIST]]},
 {t:'11:00 12:00',s:'Math — Repaso general',d:'Practicar problemas mixtos de todo el mes.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Storytelling',d:'Deuda buena vs deuda mala. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-'Mié':{hrs:'tres horas',blocks:[
+'Mié':{hrs:'cuatro horas',blocks:[
 {t:'9:00 10:00',s:'Science — Repaso general',d:'Repasa todo lo visto en Ciencias estas 9 semanas.',l:[['Khan · High School Biology',K_HSBIO]]},
 {t:'11:00 12:00',s:'English — Final review',d:'Practice presenting your finance project in English, out loud.'},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Diseño',d:'Diseñar tu zine de finanzas personales. Detalle completo abajo, en Proyecto del día.',a:1,l:[['Canva','https://www.canva.com/']]}
 ]},
-Jue:{hrs:'cuatro horas',blocks:[
+Jue:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'English — Presentation prep',d:'Write the opening 3 sentences of your final finance presentation.'},
 {t:'11:00 12:00',s:'Math — Repaso final',d:'Simulacro corto de las unidades del mes.',l:[['Khan · Algebra 1',K_ALGFULL]]},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Armar la lista de lo que aprendiste que te sirve ya, no solo para el colegio.',a:1},
 {t:'2:45 3:30',s:'IA',d:'Producir tu pieza final de cierre. Detalle completo abajo, en Proyecto del día.',a:1}
 ]},
-Vie:{hrs:'cuatro horas',blocks:[
+Vie:{hrs:'cinco horas',blocks:[
 {t:'9:00 10:00',s:'Math — Repaso final del mes',d:'Todas las unidades del mes: Forms of linear equations, funciones, exponenciales.',
   l:[['Khan · Algebra 1',K_ALGFULL]],
   khan:{course:'Repaso general del mes',units:['Forms of linear equations','Funciones lineales y exponenciales'],review:true}},
 {t:'11:00 12:00',s:'Science — Repaso final del mes',d:'Classical genetics y Molecular genetics.',
   l:[['Khan · High School Biology',K_HSBIO]],
   khan:{course:'Repaso general del mes',units:['Classical genetics','Molecular genetics'],review:true}},
+{t:'12:00 1:00',s:'Curso de Amazon',d:'Avanza en tu Curso de Amazon donde lo dejaste. Ya sabes qué hacer.'},
 {t:'2:00 2:45',s:'Negocio',d:'Preparar la presentación final del proyecto de finanzas.',a:1},
 {t:'2:45 3:30',s:'Storytelling',d:'Presentación de cierre del mes. Detalle completo abajo, en Proyecto del día.',a:1}
 ]}
@@ -963,6 +1008,19 @@ var done={}, links={}, entregas={}, khanState={}, satNotes={};
 var K_DONE='alessia-progreso-s1s2', K_LINKS='alessia-links-s1s2', K_ENTREGA='alessia-entrega-s1s2',
     K_KHAN='alessia-khan-s1s2', K_SAT='alessia-sat-notas-s1s2';
 
+var SUPA_URL='https://hlbdgcvgsnnrtkkwamxa.supabase.co';
+var SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhsYmRnY3Znc25ucnRra3dhbXhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk2OTYzNTMsImV4cCI6MjEwNTI3MjM1M30.KMGum89tM6fUgG-ltymEQLVgXIlqZ3-1sXuxcVR4mAc';
+var KID='alessia';
+function logActivity(kind,itemKey,subject,label,value){
+  try{
+    fetch(SUPA_URL+'/rest/v1/activity_log',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY},
+      body:JSON.stringify({kid:KID,week:week,day:day,kind:kind,item_key:String(itemKey),subject:subject||null,label:label||null,value:value===undefined?null:String(value)})
+    }).catch(function(){});
+  }catch(e){}
+}
+
 function loadAll(){
   try{var r=localStorage.getItem(K_DONE);if(r)done=JSON.parse(r);}catch(e){}
   try{var r2=localStorage.getItem(K_LINKS);if(r2)links=JSON.parse(r2);}catch(e){}
@@ -1034,7 +1092,7 @@ function renderList(){
     row.innerHTML='<div class="time">'+b.t+'</div><div>'+flag+'<div class="subj">'+b.s+'</div>'+
       '<div class="what">'+b.d+'</div>'+linksHtml+khanHtml+'</div>'+
       '<button class="check'+(isDone?' on':'')+'" aria-label="Marcar como hecho">'+CHECK+'</button>';
-    row.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();render();};
+    row.querySelector('.check').onclick=function(){done[key]=!done[key];saveDone();logActivity(done[key]?'done':'undone',key,b.s,b.s,done[key]);render();};
     list.appendChild(row);
 
     if(b.khan){
@@ -1043,6 +1101,7 @@ function renderList(){
           var kkey=el.getAttribute('data-kkey');
           khanState[kkey]=this.checked;
           saveKhan();
+          logActivity('khan',kkey,b.s,el.textContent.trim(),this.checked);
           el.classList.toggle('checked',this.checked);
         };
       });
@@ -1132,9 +1191,13 @@ function renderProject(){
         bar.textContent='Guardado ✓';bar.classList.add('saved');
       },500);
     });
+    ta.addEventListener('blur',function(){
+      if(ta.value&&ta.value.trim().length>0){logActivity('entrega',week+'|'+day,'Proyecto','Proyecto del día — '+DAYFULL[day],ta.value);}
+    });
     document.getElementById('markdone-btn').onclick=function(){
       done[doneKey]=!done[doneKey];
       saveDone();
+      logActivity(done[doneKey]?'done':'undone',doneKey,'Proyecto','Proyecto del día — '+DAYFULL[day],done[doneKey]);
       render();
     };
   }
@@ -1155,6 +1218,9 @@ function renderSat(){
   ta.addEventListener('input',function(){
     clearTimeout(t);
     t=setTimeout(function(){satNotes[key]=ta.value;saveSat();},500);
+  });
+  ta.addEventListener('blur',function(){
+    if(ta.value&&ta.value.trim().length>0){logActivity('sat',key,'Board meeting',SAT[week][0],ta.value);}
   });
 }
 
